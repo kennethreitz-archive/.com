@@ -1,10 +1,12 @@
 import os
 from fabric.api import *
 
-os.f
+
 def build():
 	""" Death to the bytecode! """
-	local('pelican -t krtheme -s settings.py .')
+	local('rm -fr output')
+	local('pelican -t themes/krtheme -s settings.py .')
+	local('open output/index.html')
 
 # def docs():
 # 	"""Build docs."""
