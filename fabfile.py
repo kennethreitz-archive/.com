@@ -5,7 +5,7 @@ from fabric.api import *
 def build():
 	""" Death to the bytecode! """
 	local('rm -fr output')
-	local('pelican -t themes/krtheme -s settings.py .')
+	local('pelican -t theme -s settings.py content')
 	local('open output/index.html')
 
 # def docs():

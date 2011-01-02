@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 AUTHOR = u'Kenneth Reitz'
-SITENAME = u'KennethReitz.com' 
+SITENAME = u'Kenneth Reitz'
 SITEURL = 'http://kennethreitz.com'
 
 GITHUB_URL = 'http://github.com/kennethreitz/'
@@ -14,7 +14,7 @@ LINKS = (('Biologeek', 'http://biologeek.org'),
             (u'Tarek Ziadé', "http://ziade.org/blog"),
             ('Zubin Mithra', "http://zubin71.wordpress.com/"),)
 
-SOCIAL = (('twitter', 'http://twitter.com/ametaireau'),
-          ('lastfm', 'http://lastfm.com/user/akounet'),
-          ('github', 'http://github.com/ametaireau'),)
+SOCIAL = (('twitter', 'http://twitter.com/kennethreitz'),
+          ('flickr', 'http://flickr.com/photos/kennethreitz'),
+          ('github', 'http://github.com/kennethreitz'),)
 
