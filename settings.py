@@ -5,7 +5,7 @@ SITEURL = 'http://kennethreitz.com'
 
 GITHUB_URL = 'http://github.com/kennethreitz/'
 DISQUS_SITENAME = "kennethreitz"
-PDF_GENERATOR = True
+PDF_GENERATOR = False
 
 LINKS = (('Biologeek', 'http://biologeek.org'),
             ('Filyb', "http://filyb.info/"),
