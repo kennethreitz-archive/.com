@@ -1,3 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Kenneth's log</title><link href="http://kennethreitz.com/blog/" rel="alternate"></link><link href="http://kennethreitz.com/blog//feeds/projects.atom.xml" rel="self"></link><id>http://kennethreitz.com/blog/</id><updated>2011-01-02T19:52:53Z</updated><entry><title>Tablib</title><link href="http://kennethreitz.com/blog//tablib.html" rel="alternate"></link><updated>2011-01-02T19:52:53Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2011-01-02:/blog//tablib.html/</id><summary type="html">&lt;p&gt;Tablib is x and y z.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kenneth's log</title><link href="http://kennethreitz.com/blog/" rel="alternate"></link><link href="http://kennethreitz.com/blog//feeds/projects.atom.xml" rel="self"></link><id>http://kennethreitz.com/blog/</id><updated>2011-01-03T00:41:16Z</updated><entry><title>Tablib</title><link href="http://kennethreitz.com/blog//tablib.html" rel="alternate"></link><updated>2011-01-03T00:41:16Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2011-01-03:/blog//tablib.html/</id><summary type="html">&lt;p&gt;Tablib is an extensive Python module for working with tabular datasets. It allows you create tables of data using standard Python datatypes, manipulate them, and easily export to Excel, JSON, YAML, and CSV.&lt;/p&gt;
+&lt;p&gt;Basic Usage:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+import tablib
+
+headers = ('first_name', 'last_name', 'gpa')
+data = [('John', 'Adams', 90), ('George', 'Washington', 67)]
+
+data = tablib.Dataset(*data, headers=headers)
+&lt;/pre&gt;
+&lt;p&gt;You can manipulate your data like a standard Python list:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; data.append(('Henry', 'Ford', 83))
+
+&amp;gt;&amp;gt;&amp;gt; print data['first_name']
+['John', 'George', 'Henry']
+
+&amp;gt;&amp;gt;&amp;gt; del data[1]
+&lt;/pre&gt;
+&lt;p&gt;You can easily export your data to JSON, YAML, XLS, and CSV.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; print data.json
+[{&amp;quot;first_name&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;last_name&amp;quot;: &amp;quot;Adams&amp;quot;, &amp;quot;gpa&amp;quot;: 90},
+{&amp;quot;first_name&amp;quot;: &amp;quot;Henry&amp;quot;, &amp;quot;last_name&amp;quot;: &amp;quot;Ford&amp;quot;, &amp;quot;gpa&amp;quot;: 83}]
+
+&amp;gt;&amp;gt;&amp;gt; print data.yaml
+- {age: 90, first_name: John, last_name: Adams}
+- {age: 83, first_name: Henry, last_name: Ford}
+
+&amp;gt;&amp;gt;&amp;gt; print data.csv
+first_name,last_name,age
+John,Adams,90
+Henry,Ford,83
+
+&amp;gt;&amp;gt;&amp;gt; open('people.xls', 'w').write(data.xls)
+&lt;/pre&gt;
+&lt;p&gt;Excel files with multiple sheets are also supported (via the DataBook object).&lt;/p&gt;
+&lt;p&gt;[Source on GitHub] [PyPi Listing]&lt;/p&gt;
 </summary></entry></feed>

@@ -72,7 +72,44 @@
 		
 		
 		
-		<p>Tablib is x and y z.</p>
+		<p>Tablib is an extensive Python module for working with tabular datasets. It allows you create tables of data using standard Python datatypes, manipulate them, and easily export to Excel, JSON, YAML, and CSV.</p>
+<p>Basic Usage:</p>
+<pre class="literal-block">
+import tablib
+
+headers = ('first_name', 'last_name', 'gpa')
+data = [('John', 'Adams', 90), ('George', 'Washington', 67)]
+
+data = tablib.Dataset(*data, headers=headers)
+</pre>
+<p>You can manipulate your data like a standard Python list:</p>
+<pre class="literal-block">
+&gt;&gt;&gt; data.append(('Henry', 'Ford', 83))
+
+&gt;&gt;&gt; print data['first_name']
+['John', 'George', 'Henry']
+
+&gt;&gt;&gt; del data[1]
+</pre>
+<p>You can easily export your data to JSON, YAML, XLS, and CSV.</p>
+<pre class="literal-block">
+&gt;&gt;&gt; print data.json
+[{&quot;first_name&quot;: &quot;John&quot;, &quot;last_name&quot;: &quot;Adams&quot;, &quot;gpa&quot;: 90},
+{&quot;first_name&quot;: &quot;Henry&quot;, &quot;last_name&quot;: &quot;Ford&quot;, &quot;gpa&quot;: 83}]
+
+&gt;&gt;&gt; print data.yaml
+- {age: 90, first_name: John, last_name: Adams}
+- {age: 83, first_name: Henry, last_name: Ford}
+
+&gt;&gt;&gt; print data.csv
+first_name,last_name,age
+John,Adams,90
+Henry,Ford,83
+
+&gt;&gt;&gt; open('people.xls', 'w').write(data.xls)
+</pre>
+<p>Excel files with multiple sheets are also supported (via the DataBook object).</p>
+<p>[Source on GitHub] [PyPi Listing]</p>
 
 		</div><!-- /.entry-content -->
 		
