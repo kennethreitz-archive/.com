@@ -30,8 +30,6 @@ class Post(object):
 		self.content = None
 		self.id = None
 
-
-
 posts = []
 
 try:
@@ -79,7 +77,7 @@ for post in posts:
 	article += ':date: %s\n' % post.published.strftime('%Y-%m-%d %H:%M')
 	article += ':category: Code\n\n\n'
 
-	article += smart_str(content.rst)
+	article += content.rst
 	print post.title
 
 	with open(filename, 'w') as f:
