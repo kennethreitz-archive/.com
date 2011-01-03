@@ -44,102 +44,118 @@ account. It also detects if your repo is a mirror or fork, and
 files it accordingly. My watched list is huge, but I like to have a
 local copy of my favorite libraries. You never know if the owner
 will take it down, or worse, move it to another SCM! ;-) The script
-depends on the **GitHub2** module. If you don't have it, you
-can install it easily. $ pip install github2 I recommend running
-this from `~/repos/`. #!/usr/bin/env python #
--&lt;em&gt;- coding: utf-8 -&lt;/em&gt;-&lt;/p&gt;
+depends on the &lt;strong&gt;GitHub2&lt;/strong&gt; module. If you don't have it, you
+can install it easily.:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
-&amp;quot;&amp;quot;&amp;quot;Kenneth Reitz's GitHub Syncer
-
-This script uses the GitHub API to get a list of all forked, mirrored, public, and
+$ pip install github2
+&lt;/pre&gt;
+&lt;p&gt;I recommend running this from &lt;tt class="docutils literal"&gt;~/repos/&lt;/tt&gt;.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;#!/usr/bin/env python #
+-&lt;em&gt;- coding: utf-8 -&lt;/em&gt;-&lt;/p&gt;
+&lt;p&gt;&amp;quot;&amp;quot;&amp;quot;Kenneth Reitz's GitHub Syncer&lt;/p&gt;
+&lt;p&gt;This script uses the GitHub API to get a list of all forked, mirrored, public, and
 private repos in your GitHub account. If the repo already exists locally, it will
-update it via git-pull. Otherwise, it will properly clone the repo.
-
-It will organize your repos into the following directory structure:
-
-+ repos
-  ├── forks    (public fork repos)
-  ├── mirrors  (public mirror repos)
-  ├── private  (private repos)
-  ├── public   (public repos)
-  ├── watched  (this script)
-  └── sync.py  (this script)
-
-Requires Ask Solem's github2 (http://pypi.python.org/pypi/github2).
-
-Inspired by Gisty (http://github.com/swdyh/gisty).
-&amp;quot;&amp;quot;&amp;quot;
-
-import os
-from commands import getoutput as cmd
-
-from github2.client import Github
-
-
-# GitHub configurations
+update it via git-pull. Otherwise, it will properly clone the repo.&lt;/p&gt;
+&lt;p&gt;It will organize your repos into the following directory structure:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;repos
+├── forks    (public fork repos)
+├── mirrors  (public mirror repos)
+├── private  (private repos)
+├── public   (public repos)
+├── watched  (this script)
+└── sync.py  (this script)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Requires Ask Solem's github2 (&lt;a class="reference external" href="http://pypi.python.org/pypi/github2"&gt;http://pypi.python.org/pypi/github2&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Inspired by Gisty (&lt;a class="reference external" href="http://github.com/swdyh/gisty"&gt;http://github.com/swdyh/gisty&lt;/a&gt;).
+&amp;quot;&amp;quot;&amp;quot;&lt;/p&gt;
+&lt;p&gt;import os
+from commands import getoutput as cmd&lt;/p&gt;
+&lt;p&gt;from github2.client import Github&lt;/p&gt;
+&lt;p&gt;# GitHub configurations
 GITHUB_USER = cmd('git config github.user')
-GITHUB_TOKEN = cmd('git config github.token')
-
-# API Object
-github = Github(username=GITHUB_USER, api_token=GITHUB_TOKEN)
-
-
-# repo slots
-repos = {}
-
-repos['watched'] = [r for r in github.repos.watching(GITHUB_USER)]
+GITHUB_TOKEN = cmd('git config github.token')&lt;/p&gt;
+&lt;p&gt;# API Object
+github = Github(username=GITHUB_USER, api_token=GITHUB_TOKEN)&lt;/p&gt;
+&lt;p&gt;# repo slots
+repos = {}&lt;/p&gt;
+&lt;p&gt;repos['watched'] = [r for r in github.repos.watching(GITHUB_USER)]
 repos['private'] = []
 repos['mirrors'] = []
 repos['public'] = []
-repos['forks'] = []
-
-# Collect GitHub repos via API
-for repo in github.repos.list():
-
-    if repo.private:
-        repos['private'].append(repo)
-    elif repo.fork:
-        repos['forks'].append(repo)
-    elif 'mirror' in repo.description.lower():
-        # mirrors owned by self if mirror in description...
-        repos['mirrors'].append(repo)
-    else:
-        repos['public'].append(repo)
-
-
-for org, repos in repos.iteritems():
-    for repo in repos:
-
-        # create org directory (safely)
-        try:
-            os.makedirs(org)
-        except OSError:
-            pass
-
-        # enter org dir
-        os.chdir(org)
-
-        # I own the repo
-        private = True if org in ('private', 'fork', 'mirror') else False
-
-        # just `git pull` if it's already there
-        if os.path.exists(repo.name):
-            os.chdir(repo.name)
-            print('Updating repo: %s' % (repo.name))
-            os.system('git pull')
-            os.chdir('..')
-        else:
-            if private:
-                print('Cloning private repo: %s' % (repo.name))
-                os.system('git clone git&amp;#64;github.com:%s/%s.git' % (repo.owner, repo.name))
-            else:
-                print('Cloning repo: %s' % (repo.name))
-                os.system('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))
-
-        # return to base
-        os.chdir('..')
-        print
-&lt;/pre&gt;
+repos['forks'] = []&lt;/p&gt;
+&lt;p&gt;# Collect GitHub repos via API
+for repo in github.repos.list():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;if repo.private:&lt;/dt&gt;
+&lt;dd&gt;repos['private'].append(repo)&lt;/dd&gt;
+&lt;dt&gt;elif repo.fork:&lt;/dt&gt;
+&lt;dd&gt;repos['forks'].append(repo)&lt;/dd&gt;
+&lt;dt&gt;elif 'mirror' in repo.description.lower():&lt;/dt&gt;
+&lt;dd&gt;# mirrors owned by self if mirror in description...
+repos['mirrors'].append(repo)&lt;/dd&gt;
+&lt;dt&gt;else:&lt;/dt&gt;
+&lt;dd&gt;repos['public'].append(repo)&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;dl class="last docutils"&gt;
+&lt;dt&gt;for org, repos in repos.iteritems():&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;for repo in repos:&lt;/p&gt;
+&lt;blockquote class="last"&gt;
+&lt;p&gt;# create org directory (safely)
+try:&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 88)&lt;/p&gt;
+Unexpected indentation.&lt;/div&gt;
+&lt;blockquote&gt;
+os.makedirs(org)&lt;/blockquote&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 89)&lt;/p&gt;
+Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;except OSError:&lt;/dt&gt;
+&lt;dd&gt;pass&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;# enter org dir
+os.chdir(org)&lt;/p&gt;
+&lt;p&gt;# I own the repo
+private = True if org in ('private', 'fork', 'mirror') else False&lt;/p&gt;
+&lt;p&gt;# just &lt;cite&gt;git pull&lt;/cite&gt; if it's already there
+if os.path.exists(repo.name):&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 100)&lt;/p&gt;
+Unexpected indentation.&lt;/div&gt;
+&lt;blockquote&gt;
+os.chdir(repo.name)
+print('Updating repo: %s' % (repo.name))
+os.system('git pull')
+os.chdir('..')&lt;/blockquote&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 104)&lt;/p&gt;
+Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;else:&lt;/dt&gt;
+&lt;dd&gt;&lt;dl class="first last docutils"&gt;
+&lt;dt&gt;if private:&lt;/dt&gt;
+&lt;dd&gt;print('Cloning private repo: %s' % (repo.name))
+os.system('git clone &lt;a class="reference external" href="mailto:git&amp;#64;github.com"&gt;git&amp;#64;github.com&lt;/a&gt;:%s/%s.git' % (repo.owner, repo.name))&lt;/dd&gt;
+&lt;dt&gt;else:&lt;/dt&gt;
+&lt;dd&gt;print('Cloning repo: %s' % (repo.name))
+os.system('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;# return to base
+os.chdir('..')
+print&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://gist.github.com/619473"&gt;Source on GitHub&lt;/a&gt; Enjoy!&lt;/p&gt;
 </summary></entry><entry><title>OS X Trash Freedom</title><link href="http://kennethreitz.com/blog//os-x-trash-freedom.html" rel="alternate"></link><updated>2010-09-22T19:46:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2010-09-22:/blog//os-x-trash-freedom.html/</id><summary type="html">&lt;p&gt;I noticed today that i had 120GiB of data in my Mac's Trashcan. I
 had enough. so I tried to kill it, and discovered a nice hidden
