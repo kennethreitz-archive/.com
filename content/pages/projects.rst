@@ -1,33 +1,46 @@
 Open Projects
 #############
 
+
 OSXPython.org: Best Practices for Pythonistas using OS X
+========================================================
 
 OSXPython.org is a (work in progress) website detailing Python best practices for OS X developers. Topics will include Proper Installation, Pip & Distribute, Building redistributable applications with Py2App + PyQt, Virtualenvs, Source Control techniques, &c.
 { Source on GitHub } { Website }
 
 Released Python Modules
++++++++++++++++++++++++
+
 Tablib: Tabular Dataset Library
+===============================
 
 Tablib is a simple module for working with tabular datasets. It allows you create tables of data using standard Python datatypes, manipulate them, and easily export to Excel, JSON, YAML, and CSV.
 { Source on GitHub } { PyPi Listing }
 
+
 ShowMe: Quick application debugging and analysis
+================================================
 
 ShowMe is a simple set of extremely useful function decorators for Python. It allows you to view trace information, execution time, cputime, and function documentation.
 { Source on GitHub } { PyPi Listing }
 
+
 Xerox: System Copy+Paste
+========================
 
 Xerox is a copy + paste module for python. It’s aim is to be as incredibly simple as possible. Supported platforms are currently OS X, Linux, and Windows.
 { Source on GitHub } { PyPi Listing }
 
+
 GistAPI: Wrapper for the Gist API
+=================================
 
 GistAPI is a simple Python wrapper for GitHub’s Gist API. It allows you to search, list, and manipluate Gists and their contents.
 { Source on GitHub } { PyPi Listing }
 
+
 Argue: Because your applications need a good argument!
+======================================================
 
 Argue is a command line parser, intended to make writing command line applications easy and painless. It uses built-in Python types (lists, dictionaries, etc) to define options, which makes configuration clear and concise. Additionally it contains possibility to handle subcommands (e.g. git commit or svn obliterate).
 { Source on GitHub } { PyPi Listing }
@@ -38,7 +51,7 @@ Throughout the day, I access from Google Reader from my work computer, laptop, i
 { Source on GitHub } (not yet added to cheeseshop)
 
 TextMate Tools
-kCode: TextMate Enhancment Bundle for Developers
+kCode: TextMate Enhancement Bundle for Developers
 
 kCode offers the ultimate in “Zen Coding”, completion, and various triggers for Python, HTML, CSS, and PHP development.
 { Source on GitHub }

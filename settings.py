@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 AUTHOR = u'Kenneth Reitz'
-SITENAME = u'Kenneth Reitz'
-SITEURL = 'http://kennethreitz.com'
+SITENAME = u'Kenneth\'s log'
+SITEURL = 'http://kennethreitz.com/blog/'
 
 GITHUB_URL = 'http://github.com/kennethreitz/'
 DISQUS_SITENAME = 'kennethreitz'
-PDF_GENERATOR = False
+PDF_GENERATOR = True
 
-LINKS = ()
+LINKS = (('test', 'http://test.com'),)
 
 SOCIAL = ()
 

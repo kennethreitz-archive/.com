@@ -2,7 +2,6 @@
 ##################
 
 :date: 2011-01-02 16:20
-:tags: 2011, 2010, Resolutions
 :category: Life
 :author: Kenneth Reitz
 

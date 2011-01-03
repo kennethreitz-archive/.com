@@ -33,12 +33,14 @@
 		<nav><ul>
 		
 		{% for title, link in MENUITEMS %}
-		    <li><a href="{{ link }}">{{ title }}</a></li>
+			<li><a href="{{ link }}">{{ title }}</a></li>
 		{% endfor %}
 		
 		{% if DISPLAY_PAGES_ON_MENU %}
 			{% for page in PAGES %}
-			    <li><a href="{{ SITEURL }}/pages/{{ page.url }}">{{ page.title }}</a></li>
+				{% if not page.hide %}
+				    <li><a href="{{ SITEURL }}/pages/{{ page.url }}">{{ page.title }}</a></li>
+				{% endif %}
 			{% endfor %}
 		{% endif %}
 		
