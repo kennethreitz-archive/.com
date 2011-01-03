@@ -7,6 +7,7 @@ GITHUB_URL = 'http://github.com/kennethreitz/'
 DISQUS_SITENAME = 'kennethreitz'
 PDF_GENERATOR = False
 
+BYLINE = '&copy; 2011 Kenneth Reitz &amp; co. All Rights Reserved.'
 LINKS = (
 	('GitHub Repos', 'http://github.com/kennethreitz'),
 	('Photography (Flickr)', 'http://flickr.com/kennethreitz'),

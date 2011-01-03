@@ -10,7 +10,7 @@ rapid development frameworks, primarily Django (Python!), Grails
 (Groovy / Java), and Symfony (PHP). I’ve been enjoying it. Alot.
 Life has never been better.
 
-DRY tactics. Code portability. Who likes to repeat themsleves
+DRY tactics. Code portability. Who likes to repeat themselves
 anyway? It’s a great idea.
 
 My favorite concept to date is the Object Relational Model (ORM).

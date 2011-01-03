@@ -2,15 +2,19 @@ The Setup
 #########
 
 :date: 2010-08-03 00:43
-:category: Code
+:category: Life
 
 
 I'm Kenneth Reitz, one of the two co-founders of Züm Hosting. I'm a
 passionate Python developer for `NetApp <http://netapp.com>`_. I
 typically spend my nights developing a number of open source
-projects, and my weekends architecting the web. What hardware are
-you using? ---------------------------- My sole machine is a 2010
-MacBook Pro running a Core i7 processor at 2.66 GHz w/ 8GB of DDR3
+projects, and my weekends architecting the web. 
+
+What hardware are you using?
+---------------------------- 
+
+My sole machine is a 2010 MacBook Pro running a Core i7 processor 
+at 2.66 GHz w/ 8GB of DDR3
 RAM. It's 15" non-reflective screen runs at a beautiful 1680 x
 1050. It features both a 250GB SSD and 500 GB HDD, for a total of
 750GB of local storage, thanks to the
@@ -32,7 +36,13 @@ exists on a NAS attached to my Netgear WNR3500L router. My code is
 backed up to various Git repositories local and across the net. All
 web projects and databases of relevance are backed up to Amazon S3
 on a nightly basis, along with all my tweets, Flickr photos, and
-Gmail messages. And what software? ------------------ I develop and
+Gmail messages. 
+
+
+And what software?
+------------------
+
+I develop and
 live on the latest build of Snow Leopard. My main Python
 environment is the latest 2.7 release, along with well managed
 virtualenvs for all other releases
@@ -87,5 +97,8 @@ organized in iTunes, regardless of format, with
 NetFlix, and BlueRay Disks with a Play Station 3 Slim. I play
 emulated retro video games Wii. Best $200 I've ever spent. For
 communication, I use iChat + Chax, Linkinus, Echofon, and Skype.
-What would be your dream setup? ------------------------------- No
-power chord.
+
+What would be your dream setup?
+------------------------------- 
+
+No more chords.

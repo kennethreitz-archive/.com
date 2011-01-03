@@ -72,7 +72,7 @@
 
 	{% if SOCIAL %}
 		<div class="social">
-			<h2>social</h2>
+
 			<ul>
 			    <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">atom feed</a></li>
 			    {% if FEED_RSS %}
@@ -90,7 +90,7 @@
 
 	<footer id="contentinfo" class="body">
 		<address id="about" class="vcard body">
-		&copy; 2011 Kenneth Reitz &amp; co. .
+		{{BYLINE}}
 		</address><!-- /#about -->
 
 	</footer><!-- /#contentinfo -->
