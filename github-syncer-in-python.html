@@ -70,26 +70,27 @@
 		
 			<div class="entry-content">
 			<footer class="post-info">
-					<abbr class="published" title="2010-10-10T16:20:00">
+					<abbr class="published" title="2010-10-10T19:24:00">
 						Sun 10 October 2010
 					</abbr>
 					<p>In <a href="./category/Code.html">Code</a>. 
-			<p>tags: <a href="./tag/GitHub.html">GitHub</a><a href="./tag/Python.html">Python</a></p>
+			
 </p>
 			</footer><!-- /.post-info -->
 		
 		
-		<p>Today I rewrote a little utility I’ve been using for a while to keep all of my GitHub repos up to date and organized. It updates / clones all private, public, and watched repositories from your account. It also detects if your repo is a mirror or fork, and files it accordingi.</p>
-<p>My watched list is huge, but I like to have a local copy of my favorite libraries. You never know if the owner will take it down, or worse, move it to another SCM! ;-)</p>
-<p>The script depends on the GitHub2 module. If you don’t have it, you can install it easily.</p>
+		<p>Today I rewrote a little utility I've been using for a while to
+keep all of my GitHub repos up to date and organized. It updates /
+clones all private, public, and watched repositories from your
+account. It also detects if your repo is a mirror or fork, and
+files it accordingly. My watched list is huge, but I like to have a
+local copy of my favorite libraries. You never know if the owner
+will take it down, or worse, move it to another SCM! ;-) The script
+depends on the **GitHub2** module. If you don't have it, you
+can install it easily. $ pip install github2 I recommend running
+this from `~/repos/`. #!/usr/bin/env python #
+-<em>- coding: utf-8 -</em>-</p>
 <pre class="literal-block">
-$ pip install github2
-</pre>
-<p>I recommend running this from <tt class="docutils literal">~/repos/</tt>.</p>
-<pre class="literal-block">
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 &quot;&quot;&quot;Kenneth Reitz's GitHub Syncer
 
 This script uses the GitHub API to get a list of all forked, mirrored, public, and
@@ -103,7 +104,7 @@ It will organize your repos into the following directory structure:
   ├── mirrors  (public mirror repos)
   ├── private  (private repos)
   ├── public   (public repos)
-  ├── watched  (public watched repos)
+  ├── watched  (this script)
   └── sync.py  (this script)
 
 Requires Ask Solem's github2 (http://pypi.python.org/pypi/github2).
@@ -181,6 +182,7 @@ for org, repos in repos.iteritems():
         os.chdir('..')
         print
 </pre>
+<p><a class="reference external" href="http://gist.github.com/619473">Source on GitHub</a> Enjoy!</p>
 
 		</div><!-- /.entry-content -->
 		
