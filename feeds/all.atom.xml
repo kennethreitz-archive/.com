@@ -173,9 +173,11 @@ Henry,Ford,83
 </summary></entry><entry><title>The Setup</title><link href="http://kennethreitz.com/blog//the-setup.html" rel="alternate"></link><updated>2010-08-03T00:43:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2010-08-03:/blog//the-setup.html/</id><summary type="html">&lt;p&gt;I'm Kenneth Reitz, one of the two co-founders of Züm Hosting. I'm a
 passionate Python developer for &lt;a class="reference external" href="http://netapp.com"&gt;NetApp&lt;/a&gt;. I
 typically spend my nights developing a number of open source
-projects, and my weekends architecting the web. What hardware are
-you using? ---------------------------- My sole machine is a 2010
-MacBook Pro running a Core i7 processor at 2.66 GHz w/ 8GB of DDR3
+projects, and my weekends architecting the web.&lt;/p&gt;
+&lt;div class="section" id="what-hardware-are-you-using"&gt;
+&lt;h2&gt;What hardware are you using?&lt;/h2&gt;
+&lt;p&gt;My sole machine is a 2010 MacBook Pro running a Core i7 processor
+at 2.66 GHz w/ 8GB of DDR3
 RAM. It's 15&amp;quot; non-reflective screen runs at a beautiful 1680 x
 1050. It features both a 250GB SSD and 500 GB HDD, for a total of
 750GB of local storage, thanks to the
@@ -197,7 +199,11 @@ exists on a NAS attached to my Netgear WNR3500L router. My code is
 backed up to various Git repositories local and across the net. All
 web projects and databases of relevance are backed up to Amazon S3
 on a nightly basis, along with all my tweets, Flickr photos, and
-Gmail messages. And what software? ------------------ I develop and
+Gmail messages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="and-what-software"&gt;
+&lt;h2&gt;And what software?&lt;/h2&gt;
+&lt;p&gt;I develop and
 live on the latest build of Snow Leopard. My main Python
 environment is the latest 2.7 release, along with well managed
 virtualenvs for all other releases
@@ -251,9 +257,12 @@ organized in iTunes, regardless of format, with
 &lt;a class="reference external" href="http://www.iflicksapp.com/"&gt;iFlicks&lt;/a&gt;. I stream 1080 videos,
 NetFlix, and BlueRay Disks with a Play Station 3 Slim. I play
 emulated retro video games Wii. Best $200 I've ever spent. For
-communication, I use iChat + Chax, Linkinus, Echofon, and Skype.
-What would be your dream setup? ------------------------------- No
-power chord.&lt;/p&gt;
+communication, I use iChat + Chax, Linkinus, Echofon, and Skype.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-would-be-your-dream-setup"&gt;
+&lt;h2&gt;What would be your dream setup?&lt;/h2&gt;
+&lt;p&gt;No more chords.&lt;/p&gt;
+&lt;/div&gt;
 </summary></entry><entry><title>OS X Development Tool: RegExihbit</title><link href="http://kennethreitz.com/blog//os-x-development-tool-regexihbit.html" rel="alternate"></link><updated>2010-07-26T03:12:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2010-07-26:/blog//os-x-development-tool-regexihbit.html/</id><summary type="html">&lt;p&gt;Working with overly complex Regular Expressions can quickly become
 quite an ordeal of trial and error. RegExhibit is a fantastic tool
 for OS X users that allows you to see matches as you type.
@@ -567,8 +576,6 @@ learn more about programming, &lt;a class="reference external" href="/contact-me
 one-on-one lesson. for i in range(1,101): if not i % 15: print
 &amp;quot;FizzBuzz&amp;quot; elif not i % 3: print &amp;quot;Fizz&amp;quot; elif not i % 5: print
 &amp;quot;Buzz&amp;quot; else: print i&lt;/p&gt;
-</summary></entry><entry><title>Tim Ferriss and Insights on the Social Web</title><link href="http://kennethreitz.com/blog//tim-ferriss-and-insights-on-the-social-web.html" rel="alternate"></link><updated>2009-12-15T00:56:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-12-15:/blog//tim-ferriss-and-insights-on-the-social-web.html/</id><summary type="html">&lt;p&gt;This is an absolute must watch for anyone interested in the social
-web and online promotion.&lt;/p&gt;
 </summary></entry><entry><title>Facebook and Google Launch Url Shortners</title><link href="http://kennethreitz.com/blog//facebook-and-google-launch-url-shortners.html" rel="alternate"></link><updated>2009-12-14T23:51:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-12-14:/blog//facebook-and-google-launch-url-shortners.html/</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://goo.gl"&gt;goo.gl&lt;/a&gt; and &lt;a class="reference external" href="http://fb.me"&gt;fb.me&lt;/a&gt;,
 respectively.&lt;/p&gt;
 </summary></entry><entry><title>Google Launches Public DNS Service</title><link href="http://kennethreitz.com/blog//google-launches-public-dns-service.html" rel="alternate"></link><updated>2009-12-03T17:18:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-12-03:/blog//google-launches-public-dns-service.html/</id><summary type="html">&lt;p&gt;Google just launched a
@@ -735,12 +742,6 @@ tutorial
 for`Cracking PGP with an Amazon EC2 instance &amp;amp; EDPR &amp;lt;&lt;a class="reference external" href="http://news.electricalchemy.net/2009/10/cracking-passwords-in-cloud.html"&gt;http://news.electricalchemy.net/2009/10/cracking-passwords-in-cloud.html&lt;/a&gt;&amp;gt;`_.
 Again, life is good. &lt;strong&gt;Remember:&lt;/strong&gt; if you create an successful open
 door web service, all people, good and bad, will come. &lt;img alt="image" src="http://s3.amazonaws.com/media.kennethreitz.com/black-hattitude-82.jpg" /&gt;&lt;/p&gt;
-</summary></entry><entry><title>More Google Wave Invites! Get 'em now!</title><link href="http://kennethreitz.com/blog//more-google-wave-invites-get-em-now.html" rel="alternate"></link><updated>2009-10-30T18:41:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-30:/blog//more-google-wave-invites-get-em-now.html/</id><summary type="html">&lt;p&gt;My Google Wave invite manna was just replenished!
-If you'd like an invite, leave a comment and be creative!
-Don't believe me? Then
-&lt;a class="reference external" href="http://s3.amazonaws.com/media.kennethreitz.com/wave_invites-63.png"&gt;see for yourself&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;Update: As of 1:26 PM (EST), November 23, only**2 invites remain!**
-&lt;img alt="image" src="http://s3.amazonaws.com/media.kennethreitz.com/arrow-down-circle-52.jpg" /&gt;&lt;/p&gt;
 </summary></entry><entry><title>GitHub + Strategy</title><link href="http://kennethreitz.com/blog//github-strategy.html" rel="alternate"></link><updated>2009-10-30T16:12:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-30:/blog//github-strategy.html/</id><summary type="html">&lt;p&gt;GitHub is currently &lt;a class="reference external" href="http://github.com"&gt;down&lt;/a&gt;. And that is very
 sad. However, they have an
 &lt;a class="reference external" href="http://github.com/images/error/angry_unicorn.png"&gt;Awesome Angry Unicorn&lt;/a&gt;.
@@ -749,15 +750,10 @@ my projects. If you're going to make a web application, give it
 some personality. This will not only keep your userbase
 entertained, but will serve as a nice insurance package when you
 let them down. &lt;img alt="image" src="http://s3.amazonaws.com/media.kennethreitz.com/image.axd-96.png" /&gt;&lt;/p&gt;
-</summary></entry><entry><title>Installing a LAMP Stack on Ubuntu 9.04 Server</title><link href="http://kennethreitz.com/blog//installing-a-lamp-stack-on-ubuntu-904-server.html" rel="alternate"></link><updated>2009-10-28T07:55:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-28:/blog//installing-a-lamp-stack-on-ubuntu-904-server.html/</id><summary type="html">&lt;pre class="literal-block"&gt;
-sudo apt-get install apache2 php5 mysql-server phpmyadmin  php5-curl php5-mysql
-&lt;/pre&gt;
 </summary></entry><entry><title>imo.im &amp;gt; meebo</title><link href="http://kennethreitz.com/blog//imoim-gt-meebo.html" rel="alternate"></link><updated>2009-10-27T22:50:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-27:/blog//imoim-gt-meebo.html/</id><summary type="html">&lt;p&gt;I've been a long-time user of &lt;a class="reference external" href="http://meebo.com"&gt;meebo&lt;/a&gt;, a
 web-based chat client.
 I'm not going to use it anymore now. I found...
 { &lt;a class="reference external" href="https://imo.im/"&gt;imo.im&lt;/a&gt; }&lt;/p&gt;
-</summary></entry><entry><title>Amazon's RDB Service</title><link href="http://kennethreitz.com/blog//amazons-rdb-service.html" rel="alternate"></link><updated>2009-10-27T21:51:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-27:/blog//amazons-rdb-service.html/</id><summary type="html">&lt;p&gt;Amazon offers &lt;a class="reference external" href="http://aws.amazon.com/rds/"&gt;MySQL hosting&lt;/a&gt; now.
-&lt;strong&gt;Life is good&lt;/strong&gt;.&lt;/p&gt;
 </summary></entry><entry><title>Apple + Developers = Earnings</title><link href="http://kennethreitz.com/blog//apple-developers-earnings.html" rel="alternate"></link><updated>2009-10-25T16:52:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-25:/blog//apple-developers-earnings.html/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Apple, Inc&lt;/strong&gt; reported their
 &lt;a class="reference external" href="http://www.businessweek.com/technology/ByteOfTheApple/blog/archives/2009/10/apple_stock_hit.html"&gt;highest earnings ever&lt;/a&gt;
 today.
@@ -794,21 +790,6 @@ It has many advanced features such as: delegated administration,
 advanced reporting, and malware site protection. ###Pricing That
 price isn't listed :)
 &lt;a class="reference external" href="http://www.opendns.com/start/"&gt;Sign up today!&lt;/a&gt;&lt;/p&gt;
-</summary></entry><entry><title>Re: 'User Mytopia' by Jeff Antwood</title><link href="http://kennethreitz.com/blog//re-user-mytopia-by-jeff-antwood.html" rel="alternate"></link><updated>2009-10-25T16:52:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-25:/blog//re-user-mytopia-by-jeff-antwood.html/</id><summary type="html">&lt;p&gt;On a site like &lt;a class="reference external" href="http://www.serverfault.com"&gt;ServerFault&lt;/a&gt; or
-&lt;a class="reference external" href="http://www.stackoverflow.com"&gt;StackOverflow&lt;/a&gt;, users will always
-be focusing on the task at hand: exchanging answers. If they see a
-box to enter text, they enter text, not read throughout the page.
-&lt;a class="reference external" href="http://www.codinghorror.com/blog/archives/001306.html"&gt;User Mytopia&lt;/a&gt;
-by Jeff Antwood&lt;/p&gt;
-</summary></entry><entry><title>Dearest Google,</title><link href="http://kennethreitz.com/blog//dearest-google.html" rel="alternate"></link><updated>2009-10-25T16:51:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-25:/blog//dearest-google.html/</id><summary type="html">&lt;p&gt;I'm sorry for taking you for granted. You supply my phone number,
-email address, primary chat platform, site's analytics, the
-ultimate rss reader, some money on the side. Almost all of the
-knowledge in my brain has been brought to me by (or through) you.
-Without you, I'd be so lost. Never forget that. And **never**
-abuse that. Sincerely yours, Kenneth Reitz&lt;/p&gt;
-</summary></entry><entry><title>Zsh Configuration</title><link href="http://kennethreitz.com/blog//zsh-configuration.html" rel="alternate"></link><updated>2009-10-17T16:47:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-10-17:/blog//zsh-configuration.html/</id><summary type="html">&lt;p&gt;##In case you don't know, Zsh is the greatest command prompt of all
-time—but only after you configure it. Here's my configuration.
-Updated regularly.&lt;/p&gt;
 </summary></entry><entry><title>DISQUS 2 Is Awesome</title><link href="http://kennethreitz.com/blog//disqus-2-is-awesome.html" rel="alternate"></link><updated>2009-09-13T06:51:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-09-13:/blog//disqus-2-is-awesome.html/</id><summary type="html">&lt;p&gt;I have to admit, for a while I really disliked DISQUS.&lt;/p&gt;
 &lt;p&gt;I’m a huge fan of WordPress, and do a signifiant amount of my
 development within it. I’d work on a new site, and then install the
@@ -895,47 +876,6 @@ they're enjoying the rewards and services we offer. If you have any
 other questions or concerns, please don't hesitate to contact us.
 Sincerely, Kathy Borders Rewards Customer Care ## My Reaction Well,
 I didn't see that coming.&lt;/p&gt;
-</summary></entry><entry><title>Attention: Web Developers Using OS X</title><link href="http://kennethreitz.com/blog//attention-web-developers-using-os-x.html" rel="alternate"></link><updated>2009-09-02T19:24:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-09-02:/blog//attention-web-developers-using-os-x.html/</id><summary type="html">&lt;p&gt;Somebody needs to develop a text editor with the elegance of
-&lt;em&gt;TextMate&lt;/em&gt; and completion power of &lt;em&gt;Eclipse&lt;/em&gt;.
-&lt;strong&gt;Immediately&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;That is all.&lt;/p&gt;
-</summary></entry><entry><title>Raising the Eyebrow at Snow Leopard</title><link href="http://kennethreitz.com/blog//raising-the-eyebrow-at-snow-leopard.html" rel="alternate"></link><updated>2009-09-02T06:36:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-09-02:/blog//raising-the-eyebrow-at-snow-leopard.html/</id><summary type="html">&lt;p&gt;Snow Leopard has been a huge item in the media lately. After months
-of media hype and build up, the day it was released, millions of
-Apple customers flooded the social web, telling everyone of their
-upgrade. It was all we heard about for days. And I’m still hearing
-about it.&lt;/p&gt;
-&lt;p&gt;I’m typically quite an early adopter, but I have yet to make the
-update.&lt;/p&gt;
-&lt;p&gt;Why? Here’s a list of applications that I use every day that will
-no longer function as soon as I update to Snow Leopard:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;GeekTool [resolved]&lt;/li&gt;
-&lt;li&gt;Visor for Terminal&lt;/li&gt;
-&lt;li&gt;Smart Scroll&lt;/li&gt;
-&lt;li&gt;TextMate [resolved]&lt;/li&gt;
-&lt;li&gt;Magnifique&lt;/li&gt;
-&lt;li&gt;Quicksilver Preferences! :(&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I’m a lover of all that is new and wonderful, but some of these
-applications are essential to my workflow (some more than others of
-course). I could work around them of course, but I’m so fond of
-them, I don’t really want to switch. Not to mention I’ll mention my
-custom icons and theme.&lt;/p&gt;
-&lt;p&gt;Hopefully all of these issues will be fixed soon. As soon as they
-are, I’ll be able to fully enjoy these features:&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Google Contacts &amp;amp; Calendar Support!!!&lt;/li&gt;
-&lt;li&gt;Exchange!&lt;/li&gt;
-&lt;li&gt;Context-sensitive Menus&lt;/li&gt;
-&lt;li&gt;Python 2.6 is bundled (with easy_stetup!!!)&lt;/li&gt;
-&lt;li&gt;All of those great Dev API’s (like grand central)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I love that fact that on any install of Snow Leopard, if I want to
-install some new libraries, all that I will have to do is type:
-sudo easy_install libraryname&lt;/p&gt;
-&lt;p&gt;Of course, I can do this just fine right now. But how awesome will
-it be to do that out of the box? Life couldn’t be sweeter. I can’t
-wait!&lt;/p&gt;
 </summary></entry><entry><title>Your Degree Is Worthless; Collaborate.</title><link href="http://kennethreitz.com/blog//your-degree-is-worthless-collaborate.html" rel="alternate"></link><updated>2009-09-01T21:17:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-09-01:/blog//your-degree-is-worthless-collaborate.html/</id><summary type="html">&lt;p&gt;I’ve always been a self-motivated learner as well as a free
 thinker. I was never one to get involved in cliques or social
 ladders. Despite the fact that I was raised being constantly told
@@ -955,8 +895,10 @@ you could ever make in your life. The time to “make it or break
 it”. Where every young man goes to be become a man. So I went.
 While high-school never engaged me, I assumed that courses about
 career-relevant subjects would interest me in a university setting.
-I was wrong. I was very, very wrong. College Life ------------ I
-studied Plato, Homer, and Socrates, Turing Machines, and
+I was wrong. I was very, very wrong.&lt;/p&gt;
+&lt;div class="section" id="college-life"&gt;
+&lt;h2&gt;College Life&lt;/h2&gt;
+&lt;p&gt;I studied Plato, Homer, and Socrates, Turing Machines, and
 Single-State-Automata. I analyzed the progression of American
 Popular Music from the 1920s to today. I learned how to draw, play
 the marimba properly, and splatter paint on walls. I attempted
@@ -969,7 +911,11 @@ The average college education in America costs 9 cents a minute.
 Every minute. Every day. A complete waste. And I was working 35
 hours a week as a graphics design intern, working at odd hours of
 the night, attempting to pay for all of this. It was impossible,
-and I was unengaged. The Plunge ---------- So, after totally losing
+and I was unengaged.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-plunge"&gt;
+&lt;h2&gt;The Plunge&lt;/h2&gt;
+&lt;p&gt;So, after totally losing
 interest in class or anything related to it, I gave up and dropped
 out. I didn’t want to get further in debt. So I moved back home,
 defeated, and tried my hardest to get my life back in order. I got
@@ -977,13 +923,16 @@ my high-school job back at McDonald’s. I worked harder than I ever
 have in my life. I didn’t have anything else better to do, so I
 worked as much as I could all the time. I worked one 65 hour week -
 but that got old really fast. I was again, unengaged. Then, one
-day, I quit McDonanld’s without notice. Not best practice of
+day, I quit McDonald’s without notice. Not best practice of
 course, but I didn’t want to spend any more time there. It’s
 strange what a terrible work environment it is. After a few short
 weeks, you begin to think there isn’t anything outside those walls.
 It was clear that it wasn’t getting me anywhere, so I set out with
-my laptop to try to find something better. How It All Turned Around
------------------------- I spent alot of time on some freelance
+my laptop to try to find something better.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-it-all-turned-around"&gt;
+&lt;h2&gt;How It All Turned Around&lt;/h2&gt;
+&lt;p&gt;I spent a lot of time on some freelance
 websites, where you bid for odd jobs, usually settling for some
 ridiculously low amount of money here and there. That didn’t last
 long. I remembered coming across a guy on Twitter from my hometown,
@@ -996,8 +945,11 @@ mall was a room. Inside: the COO of a major internet company, tech
 consultants, graphic designers, writers, author, bloggers,
 freelancers, and so much more. I met everyone in and around town. I
 sat in on think tank lunches. People cared about what I had to say.
-We collaborated. Collaboration is Everything.
----------------------- For the first time in my life, I was meeting
+We collaborated.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="collaboration-is-everything"&gt;
+&lt;h2&gt;Collaboration is Everything.&lt;/h2&gt;
+&lt;p&gt;For the first time in my life, I was meeting
 interesting people with awesome experience, willing to share and
 collaborate what they have learned with me. And I did the same. I
 soaked in endless amounts of information. One simple room full of a
@@ -1012,8 +964,11 @@ I didn’t want to be. I rose above. I am now a Web Applications
 Developer at a respectful technology firm. No degree. No debt. Only
 an open mind. I gain more knowledge and experience in a single
 workday than I did during my entire college career. I’m in the real
-world. And I’m loving every minute of it. In Conclusion
-------------- Looking back, I’m comfortable saying that dropping
+world. And I’m loving every minute of it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="in-conclusion"&gt;
+&lt;h2&gt;In Conclusion&lt;/h2&gt;
+&lt;p&gt;Looking back, I’m comfortable saying that dropping
 out of college has been the best decision I’ve ever made. If I
 would have gone through the entire education program, what would I
 have to show for it? $150,000 in debt, a piece of paper, and four
@@ -1023,6 +978,7 @@ before you decide to spend $150,000 on a bachelor’s degree in a
 field you’re not so certain about. Personally, I’d rather spend
 that money on something that will actually benefit me: like a
 house.&lt;/p&gt;
+&lt;/div&gt;
 </summary></entry><entry><title>Amazon AWS Introduces Virtual Private Cloud</title><link href="http://kennethreitz.com/blog//amazon-aws-introduces-virtual-private-cloud.html" rel="alternate"></link><updated>2009-08-26T12:07:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-08-26:/blog//amazon-aws-introduces-virtual-private-cloud.html/</id><summary type="html">&lt;p&gt;Dear Amazon EC2 Customer,&lt;/p&gt;
 &lt;p&gt;We are excited to announce the limited beta of Amazon Virtual
 Private Cloud (Amazon VPC), a secure and seamless bridge between
@@ -1240,7 +1196,7 @@ So, after a great number of hours, and realizing that making things
 coordinate on black is far easier than white, I settled on a theme
 that was colorful, functional, useful, triatic, and
 most-importantly, not a piece of crap. Enjoy!&lt;/p&gt;
-</summary></entry><entry><title>The Truth of Facebook's FriendFeed Aquisition</title><link href="http://kennethreitz.com/blog//the-truth-of-facebooks-friendfeed-aquisition.html" rel="alternate"></link><updated>2009-08-11T00:53:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-08-11:/blog//the-truth-of-facebooks-friendfeed-aquisition.html/</id><summary type="html">&lt;p&gt;As I'm sure most of you know, &lt;a class="reference external" href="http://facebook.com"&gt;Facebook&lt;/a&gt;
+</summary></entry><entry><title>The Truth of Facebook's FriendFeed Acquisition</title><link href="http://kennethreitz.com/blog//the-truth-of-facebooks-friendfeed-acquisition.html" rel="alternate"></link><updated>2009-08-11T00:53:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-08-11:/blog//the-truth-of-facebooks-friendfeed-acquisition.html/</id><summary type="html">&lt;p&gt;As I'm sure most of you know, &lt;a class="reference external" href="http://facebook.com"&gt;Facebook&lt;/a&gt;
 decided today that it was going to buy
 &lt;a class="reference external" href="http://friendfeed.com/kennethreitz"&gt;FriendFeed&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;My opinion might be a little biased... I just discovered FF
@@ -1412,7 +1368,7 @@ Virginia Tech this semester. Very sad. So what is he doing now?
 He's been applying for a job at Old Navy and Target. Why? He just
 spent over $20,000 for a year and a half of top-knotch schooling in
 his desired field! You'd think he'd at least apply for an
-internship at some Enginnering firm or something.&lt;/p&gt;
+internship at some Engineering firm or something.&lt;/p&gt;
 &lt;p&gt;When I presented the idea to him, he said that the thought had
 never crossed his mind.&lt;/p&gt;
 </summary></entry><entry><title>Wasted Talent</title><link href="http://kennethreitz.com/blog//wasted-talent.html" rel="alternate"></link><updated>2009-07-15T18:30:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-07-15:/blog//wasted-talent.html/</id><summary type="html">&lt;p&gt;I'd say that 95% percent of the students that I met at George Mason
@@ -1420,7 +1376,7 @@ University my Freshman year had &lt;em&gt;no idea&lt;/em&gt; why they were even 
 This is so sad.&lt;/p&gt;
 &lt;p&gt;For me, going to college was more about getting out of the house
 than anything else. And it worked. I did get out of the house. And
-I learned alot. I found my passion.&lt;/p&gt;
+I learned a lot. I found my passion.&lt;/p&gt;
 &lt;p&gt;Other students worked their butts off trying to take as many
 credits as possible, and when asked what they want to do for a
 living they don't have the slightest idea. Why would you go to
@@ -1772,10 +1728,6 @@ I'm looking for some good topic ideas.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ideas so far:&lt;/strong&gt; - Gadget Reviews - Emotional posts that just
 can't be captured by words - In general thoughts on the tech world&lt;/p&gt;
 &lt;p&gt;I'll see what I can do about posting one this week.&lt;/p&gt;
-</summary></entry><entry><title>Twitter Tracker!</title><link href="http://kennethreitz.com/blog//twitter-tracker.html" rel="alternate"></link><updated>2009-07-10T10:11:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-07-10:/blog//twitter-tracker.html/</id><summary type="html">&lt;p&gt;While this is one of the stupidest Conan sketches I have seen in a
-very long while (at least since the writers strike), this is so
-utterly funny that I have to pass it along. Incredibly applicable
-as well.&lt;/p&gt;
 </summary></entry><entry><title>Not Acting on Ideas</title><link href="http://kennethreitz.com/blog//not-acting-on-ideas.html" rel="alternate"></link><updated>2009-07-10T10:08:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-07-10:/blog//not-acting-on-ideas.html/</id><summary type="html">&lt;p&gt;As of yesterday, my second idea that I actually thought would work
 well was thought up by someone else. The first instance was a game
 that me and my friend &lt;a class="reference external" href="http://twitter.com/mikeXocon/"&gt;&amp;#64;MikeXocon&lt;/a&gt;
@@ -1890,11 +1842,11 @@ Python. I will now be working with .NET and SharePoint.&lt;/p&gt;
 &lt;p&gt;&amp;quot;Using SharePoint gives our clients a tremendous amount of security
 – they can trust that if, for whatever reason, something were to
 happen to us, their software could still be serviced by someone
-else.&amp;quot; That's certianly justifiable and understandable. That's a
+else.&amp;quot; That's certainly justifiable and understandable. That's a
 pretty good idea actually. I like it.&lt;/p&gt;
 &lt;p&gt;After looking into ASP.NET, I was actually quite surprised. The
-code is alot cleaner than PHP. It looks rather powerful actually.&lt;/p&gt;
-&lt;p&gt;Anyway, that's why I've crosssed over. No hard feelings :)&lt;/p&gt;
+code is a lot cleaner than PHP. It looks rather powerful actually.&lt;/p&gt;
+&lt;p&gt;Anyway, that's why I've crossed over. No hard feelings :)&lt;/p&gt;
 </summary></entry><entry><title>Reflections on Windows 7</title><link href="http://kennethreitz.com/blog//reflections-on-windows-7.html" rel="alternate"></link><updated>2009-05-06T04:01:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2009-05-06:/blog//reflections-on-windows-7.html/</id><summary type="html">&lt;p&gt;While I have not had the opportunity to try the latest Windows 7
 Release Candidate, I have done a bit of reading on the subject. In
 my research, I have made the following observances&lt;/p&gt;
