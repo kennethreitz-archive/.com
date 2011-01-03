@@ -8,13 +8,15 @@ DISQUS_SITENAME = 'kennethreitz'
 PDF_GENERATOR = False
 
 LINKS = (
-	('GitHub', 'http://github.com/kennethreitz'),
-	('Twitter', 'http://twitter.com/kennethreitz'),
-	('Flickr', 'http://flickr.com/kennethreitz'),
-	
-	
-	
+	('GitHub Repos', 'http://github.com/kennethreitz'),
+	('Photography (Flickr)', 'http://flickr.com/kennethreitz'),
+	('Latest Tweets', 'http://twitter.com/kennethreitz'),
+	('R&eacute;sum&eacute;', 'http://www.linkedin.com/in/kennethreitz'),
+	('Design Portfolio', 'http://pick.im/kenneth-reitz'),
+	('Later Stars', 'http://laterstars.com/kennethreitz'),
 )
 
-SOCIAL = ()
+SOCIAL = (
+	('Facebook', 'http://facebook.com/kennethreitz'),
+)
 

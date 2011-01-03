@@ -47,7 +47,7 @@ for post in tree.iterfind('//item'):
 	p = Post()
 	p.title = post.find('title').text
 	p.published = dtime(post.find('pubDate').text)
-	p.content = post.find('{http://purl.org/rss/1.0/modules/content/}encoded').text
+	p.content = smart_str(post.find('{http://purl.org/rss/1.0/modules/content/}encoded').text)
 
 	posts.append(p)
 
@@ -62,7 +62,7 @@ for post in posts:
 	#print post.__dict__
 	filename = post.published.strftime('%y%m%d-')
 	filename = filename + '_'.join(post.title.split()[:5]).lower()
-	for char in ('?', '\'', ':', '.', ''):
+	for char in '?\':.#/':
 		filename = filename.replace(char, '')
 	filename += ('.rst')
 
@@ -79,8 +79,8 @@ for post in posts:
 	article += ':date: %s\n' % post.published.strftime('%Y-%m-%d %H:%M')
 	article += ':category: Code\n\n\n'
 
-	article += content.rst
-	
+	article += smart_str(content.rst)
+	print post.title
 
 	with open(filename, 'w') as f:
 		f.write(article)
