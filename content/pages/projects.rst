@@ -1,6 +1,8 @@
 Open Projects
 #############
 
+:hide: True
+
 
 OSXPython.org: Best Practices for Pythonistas using OS X
 ========================================================

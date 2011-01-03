@@ -4,7 +4,6 @@ GitHub Syncer in Python
 :date: 2010-10-10 16:20
 :tags: GitHub, Python
 :category: Code
-:author: Kenneth Reitz
 
 
 Today I rewrote a little utility I’ve been using for a while to keep all of my GitHub repos up to date and organized. It updates / clones all private, public, and watched repositories from your account. It also detects if your repo is a mirror or fork, and files it accordingi.

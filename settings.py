@@ -7,7 +7,14 @@ GITHUB_URL = 'http://github.com/kennethreitz/'
 DISQUS_SITENAME = 'kennethreitz'
 PDF_GENERATOR = True
 
-LINKS = (('test', 'http://test.com'),)
+LINKS = (
+	('GitHub', 'http://github.com/kennethreitz'),
+	('Twitter', 'http://twitter.com/kennethreitz'),
+	('Flickr', 'http://flickr.com/kennethreitz'),
+	
+	
+	
+)
 
 SOCIAL = ()
 
