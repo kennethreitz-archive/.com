@@ -93,27 +93,6 @@ Zsh tab completion. :) From this: `cd
 good.
 [&lt;a class="reference external" href="http://wiki.github.com/joelthelion/autojump/"&gt;Project Page&lt;/a&gt;]
 [&lt;a class="reference external" href="http://github.com/joelthelion/autojump"&gt;Source on GitHub&lt;/a&gt;]&lt;/p&gt;
-</summary></entry><entry><title>Ventures: Python Development at NetApp</title><link href="http://kennethreitz.com/blog//ventures-python-development-at-netapp.html" rel="alternate"></link><updated>2010-05-26T18:15:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2010-05-26:/blog//ventures-python-development-at-netapp.html/</id><summary type="html">&lt;p&gt;For the past year I've been employed at
-&lt;a class="reference external" href="http://clutch-inc.com"&gt;Clutch, Inc&lt;/a&gt; in Winchester, Virginia, as
-a Systems Engineer and Web Developer. I've spent most of my time
-there developing content-based websites and web applications in
-PHP, advanced JavaScript, Grails, and the like. I even had the
-opportunity to develop the occassional Python application for
-server-side data manipulation/migration. But alas, all good things
-must come to an end. To that end, I have accepted a new position as
-a Senior Python Developer at
-&lt;a class="reference external" href="http://www.netapp.com"&gt;Network Appliance&lt;/a&gt; (RTP Campus), starting
-next week. One of the best parts of this opportunity will be my
-ability to work remotely from my hometown of Winchester, Virginia.
-I'll be setting up office in
-&lt;a class="reference external" href="http://brightcowork.com"&gt;Bright Cowork&lt;/a&gt; on the walking mall.
-While moving from service-oriented web development to internal
-tool/application development will be a change of pace, it's a very
-welcome one, and I look forward to every moment of it. I plan to
-leave my web development efforts to my various open source projects
-and client work, but on an as-need basis. My next step is to to
-focus my personal efforts on a new market entirely: iPhone app
-development &amp;amp; the iTunes store.&lt;/p&gt;
 </summary></entry><entry><title>GistAPI.py v0.1 Released</title><link href="http://kennethreitz.com/blog//gistapipy-v01-released.html" rel="alternate"></link><updated>2010-05-16T21:41:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2010-05-16:/blog//gistapipy-v01-released.html/</id><summary type="html">&lt;p&gt;Today I released GistAPI.py v0.1.2. It features a highly-optimized
 Gist object model and API wrapper which allows you to consume Gists
 in your next Python application. GitHub just rolled out a miniature
