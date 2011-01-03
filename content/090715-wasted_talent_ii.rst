@@ -2,7 +2,7 @@ Wasted Talent II
 ################
 
 :date: 2009-07-15 18:34
-:category: Code
+:category: Life
 
 
 To elaborate on my
@@ -16,7 +16,7 @@ Virginia Tech this semester. Very sad. So what is he doing now?
 He's been applying for a job at Old Navy and Target. Why? He just
 spent over $20,000 for a year and a half of top-knotch schooling in
 his desired field! You'd think he'd at least apply for an
-internship at some Enginnering firm or something.
+internship at some Engineering firm or something.
 
 When I presented the idea to him, he said that the thought had
 never crossed his mind.

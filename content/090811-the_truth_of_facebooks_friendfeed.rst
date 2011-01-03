@@ -1,5 +1,5 @@
-The Truth of Facebook's FriendFeed Aquisition
-#############################################
+The Truth of Facebook's FriendFeed Acquisition
+##############################################
 
 :date: 2009-08-11 00:53
 :category: Code

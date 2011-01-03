@@ -2,7 +2,7 @@ I Finally Got a MacBook
 #######################
 
 :date: 2009-08-07 05:56
-:category: Code
+:category: Life
 
 
 Yesterday I stopped by the Apple store in Fair Oaks Shopping Center

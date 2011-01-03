@@ -2,7 +2,7 @@ Was College Worth It?
 #####################
 
 :date: 2009-03-26 06:13
-:category: Code
+:category: Life
 
 
 George Mason University (at which I'm currently a non-studying

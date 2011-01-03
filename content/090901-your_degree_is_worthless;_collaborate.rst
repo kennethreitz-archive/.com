@@ -2,7 +2,7 @@ Your Degree Is Worthless; Collaborate.
 ######################################
 
 :date: 2009-09-01 21:17
-:category: Code
+:category: Life
 
 
 I’ve always been a self-motivated learner as well as a free
@@ -24,8 +24,12 @@ you could ever make in your life. The time to “make it or break
 it”. Where every young man goes to be become a man. So I went.
 While high-school never engaged me, I assumed that courses about
 career-relevant subjects would interest me in a university setting.
-I was wrong. I was very, very wrong. College Life ------------ I
-studied Plato, Homer, and Socrates, Turing Machines, and
+I was wrong. I was very, very wrong. 
+
+College Life 
+------------ 
+
+I studied Plato, Homer, and Socrates, Turing Machines, and
 Single-State-Automata. I analyzed the progression of American
 Popular Music from the 1920s to today. I learned how to draw, play
 the marimba properly, and splatter paint on walls. I attempted
@@ -38,7 +42,12 @@ The average college education in America costs 9 cents a minute.
 Every minute. Every day. A complete waste. And I was working 35
 hours a week as a graphics design intern, working at odd hours of
 the night, attempting to pay for all of this. It was impossible,
-and I was unengaged. The Plunge ---------- So, after totally losing
+and I was unengaged. 
+
+The Plunge
+----------
+
+So, after totally losing
 interest in class or anything related to it, I gave up and dropped
 out. I didn’t want to get further in debt. So I moved back home,
 defeated, and tried my hardest to get my life back in order. I got
@@ -46,13 +55,18 @@ my high-school job back at McDonald’s. I worked harder than I ever
 have in my life. I didn’t have anything else better to do, so I
 worked as much as I could all the time. I worked one 65 hour week -
 but that got old really fast. I was again, unengaged. Then, one
-day, I quit McDonanld’s without notice. Not best practice of
+day, I quit McDonald’s without notice. Not best practice of
 course, but I didn’t want to spend any more time there. It’s
 strange what a terrible work environment it is. After a few short
 weeks, you begin to think there isn’t anything outside those walls.
 It was clear that it wasn’t getting me anywhere, so I set out with
-my laptop to try to find something better. How It All Turned Around
------------------------- I spent alot of time on some freelance
+my laptop to try to find something better. 
+
+
+How It All Turned Around
+------------------------ 
+
+I spent a lot of time on some freelance
 websites, where you bid for odd jobs, usually settling for some
 ridiculously low amount of money here and there. That didn’t last
 long. I remembered coming across a guy on Twitter from my hometown,
@@ -65,8 +79,13 @@ mall was a room. Inside: the COO of a major internet company, tech
 consultants, graphic designers, writers, author, bloggers,
 freelancers, and so much more. I met everyone in and around town. I
 sat in on think tank lunches. People cared about what I had to say.
-We collaborated. Collaboration is Everything.
----------------------- For the first time in my life, I was meeting
+We collaborated. 
+
+
+Collaboration is Everything.
+---------------------------- 
+
+For the first time in my life, I was meeting
 interesting people with awesome experience, willing to share and
 collaborate what they have learned with me. And I did the same. I
 soaked in endless amounts of information. One simple room full of a
@@ -81,8 +100,13 @@ I didn’t want to be. I rose above. I am now a Web Applications
 Developer at a respectful technology firm. No degree. No debt. Only
 an open mind. I gain more knowledge and experience in a single
 workday than I did during my entire college career. I’m in the real
-world. And I’m loving every minute of it. In Conclusion
-------------- Looking back, I’m comfortable saying that dropping
+world. And I’m loving every minute of it. 
+
+
+In Conclusion
+------------- 
+
+Looking back, I’m comfortable saying that dropping
 out of college has been the best decision I’ve ever made. If I
 would have gone through the entire education program, what would I
 have to show for it? $150,000 in debt, a piece of paper, and four

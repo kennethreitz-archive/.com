@@ -2,7 +2,7 @@ What Seperates?
 ###############
 
 :date: 2009-07-15 00:28
-:category: Code
+:category: Life
 
 
 I want my thoughts to be heard. I want to share the things I find

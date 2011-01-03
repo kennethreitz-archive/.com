@@ -2,7 +2,7 @@ Fallibilism
 ###########
 
 :date: 2009-07-15 05:11
-:category: Code
+:category: Life
 
 
 Everyone seems to think that they are always right. It's pretty

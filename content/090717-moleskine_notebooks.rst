@@ -2,7 +2,7 @@ Moleskine Notebooks
 ###################
 
 :date: 2009-07-17 19:12
-:category: Code
+:category: Life
 
 
 I no longer have an iPhone (for now), so lately I've been utilizing

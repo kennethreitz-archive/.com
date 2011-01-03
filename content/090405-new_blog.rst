@@ -2,7 +2,7 @@ New Blog
 ########
 
 :date: 2009-04-05 22:09
-:category: Code
+:category: Life
 
 
 Well, I decided to go ahead and do away with the old and bring on

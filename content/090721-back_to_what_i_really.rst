@@ -2,7 +2,7 @@ Back to What I Really Love
 ##########################
 
 :date: 2009-07-21 11:46
-:category: Code
+:category: Life
 
 
 A couple of months ago, I took a position at a company that tailors

@@ -2,7 +2,7 @@ Louis Fabrizi
 #############
 
 :date: 2009-08-20 16:52
-:category: Code
+:category: Life
 
 
 A good friend of mine,

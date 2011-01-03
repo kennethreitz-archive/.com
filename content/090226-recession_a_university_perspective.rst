@@ -2,7 +2,7 @@ Recession: A University Perspective
 ###################################
 
 :date: 2009-02-26 06:12
-:category: Code
+:category: Life
 
 
 Newest update on the recession:

@@ -4,11 +4,15 @@ from fabric.api import *
 
 def build():
 	""" Death to the bytecode! """
-	local('rm -fr output')
 	local('pelican -t theme -s settings.py content')
 	# mv index archive.html
 	# take out all but 8 latest articles
-	local('open output/index.html')
+	os.chdir('html')
+	os.system('rm -fr feeds category pages tag theme')
+	os.system('mv ../output/* .')
+	os.system('git add -A')
+	os.system('git commit -m \'content update\'')
+	os.system('git push origin gh-pages')
 
 # def docs():
 # 	"""Build docs."""

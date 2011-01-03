@@ -2,7 +2,7 @@ What's In a Design?
 ###################
 
 :date: 2009-08-09 05:16
-:category: Code
+:category: Life
 
 
 Disclaimer: I am **not** an Apple fanboy. Apple makes a fortune off

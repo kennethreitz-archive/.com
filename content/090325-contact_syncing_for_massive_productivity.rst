@@ -2,7 +2,7 @@ Contact Syncing for Massive Productivity Booster
 ################################################
 
 :date: 2009-03-25 06:12
-:category: Code
+:category: Life
 
 
 Google significantly increased my quality of life recently. How?
