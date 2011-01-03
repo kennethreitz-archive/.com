@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kenneth's log</title><link href="http://kennethreitz.com/blog/" rel="alternate"></link><link href="http://kennethreitz.com/blog//feeds/projects.atom.xml" rel="self"></link><id>http://kennethreitz.com/blog/</id><updated>2011-01-02T19:52:53Z</updated><entry><title>Tablib</title><link href="http://kennethreitz.com/blog//tablib.html" rel="alternate"></link><updated>2011-01-02T19:52:53Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2011-01-02:/blog//tablib.html/</id><summary type="html">&lt;p&gt;Tablib is x and y z.&lt;/p&gt;
+</summary></entry></feed>

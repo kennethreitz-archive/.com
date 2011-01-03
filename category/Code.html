@@ -1,0 +1,3936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Kenneth's log - Code</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href=".././theme/css/main.css" type="text/css" />
+	<link href=".././feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Kenneth's log ATOM Feed" />
+	
+
+
+
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" type="text/css" media="all" href=".././css/ie.css"/>
+		<script src=".././js/IE8.js" type="text/javascript"></script><![endif]-->
+
+	<!--[if lt IE 7]>
+		<link rel="stylesheet" type="text/css" media="all" href=".././css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+
+<a href="http://github.com/kennethreitz/">
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+
+</a>
+
+	<header id="banner" class="body">
+		<h1>
+			<a href="../.">Kenneth's log </a>
+		</h1>
+		
+		<nav><ul>
+		
+		
+		
+		
+			
+				
+			
+				
+			
+		
+		
+		
+		    <li class="active">
+				<a href=".././category/Code.html">Code</a>
+			</li>
+		
+		    <li >
+				<a href=".././category/projects.html">projects</a>
+			</li>
+		
+		
+		</ul></nav>
+		
+	</header><!-- /#banner -->
+
+			   
+
+		 
+	
+		<aside id="featured" class="body"><article>
+				<h1 class="entry-title"><a href=".././github-syncer-in-python.html">GitHub Syncer in Python</a></h1> 
+				<footer class="post-info">
+						<abbr class="published" title="2010-10-10T19:24:00">
+								Sun 10 October 2010
+						</abbr>
+
+				<p>In <a href=".././category/Code.html">Code</a>. </p>
+				
+</p>
+				</footer><!-- /.post-info -->
+				<p>Today I rewrote a little utility I've been using for a while to
+keep all of my GitHub repos up to date and organized. It updates /
+clones all private, public, and watched repositories from your
+account. It also detects if your repo is a mirror or fork, and
+files it accordingly. My watched list is huge, but I like to have a
+local copy of my favorite libraries. You never know if the owner
+will take it down, or worse, move it to another SCM! ;-) The script
+depends on the **GitHub2** module. If you don't have it, you
+can install it easily. $ pip install github2 I recommend running
+this from `~/repos/`. #!/usr/bin/env python #
+-<em>- coding: utf-8 -</em>-</p>
+<pre class="literal-block">
+&quot;&quot;&quot;Kenneth Reitz's GitHub Syncer
+
+This script uses the GitHub API to get a list of all forked, mirrored, public, and
+private repos in your GitHub account. If the repo already exists locally, it will
+update it via git-pull. Otherwise, it will properly clone the repo.
+
+It will organize your repos into the following directory structure:
+
++ repos
+  ├── forks    (public fork repos)
+  ├── mirrors  (public mirror repos)
+  ├── private  (private repos)
+  ├── public   (public repos)
+  ├── watched  (this script)
+  └── sync.py  (this script)
+
+Requires Ask Solem's github2 (http://pypi.python.org/pypi/github2).
+
+Inspired by Gisty (http://github.com/swdyh/gisty).
+&quot;&quot;&quot;
+
+import os
+from commands import getoutput as cmd
+
+from github2.client import Github
+
+
+# GitHub configurations
+GITHUB_USER = cmd('git config github.user')
+GITHUB_TOKEN = cmd('git config github.token')
+
+# API Object
+github = Github(username=GITHUB_USER, api_token=GITHUB_TOKEN)
+
+
+# repo slots
+repos = {}
+
+repos['watched'] = [r for r in github.repos.watching(GITHUB_USER)]
+repos['private'] = []
+repos['mirrors'] = []
+repos['public'] = []
+repos['forks'] = []
+
+# Collect GitHub repos via API
+for repo in github.repos.list():
+
+    if repo.private:
+        repos['private'].append(repo)
+    elif repo.fork:
+        repos['forks'].append(repo)
+    elif 'mirror' in repo.description.lower():
+        # mirrors owned by self if mirror in description...
+        repos['mirrors'].append(repo)
+    else:
+        repos['public'].append(repo)
+
+
+for org, repos in repos.iteritems():
+    for repo in repos:
+
+        # create org directory (safely)
+        try:
+            os.makedirs(org)
+        except OSError:
+            pass
+
+        # enter org dir
+        os.chdir(org)
+
+        # I own the repo
+        private = True if org in ('private', 'fork', 'mirror') else False
+
+        # just `git pull` if it's already there
+        if os.path.exists(repo.name):
+            os.chdir(repo.name)
+            print('Updating repo: %s' % (repo.name))
+            os.system('git pull')
+            os.chdir('..')
+        else:
+            if private:
+                print('Cloning private repo: %s' % (repo.name))
+                os.system('git clone git&#64;github.com:%s/%s.git' % (repo.owner, repo.name))
+            else:
+                print('Cloning repo: %s' % (repo.name))
+                os.system('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))
+
+        # return to base
+        os.chdir('..')
+        print
+</pre>
+<p><a class="reference external" href="http://gist.github.com/619473">Source on GitHub</a> Enjoy!</p>
+
+				
+				</article>
+				</aside><!-- /#featured -->
+		
+			<section id="content" class="body">
+				<h1>Other articles</h1>
+				<hr />
+					<ol id="posts-list" class="hfeed">
+		
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././github-syncer-in-python.html" rel="bookmark" title="Permalink to GitHub Syncer in Python">GitHub Syncer in Python</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-10-10T16:20:00">
+								Sun 10 October 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						<p>tags: <a href=".././tag/GitHub.html">GitHub</a><a href=".././tag/Python.html">Python</a></p>
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Today I rewrote a little utility I’ve been using for a while to keep all of my GitHub repos up to date and organized. It updates / clones all private, public, and watched repositories from your account. It also detects if your repo is a mirror or fork, and files ...</p>
+				<a class="readmore" href=".././github-syncer-in-python.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././os-x-trash-freedom.html" rel="bookmark" title="Permalink to OS X Trash Freedom">OS X Trash Freedom</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-09-22T19:46:00">
+								Wed 22 September 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I noticed today that i had 120GiB of data in my Mac's Trashcan. I
+had enough. so I tried to kill it, and discovered a nice hidden
+feature. rm -fr ~/.Trash ln -s /dev/null ~/.Trash</p>
+<p>Now, when you delete a file in Finder, you get a nice pop-up ...</p>
+				<a class="readmore" href=".././os-x-trash-freedom.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././showme-v100-released.html" rel="bookmark" title="Permalink to ShowMe v1.0.0 Released">ShowMe v1.0.0 Released</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-09-16T05:41:00">
+								Thu 16 September 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>This weekend, I released a new Python module to PyPi: ShowMe
+v1.0.0. ShowMe is a simple set of function decorators that give you
+easy diagnose common problems in your Python applications. Basic
+Usage: ---------- &#64;showme.trace def complex_function(a, b, c,
+**kwargs): ....</p>
+<pre class="literal-block">
+&gt;&gt;&gt; complex_function('alpha', 'beta', False, debug=True)
+calling ...</pre>
+				<a class="readmore" href=".././showme-v100-released.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././tablib-dataset-library-v061-released.html" rel="bookmark" title="Permalink to Tablib Dataset Library v0.6.1 Released!">Tablib Dataset Library v0.6.1 Released!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-09-13T01:22:00">
+								Mon 13 September 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I'm pleased to announce a new Python module:
+<a class="reference external" href="http://github.com/kennethreitz/tablib">Tablib</a>. Tablib is a
+simple module for working with tabular datasets. It allows you
+create tables of data using standard Python datatypes, manipulate
+them, and easily export to Excel, JSON, YAML, and CSV. **Basic
+Usage**: import tablib</p>
+<pre class="literal-block">
+headers = ('first_name', 'last_name', 'gpa ...</pre>
+				<a class="readmore" href=".././tablib-dataset-library-v061-released.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-setup.html" rel="bookmark" title="Permalink to The Setup">The Setup</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-08-03T00:43:00">
+								Tue 03 August 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I'm Kenneth Reitz, one of the two co-founders of Züm Hosting. I'm a
+passionate Python developer for <a class="reference external" href="http://netapp.com">NetApp</a>. I
+typically spend my nights developing a number of open source
+projects, and my weekends architecting the web. What hardware are
+you using? ---------------------------- My sole machine is a 2010
+MacBook ...</p>
+				<a class="readmore" href=".././the-setup.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././os-x-development-tool-regexihbit.html" rel="bookmark" title="Permalink to OS X Development Tool: RegExihbit">OS X Development Tool: RegExihbit</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-07-26T03:12:00">
+								Mon 26 July 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Working with overly complex Regular Expressions can quickly become
+quite an ordeal of trial and error. RegExhibit is a fantastic tool
+for OS X users that allows you to see matches as you type.
+<a class="reference external" href="http://media.kennethreitz.com/blog/wp-content/uploads/Screen-shot-2010-07-25-at-11.08.55-PM.png">|image|</a>
+[<a class="reference external" href="http://homepage.mac.com/roger_jolly/software/">Reg Exibit</a>]
+[<a class="reference external" href="http://homepage.mac.com/roger_jolly/software/downloads/regexhibit/RegExhibit.zip">Download</a>]</p>
+
+				<a class="readmore" href=".././os-x-development-tool-regexihbit.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././unix-exit-status-code-reference.html" rel="bookmark" title="Permalink to Unix Exit Status Code Reference">Unix Exit Status Code Reference</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-07-13T19:51:00">
+								Tue 13 July 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I always find myself constantly Googling the list of unix status
+codes (typically defined in `sysexits.h`). 0 # successful
+termination 64 # base value for error messages 64 # command line
+usage error 65 # data format error 66 # cannot open input
+67 # addressee unknown
+68 # host name unknown 69 # service unavailable 70 ...</p>
+				<a class="readmore" href=".././unix-exit-status-code-reference.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././terminal-productivity-app-autojump.html" rel="bookmark" title="Permalink to Terminal Productivity App: AutoJump">Terminal Productivity App: AutoJump</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-07-07T03:20:00">
+								Wed 07 July 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>On average, I'd say I spend 65% of the workday in a terminal
+session. About 95% of that time is within the same same 4
+directories. `cd foo` &amp; `cd bar` can get old. **AutoJump**
+is a &quot;cd command that learns&quot;. It tracks shell history to detect
+which directories you ...</p>
+				<a class="readmore" href=".././terminal-productivity-app-autojump.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././ventures-python-development-at-netapp.html" rel="bookmark" title="Permalink to Ventures: Python Development at NetApp">Ventures: Python Development at NetApp</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-05-26T18:15:00">
+								Wed 26 May 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>For the past year I've been employed at
+<a class="reference external" href="http://clutch-inc.com">Clutch, Inc</a> in Winchester, Virginia, as
+a Systems Engineer and Web Developer. I've spent most of my time
+there developing content-based websites and web applications in
+PHP, advanced JavaScript, Grails, and the like. I even had the
+opportunity to develop ...</p>
+				<a class="readmore" href=".././ventures-python-development-at-netapp.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././gistapipy-v01-released.html" rel="bookmark" title="Permalink to GistAPI.py v0.1 Released">GistAPI.py v0.1 Released</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-05-16T21:41:00">
+								Sun 16 May 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Today I released GistAPI.py v0.1.2. It features a highly-optimized
+Gist object model and API wrapper which allows you to consume Gists
+in your next Python application. GitHub just rolled out a miniature
+pre-release of the
+<a class="reference external" href="http://develop.github.com/p/gist.html">Gist API</a> last month, so
+API functionality is pretty limited at the ...</p>
+				<a class="readmore" href=".././gistapipy-v01-released.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././notes-on-git-svn.html" rel="bookmark" title="Permalink to Notes on git-svn">Notes on git-svn</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-05-13T21:42:00">
+								Thu 13 May 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I'm forced to use SVN at the office. It's not THAT bad. OK, so
+maybe it's absolutely horrible. But it's more than understandable
+on their end. Those darn `.svn` folders drove me crazy. So, I use
+git-svn. Git-svn allows me to harness all the power of ...</p>
+				<a class="readmore" href=".././notes-on-git-svn.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././semantic-versioning.html" rel="bookmark" title="Permalink to Semantic Versioning">Semantic Versioning</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-05-09T08:46:00">
+								Sun 09 May 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>While listening to this week's episode of
+<a class="reference external" href="http://thechangelog.com">The Changelog</a>, I came across Tom
+Preston-Werner's
+<a class="reference external" href="http://semver.org/">Semantic Versioning Specification</a>. I love
+what I found. For many years, the open source community has been
+plagued with version number dystonia. Numbers vary so greatly from
+project to project, they are practically meaningless ...</p>
+				<a class="readmore" href=".././semantic-versioning.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././ipad-apps-worth-lusting-for.html" rel="bookmark" title="Permalink to iPad Apps Worth Lusting For">iPad Apps Worth Lusting For</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-04-04T17:57:00">
+								Sun 04 April 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>The distaste hackers and developers have towards the iPad was
+initially understandable. Now that it's out, I think everyone
+should hold one in their hand before they make any outlandish
+statements against it. Eric Sink sums it up pretty perfectly. &gt;
+Computers, by and large, are still designed for geeks ...</p>
+				<a class="readmore" href=".././ipad-apps-worth-lusting-for.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././crash-ie6-wordpress-plugin.html" rel="bookmark" title="Permalink to Crash IE6 WordPress Plugin">Crash IE6 WordPress Plugin</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-31T16:34:00">
+								Wed 31 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>## I decided to have a little fun today during lunch, so I wrote a
+WordPress + jQuery plugin for Crashing IE 6. ### Once activated, IE
+6 will instantly crash on page load. Enjoy :)</p>
+
+				<a class="readmore" href=".././crash-ie6-wordpress-plugin.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././getting-started-with-python.html" rel="bookmark" title="Permalink to Getting Started with Python">Getting Started with Python</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-29T06:38:00">
+								Mon 29 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>## For the past couple of weeks, I've been working on a Python
+tutorial series for beginners. They just went live.
+<a class="reference external" href="http://www.vtc.com/products/QuickStart!-Python-Tutorials.htm">Give them a watch</a>
+and let me know what you think!</p>
+
+				<a class="readmore" href=".././getting-started-with-python.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././basic-authentication-protected-files-htpasswd.html" rel="bookmark" title="Permalink to Basic Authentication protected files (htpasswd)">Basic Authentication protected files (htpasswd)</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-29T04:58:00">
+								Mon 29 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>## Here's a snippet for password protecting a directory served by
+Apache To set this up, just add `.htaccess` and `.htpasswd` to
+the desired directory being served by Apache . Make sure to
+<a class="reference external" href="http://www.htaccesstools.com/htpasswd-generator/">generate your own .htpasswd file</a>.
+For more `htaccess` snippets, checkout PerishablePress'
+<a class="reference external" href="http://perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/">Stupid .htaccess Tricks</a>.</p>
+
+				<a class="readmore" href=".././basic-authentication-protected-files-htpasswd.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././apache-gzip-deflate-compression.html" rel="bookmark" title="Permalink to Apache GZip Deflate Compression">Apache GZip Deflate Compression</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-29T04:05:00">
+								Mon 29 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Here's a quick Apache `.htaccess` file for adding server-side
+data compression.</p>
+
+				<a class="readmore" href=".././apache-gzip-deflate-compression.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././baconfile-awesome-public-s3-bucket-frontend.html" rel="bookmark" title="Permalink to Baconfile: Awesome Public S3 Bucket Frontend">Baconfile: Awesome Public S3 Bucket Frontend</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-09T02:28:00">
+								Tue 09 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a class="reference external" href="http://baconfile.com">|baconfile-sticker.png|</a> ## Amazon S3 is a
+fantastic data storage platform — I use it for everything. It's
+perfect for sharing data with friends. The only disadvantage is the
+interface: there is none. You can manage your buckets files with
+REST requests, along with a number of desktop clients. That's ...</p>
+				<a class="readmore" href=".././baconfile-awesome-public-s3-bucket-frontend.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././dev-tool-ghost-manage-etchosts.html" rel="bookmark" title="Permalink to Dev Tool: Ghost   #manage /etc/hosts">Dev Tool: Ghost   #manage /etc/hosts</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-08T08:15:00">
+								Mon 08 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>## The Ruby community has really been blowing me away lately with
+their array of indispensable web development tools. **Ghost**
+is no exception to this rule. It is a simple command line
+application for adding and removing 127.0.0.1 entries in your
+`/etc/hosts` file. I can't believe ...</p>
+				<a class="readmore" href=".././dev-tool-ghost-manage-etchosts.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././change-of-heart-amp-moleskine.html" rel="bookmark" title="Permalink to Change of Heart &amp; Moleskine">Change of Heart &amp; Moleskine</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-03-08T06:08:00">
+								Mon 08 March 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>## I've always been a huge fan of
+<a class="reference external" href="http://media.kennethreitz.com/blog/wp-content/uploads/moleskine.jpg">Mokeskine notebooks &lt;http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=https://www.amazon.com/s?ie=UTF8&amp;x=0&amp;ref_=nb_sb_ss_i_0_9&amp;y=0&amp;field-keywords=moleskine&amp;url=search-alias=aps&amp;sprefix=moleskine&amp;tag=bookforkind-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=390957&gt;`_|image ...</a></p>
+				<a class="readmore" href=".././change-of-heart-amp-moleskine.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././its-all-a-matter-of-perspective.html" rel="bookmark" title="Permalink to It's All a Matter of Perspective">It's All a Matter of Perspective</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-02-27T20:56:00">
+								Sat 27 February 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>An incredible reminder to look at the other side of things. <img alt="image" src="http://web.mit.edu/persci/people/adelson/images/checkershadow/checkershadow_illusion4med.jpg" />
+The squares marked <strong>A</strong> and <strong>B</strong> are the same shade of
+grey.`(proof) &lt;<a class="reference external" href="http://web.mit.edu/persci/people/adelson/images/checkershadow/checkershadow_double_med.jpg">http://web.mit.edu/persci/people/adelson/images/checkershadow/checkershadow_double_med.jpg</a>&gt;`_</p>
+
+				<a class="readmore" href=".././its-all-a-matter-of-perspective.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-future-of-social-media-is-here-google-buzz.html" rel="bookmark" title="Permalink to The Future of Social Media is Here: Google Buzz">The Future of Social Media is Here: Google Buzz</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-02-11T18:40:00">
+								Thu 11 February 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I'm all over Google Buzz. It's exactly what I've been looking for.
+&gt; Imagine taking elements of Twitter, Yammer, Foursquare, Yelp, and
+other social services, and shoving them together into one package.
+Now imagine covering that package in a layer that looks a lot like
+FriendFeed. Now imagine ...</p>
+				<a class="readmore" href=".././the-future-of-social-media-is-here-google-buzz.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././snowpocalypse.html" rel="bookmark" title="Permalink to Snowpocalypse">Snowpocalypse</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-02-11T13:46:00">
+								Thu 11 February 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a class="reference external" href="http://www.acriddle.com/wp-content/uploads/2010/02/100206_Blizzard_of_2010-39_450.jpg">|100206_Blizzard_of_2010-39_450.jpg|</a>
+<a class="reference external" href="http://www.acriddle.com/2010/02/06/portfolio-photography/landscape-and-nature-photography/blizzard-of-2010-photographs-in-winchester-virginia/">See more photosby Aaron Riddle</a>
+Snow, snow, snow, snow. I've never been so tired of the word. My
+small town of Winchester, VA suffered from over 3 feet of snow over
+the past week. Everything shutdown. I am reminded importance of
+infrastructure. I lived in Minnesota for ...</p>
+				<a class="readmore" href=".././snowpocalypse.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././spotify-in-the-us-yes-please.html" rel="bookmark" title="Permalink to Spotify in the US? Yes please.">Spotify in the US? Yes please.</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-01-17T19:03:00">
+								Sun 17 January 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>##I spent about 8 hours last night obtaining a Premium Spotify
+account in the US, and I've never been happier. As you know,
+<a class="reference external" href="http://spotify.com">Spotify</a> is only available in the UK, Spain,
+and France. So, the only way to signup for an account it to take a
+trip overseas... virtually ...</p>
+				<a class="readmore" href=".././spotify-in-the-us-yes-please.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././google-docs-now-supports-all-filetypes.html" rel="bookmark" title="Permalink to Google Docs Now Supports All Filetypes">Google Docs Now Supports All Filetypes</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-01-12T17:45:00">
+								Tue 12 January 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>For an extra $5 a month, <a class="reference external" href="http://evernote.com">Evernote</a> lets you
+upload a file of any extension to their servers. This is a
+fantastic feature for developers who like to keep their random psd
+and 3ds files in sync with the cloud. Looks like Google finally
+took the hint. Within the next ...</p>
+				<a class="readmore" href=".././google-docs-now-supports-all-filetypes.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././google-adwords-for-tv-yes-tv.html" rel="bookmark" title="Permalink to Google AdWords for TV. Yes, TV.">Google AdWords for TV. Yes, TV.</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-01-11T16:57:00">
+								Mon 11 January 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Today, Google unveiled their latest technology:
+<a class="reference external" href="http://www.google.com/adwords/tvads/index-b.html">AdWords for TV</a>
+and
+<a class="reference external" href="https://www.google.com/adsense/www/en_US/tv/">AdSense for TV</a>.
+This totally blows my mind. They are about to totally revolutionize
+the television industry. You can manage TV ads just like you manage
+AdWords ads for the web. You enter the amount you're willing to pay ...</p>
+				<a class="readmore" href=".././google-adwords-for-tv-yes-tv.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././my-standard-css-attributes.html" rel="bookmark" title="Permalink to My Standard CSS Attributes">My Standard CSS Attributes</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-01-10T18:20:00">
+								Sun 10 January 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>This is my minimal set of CSS Attributes that I use on nearly every
+project I work on. If you have any improvement suggestions, feel
+free to share.</p>
+
+				<a class="readmore" href=".././my-standard-css-attributes.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././new-years-resolutions-for-startups.html" rel="bookmark" title="Permalink to New Years Resolutions for Startups">New Years Resolutions for Startups</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2010-01-03T20:07:00">
+								Sun 03 January 2010
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Here's a small list of 2009 <em>New Year's Resolutions</em> for your
+startup. ### 1. Simplify Anyone can make something complex. It
+takes thoughtful planning, consideration, and discipline to make
+something simple. Simple = elegant. The same applies to your
+business. ### 2. Get some Humility Don't assume you know what ...</p>
+				<a class="readmore" href=".././new-years-resolutions-for-startups.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././why-ruby-scares-me.html" rel="bookmark" title="Permalink to Why Ruby Scares Me">Why Ruby Scares Me</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-20T08:33:00">
+								Sun 20 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Ruby scares me. It's not the language that strikes fear in my
+heart, however; it is the community. <img alt="image" src="http://s3.amazonaws.com/media.kennethreitz.com/scared-smaller-87.jpg" /> ## The Reasons 1. They
+treat Ruby as the Messiah — there is nothing better. There is
+nothing else. Only Ruby. 2. Community Leader Idol Wordship — did
+anyone catch the (online presence) death ...</p>
+				<a class="readmore" href=".././why-ruby-scares-me.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././do-you-develop-software-or-experiences.html" rel="bookmark" title="Permalink to Do You Develop Software or Experiences?">Do You Develop Software or Experiences?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-20T07:05:00">
+								Sun 20 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I read an
+<a class="reference external" href="http://www.antipope.org/charlie/blog-static/2009/12/21st_century_phone.html">interesting article</a>
+today on Apple's marketing strategy. A certain section stood out to
+me, regarding their hardware manufacturing: &gt; Apple is an
+experience company. They're a high-end marque; if they &gt; were in
+the automobile business, they'd be BMW, Mercedes, and &gt; Porsche
+rolled into one. They ...</p>
+				<a class="readmore" href=".././do-you-develop-software-or-experiences.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././best-css-reset-around.html" rel="bookmark" title="Permalink to Best CSS Reset Around">Best CSS Reset Around</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-20T03:09:00">
+								Sun 20 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Lets face it, cross-browser CSS can be a real pain. This helps.</p>
+
+				<a class="readmore" href=".././best-css-reset-around.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././mediatemple-dv-backup-to-s3-script.html" rel="bookmark" title="Permalink to MediaTemple (dv) Backup to S3 Script">MediaTemple (dv) Backup to S3 Script</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-18T14:38:00">
+								Fri 18 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>## The Problem <a class="reference external" href="http://mediatemple.net">MediaTemple</a> servers run
+the *Plesk Control Panel*, which *has* a reputation for having
+*useless backups*. ## The Solution * MySQL Dumps of all
+Databases and Tables * All configured vhosts, zipped up * Pushes
+it all to either S3 or FTP Stick it in <tt class="docutils literal">/etc/cron.daily/</tt>, and
+you'll be good ...</p>
+				<a class="readmore" href=".././mediatemple-dv-backup-to-s3-script.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././fizz-buzz-in-python.html" rel="bookmark" title="Permalink to Fizz Buzz in Python">Fizz Buzz in Python</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-17T16:53:00">
+								Thu 17 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Jeff Atwood of <a class="reference external" href="http://codinghorror.com">Coding Horror</a> has
+developed a sure fire test to filter out <em>good programmers</em> from
+<em>bad ones</em>. It's called
+<a class="reference external" href="http://www.codinghorror.com/blog/archives/000781.html">the FizzBuzz test</a>,
+and it's a very simple problem to solve. Enjoy! If you'd like to
+learn more about programming, <a class="reference external" href="/contact-me/">contact me</a> for a
+one-on-one lesson ...</p>
+				<a class="readmore" href=".././fizz-buzz-in-python.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././tim-ferriss-and-insights-on-the-social-web.html" rel="bookmark" title="Permalink to Tim Ferriss and Insights on the Social Web">Tim Ferriss and Insights on the Social Web</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-15T00:56:00">
+								Tue 15 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>This is an absolute must watch for anyone interested in the social
+web and online promotion.</p>
+
+				<a class="readmore" href=".././tim-ferriss-and-insights-on-the-social-web.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././facebook-and-google-launch-url-shortners.html" rel="bookmark" title="Permalink to Facebook and Google Launch Url Shortners">Facebook and Google Launch Url Shortners</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-14T23:51:00">
+								Mon 14 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a class="reference external" href="http://goo.gl">goo.gl</a> and <a class="reference external" href="http://fb.me">fb.me</a>,
+respectively.</p>
+
+				<a class="readmore" href=".././facebook-and-google-launch-url-shortners.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././google-launches-public-dns-service.html" rel="bookmark" title="Permalink to Google Launches Public DNS Service">Google Launches Public DNS Service</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-03T17:18:00">
+								Thu 03 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Google just launched a
+<a class="reference external" href="http://code.google.com/speed/public-dns/">Public DNS Service</a>,
+much like OpenDNS. ###Let me Try! To give it a try, change your
+computer (our router)'s DNS servers.
+<tt class="docutils literal">DNS Servers: 4.3.2.1, 8.8.8.8, 8.8.4.4</tt> I expect this to have
+significantly greater adoption rates than ...</p>
+				<a class="readmore" href=".././google-launches-public-dns-service.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././yahoo-to-introduce-full-facebook-connect.html" rel="bookmark" title="Permalink to Yahoo to Introduce Full Facebook Connect">Yahoo to Introduce Full Facebook Connect</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-02T18:42:00">
+								Wed 02 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Yahoo, Inc
+<a class="reference external" href="http://yhoo.client.shareholder.com/press/releasedetail.cfm?ReleaseID=427720">just announced</a>
+that it will integrate Facebook Connect for all accounts. I love
+this.</p>
+<p>Continuing its commitment to be the center of people's online
+lives, Yahoo! Inc. (NASDAQ:YHOO) today announced further
+integration with Facebook that unites social experiences from
+across the Web to provide a place ...</p>
+				<a class="readmore" href=".././yahoo-to-introduce-full-facebook-connect.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././asynchronous-google-analytics.html" rel="bookmark" title="Permalink to Asynchronous Google Analytics!">Asynchronous Google Analytics!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-02T13:29:00">
+								Wed 02 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Google Analytics now supports Asyncronous loads, which allow the
+browser to continue loading content while <strong>ga.js</strong> is being
+loaded. Now it's safe to put the script tag in the <tt class="docutils literal">&lt;head&gt;</tt> for
+you XHTML STRICT junkies.</p>
+<p><strong>Here's the new code to do so:</strong></p>
+<pre class="literal-block">
+var _gaq = _gaq || [];
+_gaq.push ...</pre>
+				<a class="readmore" href=".././asynchronous-google-analytics.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././hows-my-code.html" rel="bookmark" title="Permalink to How's My Code?">How's My Code?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-01T19:56:00">
+								Tue 01 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a class="reference external" href="http://howsmycode.com">How's My Code?</a> is a new service for peer
+code review that is decentralized, and available wherever you are.
+Perfect for indie development teams. Oh, and did I mention Seamless
+GitHub integration?</p>
+
+				<a class="readmore" href=".././hows-my-code.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././user-interface-content-vs-metacontent.html" rel="bookmark" title="Permalink to User Interface: Content vs. MetaContent">User Interface: Content vs. MetaContent</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-12-01T17:38:00">
+								Tue 01 December 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Trey of lopsa.org wrote a
+<a class="reference external" href="http://lopsa.org/node/1566">fantastic article</a> on the the techie
+vs. non-techie divide. If you are in the user-interface market, I
+suggest you read this. It sheds some wonderful light on this great
+divide. ## In Short Ordinary Users only see and understand content
+in a system. Developers and ...</p>
+				<a class="readmore" href=".././user-interface-content-vs-metacontent.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././google-analytics-intellegence.html" rel="bookmark" title="Permalink to Google Analytics + Intellegence">Google Analytics + Intellegence</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T17:53:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Google's super-star flagship cloud-based visitor tracking software,
+<a class="reference external" href="http://google.com/analytics">Google Analytics</a>, released a
+<a class="reference external" href="http://1.bp.blogspot.com/_J20OFghLIP0/Sv2bgjlDn8I/AAAAAAAAAMA/kI-VHM7VRD0/s400/Intelligence_Report.jpg">new feature</a>
+recently. It's called
+<a class="reference external" href="http://analytics.blogspot.com/2009/11/new-feature-spotlight-analytics.html">Intelligence</a>.
+##What They Have To Say Your new hardworking assistant, Analytics
+Intelligence, can't replace you or a professional analyst. But, it
+can find key information for you and your professional analysts ...</p>
+				<a class="readmore" href=".././google-analytics-intellegence.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././google-wave-interface-fail.html" rel="bookmark" title="Permalink to Google Wave Interface FAIL">Google Wave Interface FAIL</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T17:43:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I had the opportunity to see a non-technical friend's first
+reaction to Google Wave today.</p>
+<p><img alt="image" src="http://media.kennethreitz.com/stephanie-85.png" /> I can't help but laugh.</p>
+<p>Also, If you'd like to experience this mess of an interface for
+yourself, please
+<a class="reference external" href="http://kennethreitz.com/contact-me/">contact me</a>.</p>
+
+				<a class="readmore" href=".././google-wave-interface-fail.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-seo-rapper.html" rel="bookmark" title="Permalink to The SEO Rapper">The SEO Rapper</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T17:21:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>SEO Tactics are typically a dime a dozen, written by people
+interested in BlackHat PageRank Hacking and Link Farming. Surprise,
+Surprise: an SEO Rap.</p>
+<p>Surprisingly, he knows what he's talking about, and offers decent
+advice.</p>
+
+				<a class="readmore" href=".././the-seo-rapper.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././dry-and-pythonic-jquery.html" rel="bookmark" title="Permalink to DRY and Pythonic jQuery?">DRY and Pythonic jQuery?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T17:16:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Apparently, <strong>groovy:spring:java</strong> as <strong>jabs:jquery:javascript</strong>.
+As if jQuery wasn't short enough already.</p>
+<p><a class="reference external" href="http://github.com/collin/jabs">Jabs</a> lets you write this jQuery
+code:</p>
+<pre class="literal-block">
+jQuery(function() {
+  var $ = jQuery;
+
+  $(&quot;[default_value]&quot;)
+    .blur(function() {
+      var self = $(this);
+      if(self.val() === &quot;&quot;) {
+        self.val(self.attr(&quot;default_value&quot;));
+      }
+    })
+    .focus(function() {
+      var self = $(this);
+      if(self.val === self ...</pre>
+				<a class="readmore" href=".././dry-and-pythonic-jquery.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-power-of-a-clean-api.html" rel="bookmark" title="Permalink to The Power of a Clean API">The Power of a Clean API</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T12:29:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>The folks over at <a class="reference external" href="http://mozillalabs.com/">Mozilla Labs</a> never
+cease to amaze me with their unique ideas. They strive to transform
+the way users interact with the web forever.</p>
+<p><a class="reference external" href="https://jetpack.mozillalabs.com/">**Mozilla JetPack**</a> is a bit
+different, though. This tool allows web developers to make
+incredibly powerful Firefox Extentions with the layout languages
+they ...</p>
+				<a class="readmore" href=".././the-power-of-a-clean-api.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././googles-gotta-new-face.html" rel="bookmark" title="Permalink to Google's Gotta New Face">Google's Gotta New Face</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T12:05:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><img alt="image" src="http://blogoscoped.com/files/google-everything/2.png" /> Want to try it? Go to <a class="reference external" href="http://google.com">google.com</a> and
+paste this into your browser's address bar:</p>
+<pre class="literal-block">
+javascript:void(document.cookie=&quot;PREF=ID=20b6e4c2f44943bb:U=4bf292d46faad806:
+TM=1249677602:LM=1257919388:S=odm0Ys-53ZueXfZG;path=/;domain=.google.com&quot;);
+</pre>
+
+				<a class="readmore" href=".././googles-gotta-new-face.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././jquery-snippet-1-url-parameter-fetching.html" rel="bookmark" title="Permalink to jQuery Snippet #1: URL Parameter Fetching">jQuery Snippet #1: URL Parameter Fetching</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T09:08:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've decided to provide you with a new data stream. The jQuery
+Snippet of the Week. Enjoy.</p>
+<p>When executed, this function will return a beautiful string-indexed
+array of your hacking pleasures.</p>
+<p>Thanks, <a class="reference external" href="http://snipplr.com/users/Roshambo/">Roshambo</a> and
+<a class="reference external" href="http://jquery-howto.blogspot.com/">jQuery HowTo</a>!</p>
+
+				<a class="readmore" href=".././jquery-snippet-1-url-parameter-fetching.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././jquery-snippet-1-url-parameter-fetching.html" rel="bookmark" title="Permalink to jQuery Snippet #1: URL Parameter Fetching">jQuery Snippet #1: URL Parameter Fetching</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-30T09:08:00">
+								Mon 30 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've decided to provide you with a new data stream. The jQuery
+Snippet of the Week. Enjoy.</p>
+<p>When executed, this function will return a beautiful string-indexed
+array of your hacking pleasures.</p>
+<p>Thanks, <a class="reference external" href="http://snipplr.com/users/Roshambo/">Roshambo</a> and
+<a class="reference external" href="http://jquery-howto.blogspot.com/">jQuery HowTo</a>!</p>
+
+				<a class="readmore" href=".././jquery-snippet-1-url-parameter-fetching.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././blog-lt-effort.html" rel="bookmark" title="Permalink to Blog &lt; Effort">Blog &lt; Effort</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-25T07:06:00">
+								Wed 25 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><strong>Word to the wise</strong>: blogs take effort to maintain.</p>
+
+				<a class="readmore" href=".././blog-lt-effort.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././osx-mamp-python-php-mysql.html" rel="bookmark" title="Permalink to OSX + MAMP + Python + PHP + MySQL">OSX + MAMP + Python + PHP + MySQL</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-05T18:15:00">
+								Thu 05 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>If you're a web developer who uses MAMP in conjunction with
+anything other than PHP,
+I'm sure you've had quite a large bit of frustration involving
+multiple MyQL instances.</p>
+<p>Not any more! This simple chain of commands will save you days upon
+days of troubles:</p>
+<pre class="literal-block">
+sudo rm ...</pre>
+				<a class="readmore" href=".././osx-mamp-python-php-mysql.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././cloud-computing-yin-and-yang.html" rel="bookmark" title="Permalink to Cloud Computing: Yin and Yang">Cloud Computing: Yin and Yang</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-11-03T14:32:00">
+								Tue 03 November 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Cloud computing enables us. Amazon's EC2 allows anyone in the world
+to have instant access to incredibly powerful high-end servers that
+would usually cost tens of thousands of dollars for pennies on the
+dollar. ##Life is good. Of course, people use this technology for
+both good and bad. In ...</p>
+				<a class="readmore" href=".././cloud-computing-yin-and-yang.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././more-google-wave-invites-get-em-now.html" rel="bookmark" title="Permalink to More Google Wave Invites! Get 'em now!">More Google Wave Invites! Get 'em now!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-30T18:41:00">
+								Fri 30 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>My Google Wave invite manna was just replenished!
+If you'd like an invite, leave a comment and be creative!
+Don't believe me? Then
+<a class="reference external" href="http://s3.amazonaws.com/media.kennethreitz.com/wave_invites-63.png">see for yourself</a>!</p>
+<p>Update: As of 1:26 PM (EST), November 23, only**2 invites remain!**
+<img alt="image" src="http://s3.amazonaws.com/media.kennethreitz.com/arrow-down-circle-52.jpg" /></p>
+
+				<a class="readmore" href=".././more-google-wave-invites-get-em-now.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././github-strategy.html" rel="bookmark" title="Permalink to GitHub + Strategy">GitHub + Strategy</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-30T16:12:00">
+								Fri 30 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>GitHub is currently <a class="reference external" href="http://github.com">down</a>. And that is very
+sad. However, they have an
+<a class="reference external" href="http://github.com/images/error/angry_unicorn.png">Awesome Angry Unicorn</a>.
+And this unicorn makes me smile, even though I can't get to any of
+my projects. If you're going to make a web application, give it
+some personality. This will not only ...</p>
+				<a class="readmore" href=".././github-strategy.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././installing-a-lamp-stack-on-ubuntu-904-server.html" rel="bookmark" title="Permalink to Installing a LAMP Stack on Ubuntu 9.04 Server">Installing a LAMP Stack on Ubuntu 9.04 Server</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-28T07:55:00">
+								Wed 28 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<pre class="literal-block">
+sudo apt-get install apache2 php5 mysql-server phpmyadmin  php5-curl php5-mysql
+</pre>
+
+				<a class="readmore" href=".././installing-a-lamp-stack-on-ubuntu-904-server.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././imoim-gt-meebo.html" rel="bookmark" title="Permalink to imo.im &gt; meebo">imo.im &gt; meebo</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-27T22:50:00">
+								Tue 27 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've been a long-time user of <a class="reference external" href="http://meebo.com">meebo</a>, a
+web-based chat client.
+I'm not going to use it anymore now. I found...
+{ <a class="reference external" href="https://imo.im/">imo.im</a> }</p>
+
+				<a class="readmore" href=".././imoim-gt-meebo.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././amazons-rdb-service.html" rel="bookmark" title="Permalink to Amazon's RDB Service">Amazon's RDB Service</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-27T21:51:00">
+								Tue 27 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Amazon offers <a class="reference external" href="http://aws.amazon.com/rds/">MySQL hosting</a> now.
+<strong>Life is good</strong>.</p>
+
+				<a class="readmore" href=".././amazons-rdb-service.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././apple-developers-earnings.html" rel="bookmark" title="Permalink to Apple + Developers = Earnings">Apple + Developers = Earnings</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-25T16:52:00">
+								Sun 25 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><strong>Apple, Inc</strong> reported their
+<a class="reference external" href="http://www.businessweek.com/technology/ByteOfTheApple/blog/archives/2009/10/apple_stock_hit.html">highest earnings ever</a>
+today.
+But, Why? Because they have proven that thoughtful design and
+attention to every minute detail will always win in the end.</p>
+<p>Because they have shown that designing with both developers and
+users equally in mind is essential.</p>
+<p>Because they noticed that being ...</p>
+				<a class="readmore" href=".././apple-developers-earnings.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././opendns-finally-monetizes.html" rel="bookmark" title="Permalink to OpenDNS Finally Monetizes">OpenDNS Finally Monetizes</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-25T16:52:00">
+								Sun 25 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've been a long-time fan and user of
+<strong>`OpenDNS &lt;http://www.opendns.com&gt;`_</strong>, the free and
+often-superior DNS Server. I've always noticed drastic improvements
+in my site loading speeds when using the service (due to
+drastically improved domain name lookups). There's really no
+downside to using ...</p>
+				<a class="readmore" href=".././opendns-finally-monetizes.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././re-user-mytopia-by-jeff-antwood.html" rel="bookmark" title="Permalink to Re: 'User Mytopia' by Jeff Antwood">Re: 'User Mytopia' by Jeff Antwood</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-25T16:52:00">
+								Sun 25 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>On a site like <a class="reference external" href="http://www.serverfault.com">ServerFault</a> or
+<a class="reference external" href="http://www.stackoverflow.com">StackOverflow</a>, users will always
+be focusing on the task at hand: exchanging answers. If they see a
+box to enter text, they enter text, not read throughout the page.
+<a class="reference external" href="http://www.codinghorror.com/blog/archives/001306.html">User Mytopia</a>
+by Jeff Antwood</p>
+
+				<a class="readmore" href=".././re-user-mytopia-by-jeff-antwood.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././dearest-google.html" rel="bookmark" title="Permalink to Dearest Google,">Dearest Google,</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-25T16:51:00">
+								Sun 25 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I'm sorry for taking you for granted. You supply my phone number,
+email address, primary chat platform, site's analytics, the
+ultimate rss reader, some money on the side. Almost all of the
+knowledge in my brain has been brought to me by (or through) you.
+Without you, I ...</p>
+				<a class="readmore" href=".././dearest-google.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././zsh-configuration.html" rel="bookmark" title="Permalink to Zsh Configuration">Zsh Configuration</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-10-17T16:47:00">
+								Sat 17 October 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>##In case you don't know, Zsh is the greatest command prompt of all
+time—but only after you configure it. Here's my configuration.
+Updated regularly.</p>
+
+				<a class="readmore" href=".././zsh-configuration.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././disqus-2-is-awesome.html" rel="bookmark" title="Permalink to DISQUS 2 Is Awesome">DISQUS 2 Is Awesome</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-13T06:51:00">
+								Sun 13 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I have to admit, for a while I really disliked DISQUS.</p>
+<p>I’m a huge fan of WordPress, and do a signifiant amount of my
+development within it. I’d work on a new site, and then install the
+DISQUS plugin, and to my avail, commenting on my sites instantly ...</p>
+				<a class="readmore" href=".././disqus-2-is-awesome.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././facebook-vs-facebook-lite-loading-time.html" rel="bookmark" title="Permalink to Facebook vs Facebook Lite: Loading Time">Facebook vs Facebook Lite: Loading Time</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-11T01:31:00">
+								Fri 11 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I live in the middle of nowhwere. My internet connection (when I'm
+not in a
+<a class="reference external" href="http://kennethreitz.com/blog/dear-borders-group/">free-wifi café</a>)&nbsp;sucks.
+Terribly.&nbsp;<em>and Facebook doubly so</em>. Thankfully, Facebook just
+opened up
+<a class="reference external" href="http://kennethreitz.com/blog/facebook-lit-open-to-public/">Facebook Lite</a>,
+so my life just got alot easier. Here's the side-by-side
+comparison... ### <a class="reference external" href="http://www.facebook.com">Regular Facebook</a>:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string ...</tt></p></div>
+				<a class="readmore" href=".././facebook-vs-facebook-lite-loading-time.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././facebook-lite-open-to-public.html" rel="bookmark" title="Permalink to Facebook Lite Open to Public!">Facebook Lite Open to Public!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-10T22:05:00">
+								Thu 10 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>It's official, <a class="reference external" href="http://lite.facebook.com">Facebook Lite</a> was
+opened up to the US public about 10 minutes ago.</p>
+<p>This slimmed down version of Facebook is wonderful for those of us
+on slow internet connections (or tethering from our iPhones), this
+is a dream come true.</p>
+<p>Reminds me of the good ol' days ...</p>
+				<a class="readmore" href=".././facebook-lite-open-to-public.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././dear-borders-i-hate-you.html" rel="bookmark" title="Permalink to Dear Borders: I hate you">Dear Borders: I hate you</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-10T18:26:00">
+								Thu 10 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Dear Borders (and Starbucks subidary Seattle's Best Coffee), You
+have a lovely book store. Quite lovely. I love the books you sell.
+I love the music you play. I love the coffee you serve. I <strong>love</strong>
+the Moleskine Notebooks you sell. Everything about your store
+tailors itself perfectly to ...</p>
+				<a class="readmore" href=".././dear-borders-i-hate-you.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././attention-web-developers-using-os-x.html" rel="bookmark" title="Permalink to Attention: Web Developers Using OS X">Attention: Web Developers Using OS X</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-02T19:24:00">
+								Wed 02 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Somebody needs to develop a text editor with the elegance of
+<em>TextMate</em> and completion power of <em>Eclipse</em>.
+<strong>Immediately</strong>.</p>
+<p>That is all.</p>
+
+				<a class="readmore" href=".././attention-web-developers-using-os-x.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././raising-the-eyebrow-at-snow-leopard.html" rel="bookmark" title="Permalink to Raising the Eyebrow at Snow Leopard">Raising the Eyebrow at Snow Leopard</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-02T06:36:00">
+								Wed 02 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Snow Leopard has been a huge item in the media lately. After months
+of media hype and build up, the day it was released, millions of
+Apple customers flooded the social web, telling everyone of their
+upgrade. It was all we heard about for days. And I’m still hearing ...</p>
+				<a class="readmore" href=".././raising-the-eyebrow-at-snow-leopard.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././your-degree-is-worthless-collaborate.html" rel="bookmark" title="Permalink to Your Degree Is Worthless; Collaborate.">Your Degree Is Worthless; Collaborate.</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-09-01T21:17:00">
+								Tue 01 September 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I’ve always been a self-motivated learner as well as a free
+thinker. I was never one to get involved in cliques or social
+ladders. Despite the fact that I was raised being constantly told
+that grades were the single most important thing in my life, I
+could never accept ...</p>
+				<a class="readmore" href=".././your-degree-is-worthless-collaborate.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././amazon-aws-introduces-virtual-private-cloud.html" rel="bookmark" title="Permalink to Amazon AWS Introduces Virtual Private Cloud">Amazon AWS Introduces Virtual Private Cloud</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-26T12:07:00">
+								Wed 26 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Dear Amazon EC2 Customer,</p>
+<p>We are excited to announce the limited beta of Amazon Virtual
+Private Cloud (Amazon VPC), a secure and seamless bridge between
+your existing IT infrastructure and the AWS cloud. Amazon VPC
+enables you to connect your existing infrastructure to a set of
+isolated AWS compute resources ...</p>
+				<a class="readmore" href=".././amazon-aws-introduces-virtual-private-cloud.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././django-orm-for-online-payment-systems.html" rel="bookmark" title="Permalink to Django ORM for Online Payment Systems?">Django ORM for Online Payment Systems?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-21T23:26:00">
+								Fri 21 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I’ve been spending an increasingly large amount of time with some
+rapid development frameworks, primarily Django (Python!), Grails
+(Groovy / Java), and Symfony (PHP). I’ve been enjoying it. Alot.
+Life has never been better.</p>
+<p>DRY tactics. Code portability. Who likes to repeat themsleves
+anyway? It’s a great idea ...</p>
+				<a class="readmore" href=".././django-orm-for-online-payment-systems.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././louis-fabrizi.html" rel="bookmark" title="Permalink to Louis Fabrizi">Louis Fabrizi</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-20T16:52:00">
+								Thu 20 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>A good friend of mine,
+<a class="reference external" href="http://twitter.com/mrgandrews">&#64;mrgandrews</a>, is in
+the&nbsp;<a class="reference external" href="http://louisfabrizi.com">Louis Fabrizi</a> band.&nbsp; I'm loving
+the music so far! Here's a few clips: -
+<a class="reference external" href="http://louisfabrizi.com/audio/needs-prayer.mp3">Everybody Needs a Prayer</a>
+- <a class="reference external" href="http://louisfabrizi.com/audio/tonight.mp3">Tonight</a> -
+<a class="reference external" href="http://louisfabrizi.com/audio/soon.mp3">Soon</a> -
+<a class="reference external" href="http://louisfabrizi.com/audio/why-wait.mp3">Why Wait?</a></p>
+<p>If you like what you here, then you should
+<a class="reference external" href="http://www.amazon.com/gp/redirect.html?ie=UTF8&amp;location=http://www.amazon.com/s?ie=UTF8&amp;x=0&amp;ref_=nb_ss_dmusic&amp;y=0&amp;field-keywords=louis%20fabrizi&amp;url=search-alias=digital-music&amp;tag=bookforkind-20&amp;linkCode=ur2&amp;camp=1789&amp;creative=390957">buy the album</a>!</p>
+
+				<a class="readmore" href=".././louis-fabrizi.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././css-with-a-hint-of-dry.html" rel="bookmark" title="Permalink to CSS With a Hint of DRY">CSS With a Hint of DRY</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-20T02:57:00">
+								Thu 20 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I am a DRY (<em>Don’t Repeat Yourself</em>) programmer. I’m not positive,
+but I most likely inherited my love for this concept from my
+intensive Python immersion. I'm so grateful for it. Anyway, DRY is
+an essential stage of any developer's workflow. It drastically
+enforces good structure ...</p>
+				<a class="readmore" href=".././css-with-a-hint-of-dry.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-call-for-an-open-source-social-network.html" rel="bookmark" title="Permalink to The Call for an Open Source Social Network">The Call for an Open Source Social Network</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-16T20:16:00">
+								Sun 16 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Lately, I've been tossing some ideas around that I feel would
+benefit the Social Web as a whole. It’s been going through some
+rough times lately, and I think it’s time for a change. Or so I
+thought. My first idea was to create a site that ...</p>
+				<a class="readmore" href=".././the-call-for-an-open-source-social-network.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././facebook-plugin-for-wordpress.html" rel="bookmark" title="Permalink to Facebook Plugin for WordPress">Facebook Plugin for WordPress</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-16T14:38:00">
+								Sun 16 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a class="reference external" href="http://twitter.com/RealNerd">Blake</a>, a PHP engineer at
+<a class="reference external" href="http://squidoo.com">Squidoo</a>, has a blog called
+<a class="reference external" href="http://www.thewhyandthehow.com/">The Why and the How</a>. You
+should check it out, he writes really good articles and shares
+great</p>
+<p>My friend and coworker
+<a class="reference external" href="http://aaroncollegeman.com/">Aaron Collegeman</a> decided to write
+a WordPress plugin that automatically replaces the built-in
+WordPress commenting system with Facebook ...</p>
+				<a class="readmore" href=".././facebook-plugin-for-wordpress.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././google-lets-users-opt-out.html" rel="bookmark" title="Permalink to Google Lets Users Opt Out">Google Lets Users Opt Out</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-12T17:59:00">
+								Wed 12 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Hilarious. embed
+src=&quot;<a class="reference external" href="http://www.theonion.com/content/themes/common/assets/onn_embed/embedded_player.swf">http://www.theonion.com/content/themes/common/assets/onn_embed/embedded_player.swf</a>&quot;type=&quot;application/x-shockwave-flash&quot;
+allowScriptAccess=&quot;always&quot; allowFullScreen=&quot;true&quot;
+wmode=&quot;transparent&quot; width=&quot;480&quot;
+height=&quot;430&quot;flashvars=&quot;image=http%3A%2F%2Fwww.theonion.com%2Fcontent%2Ffiles%2Fimages%2FGOOGLE_VILLAGE_article.jpg&amp;videoid=97279&amp;title=Google%20Opt%20Out%20Feature%20Lets%20Users%20Protect ...</p>
+				<a class="readmore" href=".././google-lets-users-opt-out.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././smoothy-textmate-theme.html" rel="bookmark" title="Permalink to Smoothy TextMate Theme">Smoothy TextMate Theme</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-11T14:31:00">
+								Tue 11 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've said it before and I'll say it again:
+<a class="reference external" href="http://kennethreitz.com/blog/if-textmate-42/">TextMate</a> is one
+fantastic text editor.</p>
+<p>Now, I won't bore you with my passion for it, but if you've been
+reading my blog for long, you know how I feel.I do the majority of
+my development ...</p>
+				<a class="readmore" href=".././smoothy-textmate-theme.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-truth-of-facebooks-friendfeed-aquisition.html" rel="bookmark" title="Permalink to The Truth of Facebook's FriendFeed Aquisition">The Truth of Facebook's FriendFeed Aquisition</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-11T00:53:00">
+								Tue 11 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>As I'm sure most of you know, <a class="reference external" href="http://facebook.com">Facebook</a>
+decided today that it was going to buy
+<a class="reference external" href="http://friendfeed.com/kennethreitz">FriendFeed</a>.</p>
+<p>My opinion might be a little biased... I just discovered FF
+<a class="reference external" href="http://kennethreitz.com/blog/friendfeed-is-awesome/">recently</a>,
+and I must say that I've been thoroughly impressed with the service
+so far. I've been spending an ...</p>
+				<a class="readmore" href=".././the-truth-of-facebooks-friendfeed-aquisition.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././friendfeed-is-awesome.html" rel="bookmark" title="Permalink to FriendFeed is Awesome">FriendFeed is Awesome</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-09T07:10:00">
+								Sun 09 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I wanted to make a new social website that tied the knot on every
+site that's out there now – but it looks like it's already been
+done! Awesome!</p>
+
+				<a class="readmore" href=".././friendfeed-is-awesome.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././whats-in-a-design.html" rel="bookmark" title="Permalink to What's In a Design?">What's In a Design?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-09T05:16:00">
+								Sun 09 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Disclaimer: I am <strong>not</strong> an Apple fanboy. Apple makes a fortune off
+of <a class="reference external" href="http://www.squidoo.com/sheeple">speeple</a>. An Apple FanBoy
+blindly follows everything the cult leader, Steve Jobs has to say.
+They go out and purchase every iProduct that Apple realeases and
+does so with a smile on their face, not realizing that ...</p>
+				<a class="readmore" href=".././whats-in-a-design.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././i-finally-got-a-macbook.html" rel="bookmark" title="Permalink to I Finally Got a MacBook">I Finally Got a MacBook</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-08-07T05:56:00">
+								Fri 07 August 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Yesterday I stopped by the Apple store in Fair Oaks Shopping Center
+in Fairfax, VA and finally purchased a MacBook. I've been wanting
+one for quite a while – ever since I fell deeply in love with OS X
+after adopting an old 12&quot; G4 PowerBook I've been using ...</p>
+				<a class="readmore" href=".././i-finally-got-a-macbook.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././aesthetics-more-than-meets-the-eye.html" rel="bookmark" title="Permalink to Aesthetics: More Than Meets the Eye">Aesthetics: More Than Meets the Eye</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-24T05:28:00">
+								Fri 24 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I was doing some routine poking around the
+<a class="reference external" href="http://wiki.macromates.com/Main/HomePage">TextMate Wiki</a>
+tonight, and I came across an
+<a class="reference external" href="http://jason-evers.com/code/code-like-i-do">amazing mod</a>.
+Amazing. After installing it, my favorite editor looked brand new,
+and I started hacking away at code for hours.</p>
+<p>Customized (yet clean) interfaces really help me focus on my work.
+Working in ...</p>
+				<a class="readmore" href=".././aesthetics-more-than-meets-the-eye.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././django-11-rc-released.html" rel="bookmark" title="Permalink to Django 1.1 RC Released">Django 1.1 RC Released</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-22T05:46:00">
+								Wed 22 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Django 1.1's Release Candidate was released today! Whoot. Here's
+the official release: &gt; As part of the Django 1.1 release process,
+tonight we've released &gt; Django 1.1 release candidate 1, a
+preview/testing package which, &gt; hopefully, is quite close to what
+will constitute the final Django ...</p>
+				<a class="readmore" href=".././django-11-rc-released.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././back-to-what-i-really-love.html" rel="bookmark" title="Permalink to Back to What I Really Love">Back to What I Really Love</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-21T11:46:00">
+								Tue 21 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>A couple of months ago, I took a position at a company that tailors
+Microsoft SharePoint solutions. The business model was very strong
+(and successful), the work was challenging, and there was lots of
+opportunity. At the end of the day though, I just couldn't get past
+one thing ...</p>
+				<a class="readmore" href=".././back-to-what-i-really-love.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././moleskine-notebooks.html" rel="bookmark" title="Permalink to Moleskine Notebooks">Moleskine Notebooks</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-17T19:12:00">
+								Fri 17 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I no longer have an iPhone (for now), so lately I've been utilizing
+my good old Moleskine Notebook. Man I love this thing.</p>
+<p>I had been recording everything in
+<a class="reference external" href="http://evernote.com">Evernote</a>, which was epically amazing
+(esspecially since I have so many computers). There's just
+something about actually writing things ...</p>
+				<a class="readmore" href=".././moleskine-notebooks.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-microsoft-reaction-experience.html" rel="bookmark" title="Permalink to The Microsoft Reaction Experience">The Microsoft Reaction Experience</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-16T06:39:00">
+								Thu 16 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>It seems like Microsoft base its entire product line nowadays on
+reactions.</p>
+<p>They will be apparently be opening Microsoft Retailer stores across
+the nation soon. Why? I mean, I know they have the Zune, the XBox,
+and, well, Windows. But why a store? It works great for Apple – But
+Apple ...</p>
+				<a class="readmore" href=".././the-microsoft-reaction-experience.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././wasted-talent-ii.html" rel="bookmark" title="Permalink to Wasted Talent II">Wasted Talent II</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T18:34:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>To elaborate on my
+<a class="reference external" href="http://kennethreitz.com/blog/wasted-talent/">last post</a>:</p>
+<p>Here's an example of some wasted talent:</p>
+<p>I know a guy who says he wants to be an Engineer. He loves
+engineering, but, for various reasons, he is no longer attending
+Virginia Tech this semester. Very sad. So what is he doing now ...</p>
+				<a class="readmore" href=".././wasted-talent-ii.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././wasted-talent.html" rel="bookmark" title="Permalink to Wasted Talent">Wasted Talent</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T18:30:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I'd say that 95% percent of the students that I met at George Mason
+University my Freshman year had <em>no idea</em> why they were even there.
+This is so sad.</p>
+<p>For me, going to college was more about getting out of the house
+than anything else. And it worked ...</p>
+				<a class="readmore" href=".././wasted-talent.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././fallibilism.html" rel="bookmark" title="Permalink to Fallibilism">Fallibilism</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T05:11:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Everyone seems to think that they are always right. It's pretty
+funny when you think about it. Because they aren't. At all. That's
+why I'm a falliblist. I believe that others are often right, and
+since I'm human, and prone to error, I'll always ...</p>
+				<a class="readmore" href=".././fallibilism.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././whats-in-a-language.html" rel="bookmark" title="Permalink to What's in a Language?">What's in a Language?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T04:13:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>What do developers want in a language?</p>
+<ul class="simple">
+<li>Lots of Available Resources / Documentation</li>
+<li>Large Standard Library</li>
+<li>Portability</li>
+<li>Speed of Development</li>
+<li>Easy to Read</li>
+<li>A Community of Developers</li>
+</ul>
+<p>Yes, Easy to read. You'd really be surprised how much this helps a
+developer. Well over half the time a C++ Developer spends ...</p>
+				<a class="readmore" href=".././whats-in-a-language.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././media-temple-and-my-hosting.html" rel="bookmark" title="Permalink to Media Temple and My Hosting">Media Temple and My Hosting</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T03:53:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>While I haven't used many hosting services, I must admit that I
+cannot imagine any being much better than Media Temple.</p>
+<p>Alot of other people use terrible hosting that is less than $5 a
+month. Don't waste your time. Why are you even on the internet if
+you ...</p>
+				<a class="readmore" href=".././media-temple-and-my-hosting.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././windows-mobile-and-iphone-os.html" rel="bookmark" title="Permalink to Windows Mobile and iPhone OS">Windows Mobile and iPhone OS</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T03:49:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've owned about 5 WIndows Mobile devices, 3 Palm Devices, and 1
+iPhone.</p>
+<p>What we all need:</p>
+<ul class="simple">
+<li>Simplicity</li>
+<li>Power</li>
+<li>Reliability</li>
+<li>Speed</li>
+<li>Integration</li>
+</ul>
+<p><strong>Palm OS</strong> (Pre-Pre haha):</p>
+<ul class="simple">
+<li>Simple. Very Simple.</li>
+<li>Does what it needs to do and doesn't falter.</li>
+<li>Not much in terms of applications.</li>
+<li>Most certainly not designed ...</li></ul>
+				<a class="readmore" href=".././windows-mobile-and-iphone-os.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././early-adoption.html" rel="bookmark" title="Permalink to Early Adoption">Early Adoption</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T03:10:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>The world is full of people who wait for people to tell them what
+to use next. Especially on the internet.</p>
+<p>Find (or create) something great before it's popular and show
+others – if your recommendation holds true, they will respect you
+for it. They will trust you. They will ...</p>
+				<a class="readmore" href=".././early-adoption.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././microsoft-software-running-in-linux.html" rel="bookmark" title="Permalink to Microsoft Software Running in Linux">Microsoft Software Running in Linux</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T02:55:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>A few months ago, I wrote a small article for
+<a class="reference external" href="http://programmerfish.com/">ProgramerFish</a> that was
+<a class="reference external" href="http://tech.slashdot.org/article.pl?sid=09/03/17/2235215">featured on SlashDot's Front Page</a>.
+It was amazing. Within hours, my post had thousands of views and
+hundreds of comments. People both loved and hated the idea.</p>
+<p>But what made
+<a class="reference external" href="http://tech.slashdot.org/article.pl?sid=09/03/17/2235215">my post</a>
+so popular? The fact ...</p>
+				<a class="readmore" href=".././microsoft-software-running-in-linux.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././revolution-vs-innovation.html" rel="bookmark" title="Permalink to Revolution vs. Innovation">Revolution vs. Innovation</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T01:08:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I've been thinking alot about this cloud-computing &quot;movement&quot; that
+has been a buzz word for the past year and half or so. Being able
+to access anything from anywhere? Awesome, but
+<em>I can do that now</em>.</p>
+<p>I don't really get it why everyone's like &quot;oh this will ...</p>
+				<a class="readmore" href=".././revolution-vs-innovation.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././amazon-is-amazing-most-of-the-time.html" rel="bookmark" title="Permalink to Amazon is Amazing... Most of the Time">Amazon is Amazing... Most of the Time</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T00:51:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a href="#id1"><span class="problematic" id="id2">|</span></a>image|Again and again I'm really amazed at Amazon. I discovered
+<a class="reference external" href="http://aws.amazon.com/s3/">Amazon S3</a> a few months ago, and was
+really impressed with the service. For mere pennies a month, you
+can have literally an unlimited amount of &quot;cloud&quot; storage.
+Phenomenal. After using the service for a while, I realized ...</p>
+				<a class="readmore" href=".././amazon-is-amazing-most-of-the-time.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././what-seperates.html" rel="bookmark" title="Permalink to What Seperates?">What Seperates?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-15T00:28:00">
+								Wed 15 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I want my thoughts to be heard. I want to share the things I find
+on the web every day. I want to be a part of a community. I want to
+lead the community.</p>
+<p>That's why I'm here, and that's why I'm writing this.</p>
+
+				<a class="readmore" href=".././what-seperates.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././if-textmate-42.html" rel="bookmark" title="Permalink to if (TextMate == 42)">if (TextMate == 42)</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-14T23:13:00">
+								Tue 14 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><strong>{</strong> I've had some pretty extensive experience using every major
+OS for various forms of development and end-user work. And just
+like every other programmer in the world, I certainly have my
+opinions, likes, and dislikes of every platform (some are a lot
+closer to perfection than others of course ...</p>
+				<a class="readmore" href=".././if-textmate-42.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././instapaper-best-web-app-ever-created.html" rel="bookmark" title="Permalink to Instapaper: Best Web App Ever Created">Instapaper: Best Web App Ever Created</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-13T22:54:00">
+								Mon 13 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Out of all the startup applications that I have ever used,
+<a class="reference external" href="http://instapaper.com">Instapaper</a> (from the creators of
+micro-blogging site <a class="reference external" href="http://tumblr.com">Tumblr</a>) is by far the
+most innovative and useful. I use it on a daily basis. It not only
+saves me hours upon hours of time, but it allows me to focus ...</p>
+				<a class="readmore" href=".././instapaper-best-web-app-ever-created.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././best-iphone-app-byline.html" rel="bookmark" title="Permalink to Best iPhone App: Byline">Best iPhone App: Byline</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-12T03:47:00">
+								Sun 12 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><img alt="image" src="http://www.phantomfish.com/Resources/bylineicon.png" /> A couple months ago, I wrote a real simple post on
+<a class="reference external" href="http://kennethreitz.com/blog/the-ultimate-rss-feed-reader/">Google Reader</a>,
+so you know why I love it so. Well, having an iPhone is wonderful,
+but coming up with great reading material isn't the best when
+you're trying to use mobile safari. What happens if you ...</p>
+				<a class="readmore" href=".././best-iphone-app-byline.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././my-pitch-for-socialweb-20.html" rel="bookmark" title="Permalink to My Pitch for SocialWeb 2.0">My Pitch for SocialWeb 2.0</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-12T03:10:00">
+								Sun 12 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>The social web is severely flawed. I like to fix it. Who's in?</p>
+
+				<a class="readmore" href=".././my-pitch-for-socialweb-20.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-universal-flaw-in-commercial-based-oss.html" rel="bookmark" title="Permalink to The Universal Flaw in Commercial-Based OS's">The Universal Flaw in Commercial-Based OS's</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-10T21:24:00">
+								Fri 10 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Designers and Developers around the world, I present to you the
+flaw prevalent in all of today's commercial operating systems. This
+is not a security hole, nor is it a CPU-capping bug. It's more of a
+world-view. We're simply looking at things the wrong way.
+<strong>What ever ...</strong></p>
+				<a class="readmore" href=".././the-universal-flaw-in-commercial-based-oss.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././video-blog-series.html" rel="bookmark" title="Permalink to Video Blog Series">Video Blog Series</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-10T15:46:00">
+								Fri 10 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Well, I'm thinking of doing a series of video posts. This seems to
+work pretty well for some people.
+I'm looking for some good topic ideas.</p>
+<p><strong>Ideas so far:</strong> - Gadget Reviews - Emotional posts that just
+can't be captured by words - In general thoughts on the tech world ...</p>
+				<a class="readmore" href=".././video-blog-series.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././twitter-tracker.html" rel="bookmark" title="Permalink to Twitter Tracker!">Twitter Tracker!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-10T10:11:00">
+								Fri 10 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>While this is one of the stupidest Conan sketches I have seen in a
+very long while (at least since the writers strike), this is so
+utterly funny that I have to pass it along. Incredibly applicable
+as well.</p>
+
+				<a class="readmore" href=".././twitter-tracker.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././not-acting-on-ideas.html" rel="bookmark" title="Permalink to Not Acting on Ideas">Not Acting on Ideas</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-10T10:08:00">
+								Fri 10 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>As of yesterday, my second idea that I actually thought would work
+well was thought up by someone else. The first instance was a game
+that me and my friend <a class="reference external" href="http://twitter.com/mikeXocon/">&#64;MikeXocon</a>
+came up with. After reading up on some man laws one day back at
+college, we thought of the ...</p>
+				<a class="readmore" href=".././not-acting-on-ideas.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././new-design.html" rel="bookmark" title="Permalink to New Design!">New Design!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-07-10T09:24:00">
+								Fri 10 July 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>KennethReitz.com now has a new, rich theme, ready to take on a new
+life. And now iPhone friendly! My gloal? To become more well known
+that both <a class="reference external" href="http://joelonsoftware.com">Joel Spolsky</a> and
+<a class="reference external" href="http://chris.parillo.com">Chris Parillo</a>. Nothing wrong with
+them, of course. I'm just as qualified though. And I think I might ...</p>
+				<a class="readmore" href=".././new-design.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././django-remote-development-server.html" rel="bookmark" title="Permalink to Django Remote Development Server">Django Remote Development Server</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-05-08T04:03:00">
+								Fri 08 May 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><img alt="image" src="http://media.kennethreitz.com/images/django-logo.png" /> If you've worked with Django much at all, I'm sure you've
+had this problem: wanting to access the built-in development
+webserver remotely. Typically, this integrated mini-server ignores
+all requests from any IP Address other than 127.0.0.1 . If you run
+the following command, however, it ...</p>
+				<a class="readmore" href=".././django-remote-development-server.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././remote-textmate-development-via-ssh-and-rsync.html" rel="bookmark" title="Permalink to Remote TextMate Development via SSH and Rsync">Remote TextMate Development via SSH and Rsync</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-05-08T00:39:00">
+								Fri 08 May 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>I am a huge fan of
+<a class="reference external" href="http://kennethreitz.com/blog/if-textmate-42/">TextMate</a>. In my
+opinion, it is by far the greatest text editor ever conceived by
+mankind. It has a couple of shortcomings, however. One of which is
+that it has no built-in FTP or SFTP support. Remote file editing is
+a bit of a ...</p>
+				<a class="readmore" href=".././remote-textmate-development-via-ssh-and-rsync.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././unetbootin-the-utility-belt-for-oss.html" rel="bookmark" title="Permalink to uNetBootin: The Utility Belt for OS's">uNetBootin: The Utility Belt for OS's</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-05-06T13:57:00">
+								Wed 06 May 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>If you're in the mood to try a new operating system or two, I
+highly reccommend you try this little utility: uNetBootin. It is an
+image downloader that lets you easily select which Linux distro
+you'd like to install and it instantly starts fetching it from the
+cloud ...</p>
+				<a class="readmore" href=".././unetbootin-the-utility-belt-for-oss.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././crossing-over-to-the-dark-side.html" rel="bookmark" title="Permalink to Crossing Over to the Dark Side">Crossing Over to the Dark Side</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-05-06T13:49:00">
+								Wed 06 May 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Well, I've done it. I've crossed over. To .NET.</p>
+<p>I will continue to be a complete open-source junkie of course, but
+during the work hours, I will no longer be working with PHP and
+Python. I will now be working with .NET and SharePoint.</p>
+<p>I was presented with ...</p>
+				<a class="readmore" href=".././crossing-over-to-the-dark-side.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././reflections-on-windows-7.html" rel="bookmark" title="Permalink to Reflections on Windows 7">Reflections on Windows 7</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-05-06T04:01:00">
+								Wed 06 May 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>While I have not had the opportunity to try the latest Windows 7
+Release Candidate, I have done a bit of reading on the subject. In
+my research, I have made the following observances</p>
+<p>Vista was truly the worst operating system I have ever used in my
+life. It had ...</p>
+				<a class="readmore" href=".././reflections-on-windows-7.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././software-development-vs-computer-science.html" rel="bookmark" title="Permalink to Software Development vs. Computer Science">Software Development vs. Computer Science</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-05-05T20:52:00">
+								Tue 05 May 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Most developer job applications that I see have a &quot;BS in Computer
+Science or equivalent experience&quot; requirement.</p>
+<p>During my studies in Computer Science at
+<a class="reference external" href="http://kennnethreitsz.com/was-college-worth-it/">George Mason University</a>,
+though short, I learned a number of things. One of them was what a
+waste it was to learn such higher math in ...</p>
+				<a class="readmore" href=".././software-development-vs-computer-science.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-ultimate-rss-feed-reader.html" rel="bookmark" title="Permalink to The Ultimate RSS Feed Reader">The Ultimate RSS Feed Reader</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-04-23T01:35:00">
+								Thu 23 April 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>What would the ultimate RSS Reader have? Hmmm.... <strong>Features:</strong> -
+Easy-to-manage import/export - Available anywhere and in a variety
+of formats - Easy access to both urls and inline-viewing abilities
+- Customizable fonts - Takes up less than 200 MB of RAM (this rules
+out all Adobe Air Applications) - Auto feed sniffing from urls ...</p>
+				<a class="readmore" href=".././the-ultimate-rss-feed-reader.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././facebook-vs-twitter-a-critical-synopsis.html" rel="bookmark" title="Permalink to Facebook vs Twitter: A Critical Synopsis">Facebook vs Twitter: A Critical Synopsis</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-04-06T08:51:00">
+								Mon 06 April 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>For the sake of us all, lets take a look at two major social
+networks on the web today: <a class="reference external" href="http://facebook.com">Facebook</a> and
+<a class="reference external" href="http://twitter.com/kennethreitz">Twitter</a>.</p>
+<p>Twitter is an information-streaming application that is used by
+people in all walks of life. It functions, sometimes in roundabout
+ways, as an instant messenger, email client, alert ...</p>
+				<a class="readmore" href=".././facebook-vs-twitter-a-critical-synopsis.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././new-blog.html" rel="bookmark" title="Permalink to New Blog">New Blog</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-04-05T22:09:00">
+								Sun 05 April 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Well, I decided to go ahead and do away with the old and bring on
+in the new. KennethReitz.com is now new. I the theme myself and
+implemented many new feature, all thanks to
+<a class="reference external" href="http://coreylib.com">CoreyLib</a>! I hope to see alot of great
+comments and discussions in the posts to ...</p>
+				<a class="readmore" href=".././new-blog.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././was-college-worth-it.html" rel="bookmark" title="Permalink to Was College Worth It?">Was College Worth It?</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-03-26T06:13:00">
+								Thu 26 March 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>George Mason University (at which I'm currently a non-studying
+student) is a fantastic environment for a student in their 20's.
+Never before have I felt so <em>enabled</em>. The campus allowed me to
+have a completely restriction-free place to live with peers of my
+own age, and millions of ...</p>
+				<a class="readmore" href=".././was-college-worth-it.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././contact-syncing-for-massive-productivity-booster.html" rel="bookmark" title="Permalink to Contact Syncing for Massive Productivity Booster">Contact Syncing for Massive Productivity Booster</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-03-25T06:12:00">
+								Wed 25 March 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Google significantly increased my quality of life recently. How?
+Let me explain. While I am a firm believer that cloud computing
+should <em>never</em> be viewed as a replacement for the current desktop/
+model, I must say that I am now a <strong>huge</strong> fan of storing my data
+on the internet ...</p>
+				<a class="readmore" href=".././contact-syncing-for-massive-productivity-booster.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././free-incredible-color-scheme-designer.html" rel="bookmark" title="Permalink to Free Incredible Color Scheme Designer">Free Incredible Color Scheme Designer</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-03-17T22:44:00">
+								Tue 17 March 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><img alt="Picture 3.png" src="http://www.programmerfish.com/wp-content/uploads/2009/03/color-wheel.png" /> Being the programmers that we are, design isn't
+always listed as one of our stronger abilities. Every programmer
+should have a sense of design, however. Otherwise, every
+application you would ever use would be far less useful and be much
+less appealing. <em>Aesthetics are everything</em>. ColorSchemeDesigner
+allows any user ...</p>
+				<a class="readmore" href=".././free-incredible-color-scheme-designer.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././free-direct-download-microsoft-office-2007.html" rel="bookmark" title="Permalink to Free Direct Download: Microsoft Office 2007">Free Direct Download: Microsoft Office 2007</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-03-17T19:14:00">
+								Tue 17 March 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Have you ever had the problem of losing an installation CD? This
+happened to me the other day when I needed to install Microsoft
+Office 2007. I found an easy solution, however, and I'd like to
+share it with you: Direct Downloads of Microsoft Office 2007 in
+<em>all</em> flavors ...</p>
+				<a class="readmore" href=".././free-direct-download-microsoft-office-2007.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././python-regular-expressions.html" rel="bookmark" title="Permalink to Python + Regular Expressions">Python + Regular Expressions</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-03-17T05:30:00">
+								Tue 17 March 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Have you ever needed to parse through large amounts of text looking
+for a specific pattern? Patterns like “one capital letter followed
+by three numbers” or “dd/mm/yyyy”? This is known as Pattern
+Matching. Regular Expressions allow easy syntax for pattern
+matching, and is an invaluable skill to add ...</p>
+				<a class="readmore" href=".././python-regular-expressions.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././how-to-run-microsoft-office-2007-in-ubuntu-linux-810.html" rel="bookmark" title="Permalink to How to Run Microsoft Office 2007 in Ubuntu Linux 8.10">How to Run Microsoft Office 2007 in Ubuntu Linux 8.10</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-03-16T19:12:00">
+								Mon 16 March 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><img alt="ms-office-2007" src="http://www.programmerfish.com/wp-content/uploads/2009/03/msoffice2007.gif" /> Wouldn't it be lovely to have a nice, clean
+installation of Microsoft's Office 2007 Suite to run on your Ubuntu
+Linux Distribution? For some people, this is the only thing that
+truly holds them back from an all-Linux environment... But not
+anymore! We have compiled a nice, concise ...</p>
+				<a class="readmore" href=".././how-to-run-microsoft-office-2007-in-ubuntu-linux-810.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././recession-a-university-perspective.html" rel="bookmark" title="Permalink to Recession: A University Perspective">Recession: A University Perspective</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-02-26T06:12:00">
+								Thu 26 February 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Newest update on the recession:</p>
+<blockquote>
+<p>To the George Mason University Community:</p>
+<p>For over a year now the global financial situation has steadily
+worsened, and many aspects of life have become more difficult for
+many Americans. There is little evidence that the world or national
+economies are rebounding or showing signs ...</p></blockquote>
+				<a class="readmore" href=".././recession-a-university-perspective.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././to-someone-special.html" rel="bookmark" title="Permalink to To Someone Special...">To Someone Special...</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-02-14T06:13:00">
+								Sat 14 February 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>While I doubt that you'll never read this... I can't help but
+imagine that one day you might. I know that blogging isn't your
+thing, and you could probally care less about my website - it's
+just something that takes me away from you at times.</p>
+<p>But ...</p>
+				<a class="readmore" href=".././to-someone-special.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././mintcom-money-management-20.html" rel="bookmark" title="Permalink to Mint.com: Money Management 2.0">Mint.com: Money Management 2.0</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2009-01-30T12:42:00">
+								Fri 30 January 2009
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>There are a few things in life that I am naturally not good at.
+Some people fail at communication skills, while others
+<a class="reference external" href="http://jwhsband.tripod.com/">get angry and lash out at others for no reason</a>.
+I, however, like to spend all of my money. ALL of it. Every
+paycheck.</p>
+<p>But thanks to this ...</p>
+				<a class="readmore" href=".././mintcom-money-management-20.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././twitter-authority-number-of-followers-vs-retweets.html" rel="bookmark" title="Permalink to Twitter Authority? Number of Followers vs. ReTweets">Twitter Authority? Number of Followers vs. ReTweets</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2008-12-30T00:51:00">
+								Tue 30 December 2008
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p><a class="reference external" href="http://twitter.com">Twitter</a> is by far the market leader of the
+so-called &quot;micro-blogging&quot; scene. Is this a bad thing? A number
+people think that
+<a class="reference external" href="http://www.neuro-vision.us/ad/Article/How-Twitter-is-Destroying-Your-Mind/4970">Twitter is destroying us</a>.
+Others seem to find it to be a wonderful
+<a class="reference external" href="http://www.ehow.com/how_2263342_market-business-twitter.html">marketplace</a>
+and even a source for
+<a class="reference external" href="http://www.whatsyourtweetworth.com/">revenue</a>, if allowed. In
+order for any of these ...</p>
+				<a class="readmore" href=".././twitter-authority-number-of-followers-vs-retweets.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././pownce-shut-down-december-15.html" rel="bookmark" title="Permalink to Pownce: Shut Down December 15!">Pownce: Shut Down December 15!</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2008-11-30T06:14:00">
+								Sun 30 November 2008
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>Chances are, this news will either have you screaming at the top of
+your lungs or making you shake your head saying &quot;Wah&quot;? And to the
+Web 2.0 world/micro-blogosphere, shame on you. #Shame! This is a
+wonderful internet startup that was built on a framework framework
+and has ...</p>
+				<a class="readmore" href=".././pownce-shut-down-december-15.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././a-new-spin-to-software-platform-design.html" rel="bookmark" title="Permalink to A New Spin to Software Platform Design">A New Spin to Software Platform Design</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2008-11-11T19:31:00">
+								Tue 11 November 2008
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>*I wrote this article two years ago, before I found OS X. I wish I
+would have known then.* As I've said before, I find many reasons
+to believe that modern commercialized software platforms are
+severely lacking in many, many areas. This should not come as a
+surprise to ...</p>
+				<a class="readmore" href=".././a-new-spin-to-software-platform-design.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././the-fbi-releases-code-challenge-to-hackers.html" rel="bookmark" title="Permalink to The FBI Releases Code Challenge to Hackers">The FBI Releases Code Challenge to Hackers</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="2008-11-11T06:13:00">
+								Tue 11 November 2008
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				<p>The Federal Bureau of Investigation, that's right, the FBI, has
+just released a
+<a class="reference external" href="%20http://www.networkworld.com/community/node/36704">Code Challenge</a>
+for hackers around the world! Here are the details:</p>
+<blockquote>
+A relatively basic form of substitution cipher is the Caesar
+Cipher, named for its Roman origins. The Caesar Cipher involves
+writing two alphabets, one above ...</blockquote>
+				<a class="readmore" href=".././the-fbi-releases-code-challenge-to-hackers.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+		 
+	 
+		<li><article class="hentry">	
+				<header>
+						<h1><a href=".././auto-draft.html" rel="bookmark" title="Permalink to Auto Draft">Auto Draft</a></h1>
+				</header>
+				
+				<div class="entry-content">
+				<footer class="post-info">
+						<abbr class="published" title="1970-01-01T00:00:00">
+								Thu 01 January 1970
+						</abbr>
+
+						<p> In <a href=".././category/Code.html">Code</a></p>
+						
+</p>
+					<p></p>
+				</footer><!-- /.post-info -->
+				
+				<a class="readmore" href=".././auto-draft.html">read more</a>
+				
+				</div><!-- /.entry-content -->
+		</article></li>
+	
+
+</ol><!-- /#posts-list -->
+</section><!-- /#content -->
+
+
+
+	<section id="extras" class="body">
+
+	
+		<div class="blogroll">
+			<h2>Links</h2>
+			<ul>
+			
+			    <li><a href="http://github.com/kennethreitz">GitHub Repos</a></li>
+			
+			    <li><a href="http://flickr.com/kennethreitz">Photography (Flickr)</a></li>
+			
+			    <li><a href="http://twitter.com/kennethreitz">Latest Tweets</a></li>
+			
+			    <li><a href="http://www.linkedin.com/in/kennethreitz">R&eacute;sum&eacute;</a></li>
+			
+			    <li><a href="http://pick.im/kenneth-reitz">Design Portfolio</a></li>
+			
+			    <li><a href="http://laterstars.com/kennethreitz">Later Stars</a></li>
+			
+			</ul>
+		</div><!-- /.blogroll -->
+	
+
+	
+		<div class="social">
+			<h2>social</h2>
+			<ul>
+			    <li><a href=".././feeds/all.atom.xml" rel="alternate">atom feed</a></li>
+			    
+
+			
+			    <li><a href="http://facebook.com/kennethreitz">Facebook</a></li>
+			
+			</ul>
+		</div><!-- /.social -->
+	
+
+	</section><!-- /#extras -->
+
+	<footer id="contentinfo" class="body">
+		<address id="about" class="vcard body">
+		&copy; 2011 Kenneth Reitz &amp; co. .
+		</address><!-- /#about -->
+
+	</footer><!-- /#contentinfo -->
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'kennethreitz';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<script type="text/javascript" charset="utf-8">
+	var disqus_developer = 1;
+</script>
+
+</body>
+</html>
