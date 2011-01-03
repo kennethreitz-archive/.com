@@ -101,11 +101,11 @@ dl {margin: 0 0 1.5em 0;}
 dt {font-weight: bold;}
 dd {margin-left: 1.5em;}
 
-pre{
+pre {
 	background-color: #000; padding: 10px; color: #fff; margin: 10px; overflow: auto;
-	font-family: Inconsolata;
+	font-family: Inconsolata, Monaco, Courier;
 	font-size: 13px;
-	
+	border-radius: 8px;
 }
 
 /* Quotes */
