@@ -1,0 +1,121 @@
+Recession: A University Perspective
+###################################
+
+:date: 2009-02-26 06:12
+:category: Code
+
+
+Newest update on the recession:
+
+    To the George Mason University Community:
+
+    For over a year now the global financial situation has steadily
+    worsened, and many aspects of life have become more difficult for
+    many Americans. There is little evidence that the world or national
+    economies are rebounding or showing signs of an imminent recovery.
+
+    We share the hope that was so profoundly expressed by President
+    Obama during his inaugural speech of a better day in the months and
+    years ahead, and his resolve to view this financial situation as an
+    opportunity for improvement. How long the economic crisis will
+    persist is unknown to any of us. The road ahead will not be easy,
+    but if we keep our focus and reaffirm our commitment to protect the
+    core, we will endure and be well positioned when the economy
+    rebounds.
+
+    Our institutional vital signs are stronger than ever as we have
+    assembled a teaching and research faculty who continuously advance
+    the reputation of the institution. We have achieved national
+    recognition for our teaching excellence, as well as several
+    breakthrough discoveries in various areas of research. The number
+    of student applications is higher than ever, and the quality of
+    incoming undergraduate, transfer, and graduate students is superior
+    to any previous year. Our retention rate and graduation rate are at
+    all-time highs. We award more degrees annually than any other
+    college or university in the Commonwealth of Virginia, and our
+    alumni are increasingly being tapped as highly respected regional,
+    national, and international leaders. National publications have
+    acknowledged our institutional advancement and our outstanding
+    value to our students. These rankings and accomplishments are a
+    direct reflection of the effort and commitment made by you.
+
+    As we are currently expending approximately $250 million per year
+    on new construction and improvements, we are not only changing the
+    face of our campuses but serving as a major contributor to the
+    Northern Virginia economy at a time when so many other economic
+    drivers are either stagnant or declining. By any measurement, we
+    are highly efficient and effective in how we manage the university,
+    and this is true of both our academic administration and our
+    support services. However, as state support declines and day-to-day
+    responsibilities increase, certainly you must question how we can
+    possibly do more. Yet we know we must. We must continue to find
+    ways to work smarter and more effectively.
+
+    The provost and senior vice president have held informational
+    sessions to explain our budget reduction strategies as we have
+    absorbed a 5 percent General Fund reduction in FY 2008; another 7
+    percent budget reduction in FY 2009 with the high probability of a
+    deeper cut in state support next year (FY 2010). As you probably
+    know, the governor recommended another 8 percent General Fund
+    reduction for FY 2010. Operating plans for FY 2010 are currently
+    being developed which will provide us with the necessary
+    information to make the wisest possible resource allocation
+    decision.
+
+    As the state continues to struggle financially, we must focus our
+    efforts on keeping higher education accessible to new and returning
+    students. This will be a monumental task as we brace ourselves for
+    what will most likely be a substantial reduction in state support
+    this coming year. Therefore, I have decided to establish an Adverse
+    Economy Assistance Fund to assist students whose family’s economic
+    situation has been dramatically weakened by job loss or other
+    catastrophic incidents as a result of the economic crisis.
+    Established at $150,000 and to be used by the Office of Financial
+    Aid in conjunction with other available assistance to help
+    students, this fund will hopefully make the difference between
+    either continuing their studies or withdrawing from George Mason
+    University for many students.
+
+    The university’s endowment performance for the past year, though
+    experiencing a double-digit decline, achieved a top quartile peer
+    ranking. A priority for Mason is to continue to build on the
+    success of the recently completed capital campaign that raised more
+    than $140 million for George Mason University. In 2008 we raised
+    more dollars, gifts, and pledges than ever in the history of Mason.
+    We are enormously grateful to the thousands of Mason supporters who
+    continue to invest in the future of this great institution. Your
+    support is more important than ever.
+
+    Our university culture is marked by a commitment to improvement, a
+    relentless search for best practices, and a quest for excellence.
+    We know that only through the alignment of a shared vision and a
+    university spirit that embraces diversity and civility can we
+    advance those actions that will strengthen the core values of this
+    great university. There is no easy answer to maintaining
+    institutional momentum during difficult financial times, but being
+    resilient and optimistic is the foundation of our plan.
+
+    Our strength is our people. Several university community members
+    have already made significant contributions by volunteering to
+    accept salary reductions, deferring compensation package increases,
+    individually absorbing costs that otherwise would be eligible for
+    state reimbursement, and contributing larger amounts of
+    unrestricted donations to the George Mason University Foundation. A
+    different person seems to step up every day to lead us on this
+    journey. That is what makes George Mason University so special.
+
+    We will emerge a better university after these turbulent times
+    because each of you believes that you can make a difference at
+    Mason—and you can—and you do. Although challenged by these
+    financial constraints, we will rally together to build an
+    institution that will withstand today’s economic downturn and be
+    prepared to meet any future challenges. It is our responsibility,
+    our opportunity, to take advantage of this economic downturn and do
+    whatever we can to lift tomorrow’s leaders onto our shoulders so
+    they may view a horizon that inspires hope and promise and the
+    opportunity to fulfill their dreams of a better tomorrow. We in
+    higher education hold the key to their success. Together we can do
+    this! We are Mason.
+
+    Alan G. Merten
+
