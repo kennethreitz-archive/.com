@@ -2,7 +2,7 @@ The Setup
 #########
 
 :date: 2010-08-03 00:43
-:category: Life
+:category: Code
 
 
 I'm Kenneth Reitz, one of the two co-founders of Züm Hosting. I'm a
