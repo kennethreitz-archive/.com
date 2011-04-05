@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+        <meta charset="utf-8" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+        </header><!-- /#banner -->
+        {% if categories %}<ul>
+        {% for category, articles in categories %}
+            <li><a href="{{ SITEURL }}/category/{{category}}.html">{{ category }}</a></li> 
+        {% endfor %}
+        </ul> {% endif %}
+        {% block content %}
+        {% endblock %}
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a
+                href="http://hg.lolnet.org/pelican/">pelican</a>, and obviously <a href="http://python.org">python</a>!
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>
