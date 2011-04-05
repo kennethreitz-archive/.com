@@ -2,7 +2,6 @@ GitHub Syncer in Python
 #######################
 
 :date: 2010-10-10 19:24
-:category: Code
 
 
 Today I rewrote a little utility I've been using for a while to
@@ -12,13 +11,17 @@ account. It also detects if your repo is a mirror or fork, and
 files it accordingly. My watched list is huge, but I like to have a
 local copy of my favorite libraries. You never know if the owner
 will take it down, or worse, move it to another SCM! ;-) The script
-depends on the \*\*GitHub2\*\* module. If you don't have it, you
-can install it easily. $ pip install github2 I recommend running
-this from \`~/repos/\`. #!/usr/bin/env python #
--*- coding: utf-8 -*-
+depends on the **GitHub2** module. If you don't have it, you
+can install it easily.::
+
+    $ pip install github2 
+
+I recommend running this from ``~/repos/``.
 
 ::
-
+    #!/usr/bin/env python #
+    -*- coding: utf-8 -*-
+    
     """Kenneth Reitz's GitHub Syncer
     
     This script uses the GitHub API to get a list of all forked, mirrored, public, and 
