@@ -4,9 +4,9 @@ Tablib
 Tablib is an extensive Python module for working with tabular datasets. It allows you create tables of data using standard Python datatypes, manipulate them, and easily export to Excel, JSON, YAML, and CSV.
 
 
-Basic Usage:
+Basic Usages:
 
-.. code-block:: PythonLexer
+.. code-block:: python
 
 	import tablib
 
@@ -16,7 +16,9 @@ Basic Usage:
 	data = tablib.Dataset(*data, headers=headers)
 
 
-You can manipulate your data like a standard Python list: ::
+You can manipulate your data like a standard Python list:
+
+.. code-block:: pycon
 
 	>>> data.append(('Henry', 'Ford', 83))
 
@@ -25,7 +27,9 @@ You can manipulate your data like a standard Python list: ::
 
 	>>> del data[1]
 
-You can easily export your data to JSON, YAML, XLS, and CSV. ::
+You can easily export your data to JSON, YAML, XLS, and CSV.
+
+.. code-block:: pycon
 
 	>>> print data.json
 	[{"first_name": "John", "last_name": "Adams", "gpa": 90},
