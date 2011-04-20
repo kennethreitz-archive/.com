@@ -1,4 +1,7 @@
+# -*- coding: utf-8 -*-
+
 import os
+
 from fabric.api import *
 
 
@@ -10,15 +13,14 @@ def build():
 	os.chdir('html')
 	os.system('rm -fr feeds category pages tag theme')
 	os.system('mv ../output/* .')
+	os.chdir('..')
+
+
+def push():
+	os.chdir('html')
+
 	os.system('git add -A')
 	os.system('git commit -m \'content update\'')
 	os.system('git push origin gh-pages')
 
-# def docs():
-# 	"""Build docs."""
-# 	os.system('make html')
-# 	os.chdir('_build/html')
-# 	os.system('sphinxtogithub .')
-# 	os.system('git add -A')
-# 	os.system('git commit -m \'documentation update\'')
-# 	os.system('git push origin gh-pages')
+	os.chdir('..')
