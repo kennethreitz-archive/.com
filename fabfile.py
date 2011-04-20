@@ -3,7 +3,7 @@ from fabric.api import *
 
 
 def build():
-	""" Death to the bytecode! """
+	"""Builds website."""
 	local('pelican -t theme -s settings.py content')
 	# mv index archive.html
 	# take out all but 8 latest articles
