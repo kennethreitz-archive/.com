@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
-<section id="content" class="body">
-<article>
-        <header> <h1 class="entry-title"><a href="{{ article.url }}"
-        rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title
-        }}</a></h1> {% include 'twitter.html' %} </header>
-        <div class="entry-content">
+        <h1> {{ article.title }} </h1>
+
         {% include 'article_infos.html' %}
         {{ article.content }}
-        </div><!-- /.entry-content -->
+
+        <!-- /.entry-content -->
         {% if DISQUS_SITENAME %}
         <div class="comments">
             <div id="disqus_thread"></div>
@@ -24,6 +21,4 @@
         </div>
         {% endif %}
 
-</article>
-</section>
 {% endblock %}

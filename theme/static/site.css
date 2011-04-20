@@ -43,7 +43,7 @@ pre, code {
 pre {
   margin: 0 0 15px 0;
   width: 600px;
-  border: 1px solid #e5e5ee;  
+  border: 1px solid #e5e5ee;
   background: ghostWhite;
   overflow: auto;
 }
@@ -60,7 +60,7 @@ ul {
 }
 
 #sidebar {
-  background: ghostWhite;
+  /*background: ghostWhite;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +69,7 @@ ul {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 15px 0 30px 30px;
-  border-right: 1px solid #DDD;
+  /*border-right: 1px solid #DDD;*/
 }
 
 #sidebar a {
