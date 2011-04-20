@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Kenneth Reitz #2</title><link href="http://kennethreitz.com/" rel="alternate"></link><link href="http://kennethreitz.com//feeds/projects.atom.xml" rel="self"></link><id>http://kennethreitz.com/</id><updated>2011-04-16T04:50:19Z</updated><entry><title>Tablib</title><link href="http://kennethreitz.com//tablib.html" rel="alternate"></link><updated>2011-04-16T04:50:19Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2011-04-16://tablib.html/</id><summary type="html">&lt;p&gt;Tablib is an extensive Python module for working with tabular datasets. It allows you create tables of data using standard Python datatypes, manipulate them, and easily export to Excel, JSON, YAML, and CSV.&lt;/p&gt;
+&lt;p&gt;Basic Usages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;tablib&lt;/span&gt;
+
+&lt;span class="n"&gt;headers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;first_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;last_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;gpa&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;John&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Adams&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;90&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;George&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Washington&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;67&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tablib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Dataset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can manipulate your data like a standard Python list:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Henry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Ford&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;83&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;first_name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="go"&gt;[&amp;#39;John&amp;#39;, &amp;#39;George&amp;#39;, &amp;#39;Henry&amp;#39;]&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can easily export your data to JSON, YAML, XLS, and CSV.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
+&lt;span class="go"&gt;[{&amp;quot;first_name&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;last_name&amp;quot;: &amp;quot;Adams&amp;quot;, &amp;quot;gpa&amp;quot;: 90},&lt;/span&gt;
+&lt;span class="go"&gt;{&amp;quot;first_name&amp;quot;: &amp;quot;Henry&amp;quot;, &amp;quot;last_name&amp;quot;: &amp;quot;Ford&amp;quot;, &amp;quot;gpa&amp;quot;: 83}]&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;yaml&lt;/span&gt;
+&lt;span class="go"&gt;- {age: 90, first_name: John, last_name: Adams}&lt;/span&gt;
+&lt;span class="go"&gt;- {age: 83, first_name: Henry, last_name: Ford}&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;
+&lt;span class="go"&gt;first_name,last_name,age&lt;/span&gt;
+&lt;span class="go"&gt;John,Adams,90&lt;/span&gt;
+&lt;span class="go"&gt;Henry,Ford,83&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;people.xls&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xls&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Excel files with multiple sheets are also supported (via the DataBook object).&lt;/p&gt;
+&lt;p&gt;[Source on GitHub] [PyPi Listing]&lt;/p&gt;
+</summary></entry><entry><title>GitHub Syncer in Python</title><link href="http://kennethreitz.com//github-syncer-in-python.html" rel="alternate"></link><updated>2010-10-10T19:24:00Z</updated><author><name>Kenneth Reitz</name></author><id>tag:kennethreitz.com,2010-10-10://github-syncer-in-python.html/</id><summary type="html">&lt;p&gt;Today I rewrote a little utility I've been using for a while to
+keep all of my GitHub repos up to date and organized. It updates /
+clones all private, public, and watched repositories from your
+account. It also detects if your repo is a mirror or fork, and
+files it accordingly. My watched list is huge, but I like to have a
+local copy of my favorite libraries. You never know if the owner
+will take it down, or worse, move it to another SCM! ;-) The script
+depends on the &lt;strong&gt;GitHub2&lt;/strong&gt; module. If you don't have it, you
+can install it easily.:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install github2
+&lt;/pre&gt;
+&lt;p&gt;I recommend running this from &lt;tt class="docutils literal"&gt;~/repos/&lt;/tt&gt;.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;::&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;#!/usr/bin/env python #
+-&lt;em&gt;- coding: utf-8 -&lt;/em&gt;-&lt;/p&gt;
+&lt;p&gt;&amp;quot;&amp;quot;&amp;quot;Kenneth Reitz's GitHub Syncer&lt;/p&gt;
+&lt;p&gt;This script uses the GitHub API to get a list of all forked, mirrored, public, and
+private repos in your GitHub account. If the repo already exists locally, it will
+update it via git-pull. Otherwise, it will properly clone the repo.&lt;/p&gt;
+&lt;p&gt;It will organize your repos into the following directory structure:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;repos
+├── forks    (public fork repos)
+├── mirrors  (public mirror repos)
+├── private  (private repos)
+├── public   (public repos)
+├── watched  (this script)
+└── sync.py  (this script)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Requires Ask Solem's github2 (&lt;a class="reference external" href="http://pypi.python.org/pypi/github2"&gt;http://pypi.python.org/pypi/github2&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Inspired by Gisty (&lt;a class="reference external" href="http://github.com/swdyh/gisty"&gt;http://github.com/swdyh/gisty&lt;/a&gt;).
+&amp;quot;&amp;quot;&amp;quot;&lt;/p&gt;
+&lt;p&gt;import os
+from commands import getoutput as cmd&lt;/p&gt;
+&lt;p&gt;from github2.client import Github&lt;/p&gt;
+&lt;p&gt;# GitHub configurations
+GITHUB_USER = cmd('git config github.user')
+GITHUB_TOKEN = cmd('git config github.token')&lt;/p&gt;
+&lt;p&gt;# API Object
+github = Github(username=GITHUB_USER, api_token=GITHUB_TOKEN)&lt;/p&gt;
+&lt;p&gt;# repo slots
+repos = {}&lt;/p&gt;
+&lt;p&gt;repos['watched'] = [r for r in github.repos.watching(GITHUB_USER)]
+repos['private'] = []
+repos['mirrors'] = []
+repos['public'] = []
+repos['forks'] = []&lt;/p&gt;
+&lt;p&gt;# Collect GitHub repos via API
+for repo in github.repos.list():&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;if repo.private:&lt;/dt&gt;
+&lt;dd&gt;repos['private'].append(repo)&lt;/dd&gt;
+&lt;dt&gt;elif repo.fork:&lt;/dt&gt;
+&lt;dd&gt;repos['forks'].append(repo)&lt;/dd&gt;
+&lt;dt&gt;elif 'mirror' in repo.description.lower():&lt;/dt&gt;
+&lt;dd&gt;# mirrors owned by self if mirror in description...
+repos['mirrors'].append(repo)&lt;/dd&gt;
+&lt;dt&gt;else:&lt;/dt&gt;
+&lt;dd&gt;repos['public'].append(repo)&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/blockquote&gt;
+&lt;dl class="last docutils"&gt;
+&lt;dt&gt;for org, repos in repos.iteritems():&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;for repo in repos:&lt;/p&gt;
+&lt;blockquote class="last"&gt;
+&lt;p&gt;# create org directory (safely)
+try:&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 88)&lt;/p&gt;
+Unexpected indentation.&lt;/div&gt;
+&lt;blockquote&gt;
+os.makedirs(org)&lt;/blockquote&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 89)&lt;/p&gt;
+Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;except OSError:&lt;/dt&gt;
+&lt;dd&gt;pass&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;# enter org dir
+os.chdir(org)&lt;/p&gt;
+&lt;p&gt;# I own the repo
+private = True if org in ('private', 'fork', 'mirror') else False&lt;/p&gt;
+&lt;p&gt;# just &lt;cite&gt;git pull&lt;/cite&gt; if it's already there
+if os.path.exists(repo.name):&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 100)&lt;/p&gt;
+Unexpected indentation.&lt;/div&gt;
+&lt;blockquote&gt;
+os.chdir(repo.name)
+print('Updating repo: %s' % (repo.name))
+os.system('git pull')
+os.chdir('..')&lt;/blockquote&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 104)&lt;/p&gt;
+Block quote ends without a blank line; unexpected unindent.&lt;/div&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;else:&lt;/dt&gt;
+&lt;dd&gt;&lt;dl class="first last docutils"&gt;
+&lt;dt&gt;if private:&lt;/dt&gt;
+&lt;dd&gt;print('Cloning private repo: %s' % (repo.name))
+os.system('git clone &lt;a class="reference external" href="mailto:git&amp;#64;github.com"&gt;git&amp;#64;github.com&lt;/a&gt;:%s/%s.git' % (repo.owner, repo.name))&lt;/dd&gt;
+&lt;dt&gt;else:&lt;/dt&gt;
+&lt;dd&gt;print('Cloning repo: %s' % (repo.name))
+os.system('git clone git://github.com/%s/%s.git' % (repo.owner, repo.name))&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;# return to base
+os.chdir('..')
+print&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://gist.github.com/619473"&gt;Source on GitHub&lt;/a&gt; Enjoy!&lt;/p&gt;
+</summary></entry></feed>

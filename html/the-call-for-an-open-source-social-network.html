@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>The Call for an Open Source Social Network</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./theme/css/main.css" type="text/css" />
+        <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Kenneth Reitz #2 ATOM Feed" />
+        
+
+        
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="./css/ie.css"/>
+                <script src="./js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+
+<a href="http://github.com/kennethreitz/">
+
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+
+</a>
+
+        <header id="banner" class="body">
+                <h1><a href=".">Kenneth Reitz #2 </a></h1>
+                <nav><ul>
+                
+                
+                
+                    <li><a href="./pages/open-projects.html">Open Projects</a></li>
+                
+                    <li><a href="./pages/resume.html">Résumé</a></li>
+                
+                
+                
+                    <li class="active"><a href="./category/Code.html">Code</a></li>
+                
+                    <li ><a href="./category/Life.html">Life</a></li>
+                
+                    <li ><a href="./category/projects.html">projects</a></li>
+                
+                </ul></nav>
+        </header><!-- /#banner -->
+                
+<section id="content" class="body">    
+<article>
+        <header> <h1 class="entry-title"><a href="the-call-for-an-open-source-social-network.html"
+        rel="bookmark" title="Permalink to The Call for an Open Source Social Network">The Call for an Open Source Social Network</a></h1>  </header>
+        <div class="entry-content">
+        <footer class="post-info">
+        <abbr class="published" title="2009-08-16T20:16:00">
+                Sun 16 August 2009
+        </abbr>
+
+        
+        <address class="vcard author">
+                By <a class="url fn" href="#">Kenneth Reitz</a>
+        </address>
+        
+<p>In <a href="./category/Code.html">Code</a>. </p>
+
+</p>
+
+</footer><!-- /.post-info -->
+        <p>Lately, I've been tossing some ideas around that I feel would
+benefit the Social Web as a whole. It’s been going through some
+rough times lately, and I think it’s time for a change. Or so I
+thought. My first idea was to create a site that was rather
+decentralized, allowing all of your content to exist on other
+sites, but still allowing for you to interact without locking a
+user in. As it turns out, this site already exists. It is called
+<a class="reference external" href="http://friendfeed.com/kennethreitz">FriendFeed</a>.
+<em>`I love FriendFeed &lt;http://kennethreitz.com/blog/friendfeed-is-awesome/&gt;`_</em>.
+About a week after I decided that I wanted to get into it,
+<a class="reference external" href="http://kennethreitz.com/blog/friendfeed-is-awesome/">Facebook decided to purchase it</a>.
+How sad. They claim that it will still be up and running, but we’ll
+see if that proves to be the case (I have my fingers crossed).
+Pownce (which was powered by Python / Django) was shut down when it
+was purchased. I pray this not be the case. Think about this now:
+<strong>Why is that even an option</strong>? Social networking is all about
+community and building tribes – So why do we need to have an
+organization in charge of our chosen communication platform?
+<strong>Here is my proposal</strong>: Create a community-driven,
+community-developed, and community-controlled social networking
+site that is truly open source. The community could take care of
+everything from feature development to content control. No random
+shutting down, buy-outs, or merges. No more random change of
+Privacy Policies or Content Ownership battles. No more worries. The
+only group of people who would be benefitted would be the community
+itself, not some company. An open minded network full of open
+minded people working for the better of the community. # The Open
+Web of Flow</p>
+<div class="section" id="step-one-solid-platform-choice">
+<h2><strong>Step One</strong>: Solid Platform Choice</h2>
+<p>The platform choice is the most important. You've seen what happens
+when the wrong tool is chosen for the job: look at Twitter: Bad
+Planning. We're all familiar with the Fail Whale but we shouldn't.
+At all. So what do we use? There's an array of options. .NET? HAHA!
+Did you know that there's even
+<a class="reference external" href="http://membertomember.com/">a social platform built on top of Microsoft's Sharepoint</a>?
+I bet you didn't. I've installed it a number of times. It's
+fantastic (for people who need it). But we don't. At all. What type
+of open source project aside Mono is driven by NET developers
+anyway? They are in an entirely different mindset than us. Anyway,
+the answer is obvious: Django on a LAMP Stack (Linux + Apache +
+MySql + Python). We can all agree that Python is freaking amazing.
+And it's certianly not going anywhere any time soon. I think google
+has proven time-and time again that Python is the language for just
+about any job. And when Google's unlayden-swallow project is
+complete, all (typically negligible) performance issues will be
+eliminated. Done. ### <strong>Step Two</strong>: Basic Information Architecture</p>
+<p>We need to decide how the whole system will work. FriendFeed has an
+excellent system in place. Lets use it. Users can tie everything in
+from all of their other websites and steam it on their profile, and
+display it all on one page. Everything's streamlined, commentable,
+hookable, and readily accessible. Google Profiles rock. But that is
+definitely an abandoned project. Lets mix that with a
+FriendFeed-style activity stream. Done. ### <strong>Step Three</strong>:
+Sustainability, Audience, and Accessibility</p>
+<p>How will we pay for it? How will we get people to contribute? How
+will be get people to use it? Answer: Twitter is getting old and
+it's getting old fast. It's time for something new. Lets blow them
+away and they will ALL hop on board. Allow for easy
+external-account migration and account creation and we'll be
+golden. ### <strong>Step Four</strong>: Technical Planning and Engineering</p>
+<p>This is all the stuff end users don't have to worry about.
+Performance. Design. System Administration. Database Engineering.
+The geek stuff. I mean come on guys, how awesome would it be to be
+able to make a commit to the Twitter live SVN Branch? Epically
+awesome. ### <strong>Step Five</strong>: Community + Collaboration</p>
+<p>Once the community gets going, there will be no stopping it. In
+conclusion, think about what we have to lose? Are you with me?</p>
+</div>
+
+        </div><!-- /.entry-content -->
+        
+        <div class="comments">
+        <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+               var disqus_identifier = "the-call-for-an-open-source-social-network.html";
+               (function() {
+               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+               dsq.src = 'http://kennethreitz.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+        </div>
+        
+
+</article>
+</section>
+
+        <section id="extras" class="body">
+        
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                        
+                            <li><a href="http://github.com/kennethreitz">GitHub Repos</a></li>
+                        
+                            <li><a href="http://flickr.com/kennethreitz">Photography (Flickr)</a></li>
+                        
+                            <li><a href="http://twitter.com/kennethreitz">Latest Tweets</a></li>
+                        
+                            <li><a href="http://www.linkedin.com/in/kennethreitz">R&eacute;sum&eacute;</a></li>
+                        
+                            <li><a href="http://pick.im/kenneth-reitz">Design Portfolio</a></li>
+                        
+                            <li><a href="http://laterstars.com/kennethreitz">Later Stars</a></li>
+                        
+                        </ul>
+                </div><!-- /.blogroll -->
+        
+        
+        
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="./feeds/all.atom.xml" rel="alternate">atom feed</a></li>
+                            
+
+                        
+                            <li><a href="http://facebook.com/kennethreitz">Facebook</a></li>
+                        
+                        </ul>
+                </div><!-- /.social -->
+        
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://smashingmagazine.com">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'kennethreitz';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+</body>
+</html>
