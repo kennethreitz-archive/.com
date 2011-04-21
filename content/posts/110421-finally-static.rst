@@ -13,7 +13,7 @@ I almost sat down and wrote something myself, but luckly I found
 Alex Metaireau's incredible
 `Pelican <http://docs.notmyidea.org/alexis/pelican/>`_ project. So, now
 my website is statically generated with a combination of all my
-favorite tools: ReStructured Text, Jinja2, Python, and Git.
+favorite tools: ReStructured Text, Jinja2, Python, Git, and Jenkins.
 
 The move is far from perfect, but I'm glad I finally did it. All existing
 comments are gone. There's no longer a mobile version. Many of the old
