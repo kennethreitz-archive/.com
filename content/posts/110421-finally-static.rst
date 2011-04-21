@@ -3,6 +3,7 @@ New Blog: Finally Static!
 
 :date: 2011-04-21 02:45
 :category: code, python
+:featured: True
 
 I've been wanting to convert my webiste from a WordPress-powered
 application to a static for a long time now. I tried a few different
