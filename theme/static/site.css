@@ -60,7 +60,6 @@ ul {
 }
 
 #sidebar {
-  /*background: ghostWhite;*/
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +68,6 @@ ul {
   overflow-y: auto;
   overflow-x: hidden;
   padding: 15px 0 30px 60px;
-  /*border-right: 1px solid #DDD;*/
 }
 
 #sidebar a {
@@ -78,6 +76,10 @@ ul {
   color: black;
   font-weight: bold;
   margin-top: 15px;
+}
+
+#sidebar a:hover {
+  text-decoration: underline;
 }
 
 #sidebar ul {
