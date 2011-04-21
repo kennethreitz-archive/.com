@@ -2,7 +2,8 @@ Spotify in the US? Yes please.
 ##############################
 
 :date: 2010-01-17 19:03
-:category: Code
+:category: code
+:featured: True
 
 
 I spent about 8 hours last night obtaining a Premium Spotify
