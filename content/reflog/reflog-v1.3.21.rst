@@ -3,7 +3,6 @@ GitHub Reflog v1.3.21
 
 :date: 2011-03-21 19:03
 :category: github, code
-:featured: False
 
 Welcome to the first edition of The GitHub Reflog. This is a
 new weekly installment chronicling awesome GitHub repos, brought to

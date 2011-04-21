@@ -3,7 +3,6 @@ GitHub Reflog v1.4.12
 
 :date: 2011-04-12 19:03
 :category: github, code
-:featured: False
 
 
 Welcome to the fourth edition of **The GitHub Reflog** — the weekly
