@@ -6,6 +6,7 @@ SITEURL = 'http://kennethreitz.com/'
 GITHUB_URL = 'https://github.com/kennethreitz/'
 DISQUS_SITENAME = 'kennethreitz'
 PDF_GENERATOR = False
+GOOGLE_ANALYTICS = 'UA-8742933-1'
 
 BYLINE = '&copy; 2011 Kenneth Reitz &amp; co. All Rights Reserved.'
 LINKS = (
