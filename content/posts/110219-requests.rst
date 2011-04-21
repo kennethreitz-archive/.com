@@ -2,7 +2,7 @@ Requests: Python HTTP Module
 ############################
 
 :date: 2011-02-19 01:22
-:category: code, python
+:category: python
 :featured: True
 
 I’m happy to announce the release of my latest Python module: **Requests**.
