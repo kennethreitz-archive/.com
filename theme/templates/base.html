@@ -28,10 +28,10 @@
 
 
 <div id="sidebar">
-  <!-- <h2>{{ SITENAME }}</h2> -->
-  <a href="/"><img alt="Kenneth Reitz" src="http://kennethreitz.com/kr.gif" class="firstChild lastChild" style="margin-top: 10px; margin-bottom: 10px;"></a>
 
-  <div style="margin-left: 30px; margin-bottom: 30px; line-height: 13px;">
+  <a href="/"><img alt="Kenneth Reitz" src="http://kennethreitz.com/kr.gif" class="firstChild lastChild" style="margin-top: 10px; margin-bottom: 10px; margin-left: -60px;"></a>
+
+  <div style="margin-bottom: 30px; line-height: 13px;">
     {% for link in LINKS %}
       <a href="{{ link[1] }}"> {{ link[0] }} </a>
     {% endfor %}
@@ -40,7 +40,7 @@
 
   <h3>Recent Articles</h3>
 
-  <ul style="text-indent: -10px;">
+  <ul>
     {% for article in (dates|reverse|list)[0:6] %}
       {% if not article.project %}
 
