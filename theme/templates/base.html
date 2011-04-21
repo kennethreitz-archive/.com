@@ -26,22 +26,18 @@
 
 <body>
 
+
 <div id="sidebar">
         <!-- <h2>{{ SITENAME }}</h2> -->
 
         <img alt="iA" src="http://kennethreitz.com/kr.gif" class="firstChild lastChild" style="margin-top: 10px; margin-bottom: 10px;">
 
-        <ul>
-          <li>
+        <div style="margin-left: 30px; margin-bottom: 30px; line-height: 13px;">
             <a href="/about">Colophon</a>
-          </li>
-          <li>
             <a href="/projects">Projects</a>
-          </li>
-          <li>
             <a href="/articles">Articles</a>
-          </li>
-        </ul>
+        </div>
+
 
         <h3>Recent Articles</h3>
 
@@ -64,6 +60,7 @@
 </div>
 
 <div id="container">
+        {% include 'github.html' %}
         {% block content %}
         {% endblock %}
 </div>
