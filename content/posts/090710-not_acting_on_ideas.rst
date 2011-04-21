@@ -3,7 +3,6 @@ Not Acting on Ideas
 
 :date: 2009-07-10 10:08
 :category: Life
-:featured: False
 
 
 As of yesterday, my second idea that I actually thought would work
