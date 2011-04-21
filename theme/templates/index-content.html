@@ -28,17 +28,15 @@ I'm an open source software developer that loves streamlining mundane things. I 
 <p>I've written a number of popular open source libraries:</p>
 
 <ul>
-<li><strong>Tablib</strong>: Tabular Data library</li>
-<li><strong>Requests</strong>: HTTP Module (That Doesn't Suck)</li>
-<li><strong>Clint</strong>: Command Line Interface </li>
-<li><strong>Redi</strong>: Awesome Redis Interface </li>
-<li><strong>Etc</strong>: Many More</li>
 
-
-<!-- <li><strong>python-gistapi</strong>: Tabular Data library</li>
-<li><strong>python-github2</strong>: Tabular Data library</li>
-<li><strong>python-convore</strong>: Wrapper for the Convore API</li>
-<li><strong>python-guide</strong>: Best parcit</li> -->
+    {% for link in PROJECTS %}
+        <li>
+            <a href="{{ link[1] }}" style="text-decoration: none;">
+                <strong>{{ link[0] }}</strong>: {{ link[2] }}
+            </a>
+        </li>
+    {% endfor %}
+    <li><strong>Etc</strong>: Many More</li>
 </ul>
 
 <p>

@@ -1,0 +1,32 @@
+Tablib v0.9.4 Released
+######################
+
+:date: 2011-02-18 01:22
+:category: code, python
+:featured: False
+
+Tablib v0.9.4 was released today.
+
+For those unfamiliar with Tablib, it’s my format-agnostic tabular data library. To learn more, see Tablib.org.
+
+Finally, we have Python 2.5 support! This should open some new possibilities, particularly for those of you on Google App Engine.
+
+This update brings:
+
+    - Python 2.5 Support
+    - Internal pre-2.7 OrderedDicts
+    - AnyJSON System
+    - Secret surprise for the PEP8-strict folks
+    - Various bug fixes
+
+
+Thanks to tox, the codebase is now continuously tested against CPython 2.5, 2.6, 2.7, and PyPy-c v1.4.
+
+The next steps are to add:
+
+    - Tablib.ext Namespace Package (for django-tablib, tablib-extras, &c.)
+    - Hooks System (e.g. post-append, pre-export, &c. )
+
+[`Tablib.org <http://tablib.org>`_]
+[`Source on GitHub <https://github.com/kenethreitz/tablib>`_]
+[`PyPi <http://pypi.python.org/pypi/tablib>`_]

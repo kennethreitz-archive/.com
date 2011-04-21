@@ -22,9 +22,8 @@ SOCIAL = (
 )
 
 PROJECTS = (
-    ('Requests', 'http://tablib.org'),
-    ('Requests', 'https://github.com/kennethreitz/requests'),
-    ('Clint', 'https://github.com/kennethreitz/clint'),
-    ('Redi', 'https://github.com/kennethreitz/redi'),
-    ('python-convore', 'https://github.com/kennethreitz/python-convore')
+    ('Tablib', 'http://tablib.org', 'Tabular Data library'),
+    ('Requests', 'https://github.com/kennethreitz/requests', 'HTTP Module (That Doesn\'t Suck)'),
+    ('Clint', 'https://github.com/kennethreitz/clint', 'Command Line Interface Tools'),
+    ('Redi', 'https://github.com/kennethreitz/redi', 'Awesome Redis Interface')
 )

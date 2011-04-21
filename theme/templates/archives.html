@@ -9,6 +9,8 @@
 
   {% for article in dates|reverse %}
 
+    {% if not article.project %}
+
       {% if article.date.year != current_year %}
 
         {% if in_list %}
@@ -26,6 +28,7 @@
         <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
       </li>
 
+    {% endif %}
 
   {% endfor %}
 </dl>

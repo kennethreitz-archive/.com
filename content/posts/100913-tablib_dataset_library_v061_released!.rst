@@ -1,8 +1,9 @@
-Tablib Dataset Library v0.6.1 Released! 
+Tablib Dataset Library v0.6.1 Released!
 ########################################
 
 :date: 2010-09-13 01:22
-:category: Code
+:category: code, python
+:featured: True
 
 
 I'm pleased to announce a new Python module:
@@ -16,7 +17,7 @@ Usage\*\*: import tablib
 
     headers = ('first_name', 'last_name', 'gpa')
     data = [('John', 'Adams', 90), ('George', 'Washington', 67)]
-    
+
     data = tablib.Dataset(*data, headers=headers)
 
 You can maniuplate your data like a standard Python list: >>>
@@ -26,7 +27,7 @@ data.append(('Henry', 'Ford', 83))
 
     >>> print data['first_name']
     ['John', 'George', 'Henry']
-    
+
     >>> del data[1]
 
 You can easily export your data to JSON, YAML, XLS, and CSV. >>>
@@ -39,12 +40,12 @@ print data.json [{"first\_name": "John", "last\_name": "Adams",
     >>> print data.yaml
     - {age: 90, first_name: John, last_name: Adams}
     - {age: 83, first_name: Henry, last_name: Ford}
-    
+
     >>> print data.csv
-    first_name,last_name,age 
-    John,Adams,90 
-    Henry,Ford,83 
-    
+    first_name,last_name,age
+    John,Adams,90
+    Henry,Ford,83
+
     >>> open('people.xls', 'w').write(data.xls)
 
 Excel files with multiple sheets are also supported (via the
