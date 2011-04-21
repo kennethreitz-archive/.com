@@ -5,7 +5,7 @@ New Blog: Finally Static!
 :category: python
 :featured: True
 
-I've been wanting to convert my webiste from a WordPress-powered
+I've been wanting to convert my website from a WordPress-powered
 application to a static one for a long time now. I tried a few different
 systems, but nothing was flexible enough for my needs.
 
