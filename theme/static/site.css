@@ -65,7 +65,7 @@ ul {
   left: 0;
   bottom: 0;
   width: 250px;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   padding: 15px 0 30px 60px;
 }
