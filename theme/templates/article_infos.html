@@ -1,8 +1,13 @@
-<footer class="post-info">
-        <abbr class="published" title="{{ article.date.isoformat() }}">
-                <b>{{ article.locale_date }}</b>
-        </abbr>
+{% if not article.project %}
 
-{% include 'taglist.html' %}
-{% include 'translations.html' %}
-</footer>
+    <footer class="post-info">
+        <abbr class="published" title="{{ article.date.isoformat() }}">
+        <b>{{ article.locale_date }}</b>
+    </abbr>
+
+    {% include 'taglist.html' %}
+    {% include 'translations.html' %}
+
+    </footer>
+
+{% endif %}

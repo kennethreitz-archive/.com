@@ -4,23 +4,5 @@
 
 {% include 'index-content.html' %}
 
-{% if articles %}
-    <ul>
-        {% for article in articles_page.object_list %}
 
-            <li>
-                <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
-            </li>
-
-        {% endfor %}
-    </ul>
-
-{% else %}
-<section id="content" class="body">
-<h2>Pages</h2>
-{% for page in PAGES %}
-    <li><a href="{{ SITEURL }}/pages/{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}
-</section>
-{% endif %}
 {% endblock content %}

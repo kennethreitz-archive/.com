@@ -53,3 +53,37 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. </p>
+
+
+    {% set current_year = 0 %}
+  {% set in_list = False %}
+
+  {% for article in dates|reverse %}
+
+    {% if article.featured %}
+
+      {% if article.date.year != current_year %}
+
+        {% if in_list %}
+          </ul>
+        {% endif %}
+
+        <h2>{{ article.date.year }}</h2>
+        {% set current_year = article.date.year %}
+        {% set in_list = True %}
+        <ul>
+
+      {% endif %}
+
+      <li>
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
+      </li>
+
+    {% endif %}
+
+  {% endfor %}
+
+
+<h3>Backlog</h3>
+
+Check out the <a href="/archives.html">article archive</a> for blog posts going back to 2008.

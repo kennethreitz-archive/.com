@@ -3,7 +3,7 @@ Semantic Versioning
 
 :date: 2010-05-09 08:46
 :category: Code
-
+:featured: True
 
 While listening to this week's episode of
 `The Changelog <http://thechangelog.com>`_, I came across Tom

@@ -3,6 +3,7 @@ Not Acting on Ideas
 
 :date: 2009-07-10 10:08
 :category: Life
+:featured: True
 
 
 As of yesterday, my second idea that I actually thought would work
@@ -33,5 +34,5 @@ to jump the shark I suppose!
 .. figure:: http://www.whatsoniphone.com/screen_dumps/Urinal_Test.jpg
    :align: center
    :alt: image
-   
+
    image

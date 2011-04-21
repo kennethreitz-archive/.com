@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/site.css" type="text/css" />
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/highlight.css" type="text/css" />
+  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/site.css" type="text/css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/highlight.css" type="text/css" />
 
 
-        <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
+  <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
 
-        {% if FEED_RSS %}
-        <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
+  {% if FEED_RSS %}
+    <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
 
-        <script src="{{ SITEURL }}/theme/jquery.js" type="text/javascript" charset="utf-8"></script>
-        <script src="{{ SITEURL }}/theme/highlight.js" type="text/javascript" charset="utf-8"></script>
+  <script src="{{ SITEURL }}/theme/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="{{ SITEURL }}/theme/highlight.js" type="text/javascript" charset="utf-8"></script>
 
-        <script type="text/javascript" charset="utf-8">
-                hljs.initHighlightingOnLoad();
-        </script>
+  <script type="text/javascript" charset="utf-8">
+    hljs.initHighlightingOnLoad();
+  </script>
 </head>
 
 
@@ -28,46 +28,67 @@
 
 
 <div id="sidebar">
-        <!-- <h2>{{ SITENAME }}</h2> -->
+  <!-- <h2>{{ SITENAME }}</h2> -->
+  <a href="/"><img alt="Kenneth Reitz" src="http://kennethreitz.com/kr.gif" class="firstChild lastChild" style="margin-top: 10px; margin-bottom: 10px;"></a>
 
-        <a href="/"><img alt="Kenneth Reitz" src="http://kennethreitz.com/kr.gif" class="firstChild lastChild" style="margin-top: 10px; margin-bottom: 10px;"></a>
-
-        <div style="margin-left: 30px; margin-bottom: 30px; line-height: 13px;">
-            <a href="/about">Colophon</a>
-            <a href="/projects">Projects</a>
-            <a href="/articles">Articles</a>
-        </div>
-
-
-        <h3>Recent Articles</h3>
-
-        <ul>
-          <li><a>Some Post Name</a></li>
-          <li><a>Some Post Name</a></li>
-          <li><a>Some Post Name</a></li>
-          <li><a>Some Post Name</a></li>
-        </ul>
+  <div style="margin-left: 30px; margin-bottom: 30px; line-height: 13px;">
+    {% for link in LINKS %}
+      <a href="{{ link[1] }}"> {{ link[0] }} </a>
+    {% endfor %}
+  </div>
 
 
-        <h3>Get in Touch</h3>
+  <h3>Recent Articles</h3>
 
-        <ul>
-          <li><a>Email</a></li>
-          <li><a>GitHub</a></li>
-          <li><a>Twitter</a></li>
-          <li><a>Flickr</a></li>
-        </ul>
+  <ul>
+    {% for article in (dates|reverse|list)[0:5] %}
+      {% if not article.project %}
+
+        <li>
+          <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
+        </li>
+
+      {% endif %}
+    {% endfor %}
+
+  </ul>
+
+  <h3>Projects</h3>
+
+  <ul>
+    {% for link in PROJECTS %}
+    <li>
+      <a href="{{ link[1] }}"> {{ link[0] }} </a>
+    </li>
+    {% endfor %}
+
+
+
+
+  </ul>
+
+  <h3>Get in Touch</h3>
+
+  <ul>
+  {% for link in SOCIAL %}
+    <li>
+      <a href="{{ link[1] }}"> {{ link[0] }} </a>
+    </li>
+  {% endfor %}
+  </ul>
+
 </div>
+
+
+
+
 
 <div id="container">
-        {% include 'github.html' %}
-        {% block content %}
-        {% endblock %}
+  {% include 'github.html' %}
+
+  {% block content %}
+  {% endblock %}
 </div>
-
-
-
-
 
 
 
