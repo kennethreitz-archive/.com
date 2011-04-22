@@ -92,37 +92,9 @@
 
 
 
-<script type="text/javascript" charset="utf-8">
-  jQuery(function($){
-    function underscore(str) {
-      return str.replace(/::/g, '/')
-                .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2')
-                .replace(/([a-z\d])([A-Z])/g, '$1_$2')
-                .replace(/-/g, '_')
-                .toLowerCase();
-    }
+{% include 'body-js.html' %}
 
-    function dasherize(str) {
-      return underscore(str).replace(/_/g, '-');
-    }
-
-    $("h1").each(function(){
-      var name = $(this).text();
-      $(this).attr("id", "h-" + dasherize(name));
-    });
-
-    $("h2").each(function(){
-      var name = $(this).text();
-      $(this).attr("id", "s-" + dasherize(name));
-    });
-  });
-
-  jQuery(function(){
-
-    $("pre").wrapInner('<code>')
-  });
-</script>
-
+{% include 'analytics.html' %}
 
 
 </body>
