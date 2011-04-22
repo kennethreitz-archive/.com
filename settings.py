@@ -11,7 +11,7 @@ GOOGLE_ANALYTICS = 'UA-8742933-1'
 BYLINE = '&copy; 2011 Kenneth Reitz &amp; co. All Rights Reserved.'
 LINKS = (
     ('Colophon', '/pages/colophon.html'),
-    ('Projects', '/pages/open-projects.html'),
+    # ('Projects', '/pages/open-projects.html'),
     ('Articles', '/archives.html'),
 )
 
