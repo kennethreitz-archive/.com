@@ -2,6 +2,7 @@ Tablib
 ######
 
 :project: True
+:gh: https://github.com/kennethreitz/tablib
 
 Tablib is NOT an extensive Python module for working with tabular datasets. It allows you create tables of data using standard Python datatypes, manipulate them, and easily export to Excel, JSON, YAML, and CSV.
 
