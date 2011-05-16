@@ -8,7 +8,7 @@ Requests v0.4.0 Released
 Requests v0.4.0 was released late last night!
 
 If you're unfamiliar with **Requests**, it is an HTTP Module for Python that
-strives to keep things as simple as possible. `Lean more
+strives to keep things as simple as possible. `Learn more
 <http://python-requests.org>`_.
 
 It is being used internally at Twitter, Inc and The Library of Congress.
