@@ -31,8 +31,8 @@ and crazy hacks for you.
 
 
 
-Tablib: Tabular Dataset Library
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tablib: Format-Agnostic Tabular Datasets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Tablib is a powerful module for working with tabular datasets. It allows
 you create tables of data using standard Python datatypes, manipulate
