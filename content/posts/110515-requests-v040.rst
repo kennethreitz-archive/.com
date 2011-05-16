@@ -51,7 +51,7 @@ New Features
 Version 0.4.0 features the new ``Response.history`` attribute, which contains a
 list of requests leading up to the response. If you ask for a URL, and it
 bounces off of 3x 301 Redirects, those 3 requests will reside in the
-``Respsponse.history`` atrribute.
+``Response.history`` atrribute.
 
 Requests now features a wonderful Case-insensitive Header Dictionary,
 so you can handle unpredictable response headers easily. One server will
