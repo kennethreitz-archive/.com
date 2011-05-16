@@ -42,7 +42,7 @@ Community Update
 I decided to change the project tagline from *"Most Python HTTP Modules suck.
 This one doesn't."* to *"Python HTTP Requests for Humans."*. While I did enjoy
 the bit of personality that the previous tagline brought to the project,
-there's no need for the passive agression. Positivity only going forward.
+there's no need for the passive agression. Only Positivity going forward.
 
 
 New Features
@@ -50,19 +50,19 @@ New Features
 
 Version 0.4.0 features the new ``Response.history`` attribute, which contains a
 list of requests leading up to the response. If you ask for a URL, and it
-bounces off of 3x 301 Redirects, those 3 requests will reside in the `
-`Respsponse.history`` atrribute.
+bounces off of 3x 301 Redirects, those 3 requests will reside in the
+``Respsponse.history`` atrribute.
 
 Requests now features a wonderful Case-insensitive Header Dictionary,
 so you handle response headers easily. One server will respond with
-``'content-encoding``, while another will respond with ``'Content-Encoding'``.
+``content-encoding``, while another will respond with ``Content-Encoding``.
 ``r.header['content-encoding']`` will return the proper value in both
 scenarios.
 
-Requests now transparently supports Unicode URLs (e.g. ``''http://ko.wikipedia.org/wiki/위키백과:대문``).
+Requests now transparently supports Unicode URLs (e.g. ``'http://ko.wikipedia.org/wiki/위키백과:대문'``).
 
 We also automatically decompresses GZip'd Encoded responses, without the need
-to send up an ``'Accept-encoding'`` header.
+to send up an ``Accept-encoding`` header.
 
 Urllib2 has a major recursion issue when HTTP BASIC Authentication is
 required, but bad credentials were provided. Requests now handles this
