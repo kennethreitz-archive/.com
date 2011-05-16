@@ -13,10 +13,8 @@ strives to keep things as simple as possible. `Lean more
 
 Since the initial release, 3 months ago, Requests quickly became my most popular
 
-It is `being used internally
-<http://docs.python-requests.org/en/latest/index.html#testimonals>`_ at
-Twitter, Inc and The Library of Congress. If your company (or project) is using
-Requests internally, send me an email!
+It is being used internally at Twitter, Inc and The Library of Congress.
+If your company (or project) is using Requests internally, send me an email!
 
 Python project. It's approaching
 `200 Watchers <https://github.com/kennethreitz/requests/watchers>`_
