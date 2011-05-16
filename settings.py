@@ -24,7 +24,7 @@ SOCIAL = (
 
 PROJECTS = (
     ('Tablib', 'http://tablib.org', 'Tabular Data library'),
-    ('Requests', 'https://github.com/kennethreitz/requests', 'HTTP Module (That Doesn\'t Suck)'),
+    ('Requests', 'http://python-requests.org', 'HTTP Module (That Doesn\'t Suck)'),
     ('Clint', 'https://github.com/kennethreitz/clint', 'Command Line Interface Tools'),
     ('Redi', 'https://github.com/kennethreitz/redi', 'Awesome Redis Interface')
 )
