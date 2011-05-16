@@ -54,10 +54,10 @@ bounces off of 3x 301 Redirects, those 3 requests will reside in the
 ``Respsponse.history`` atrribute.
 
 Requests now features a wonderful Case-insensitive Header Dictionary,
-so you handle response headers easily. One server will respond with
-``content-encoding``, while another will respond with ``Content-Encoding``.
-``r.header['content-encoding']`` will return the proper value in both
-scenarios.
+so you can handle unpredictable response headers easily. One server will
+respond with ``content-encoding``, while another will respond with
+``Content-Encoding``. ``r.header['content-encoding']`` will return the proper
+value in both scenarios.
 
 Requests now transparently supports Unicode URLs (e.g. ``'http://ko.wikipedia.org/wiki/위키백과:대문'``).
 
