@@ -72,10 +72,17 @@ scenario properly.
 Links
 -----
 
-GitHub: https://github.com/kennethreitz/requests
-PyPi: http://pypi.python.org/pypi/requests
-PyPi Mirror: http://pip.kreitz.co/pypi/requests/0.4.0/
-Continuous Integration: http://ci.kennethreitz.com/job/tablib-tests/
+GitHub:
+    https://github.com/kennethreitz/requests
+
+PyPi:
+    http://pypi.python.org/pypi/requests
+
+PyPi Mirror:
+    http://pip.kreitz.co/pypi/requests/0.4.0/
+
+Continuous Integration:
+    http://ci.kennethreitz.com/job/tablib-tests/
 
 
 [`Source on GitHub <http://github.com/kennethreitz/requests>`_]
