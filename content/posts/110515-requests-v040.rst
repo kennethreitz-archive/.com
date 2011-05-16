@@ -11,11 +11,10 @@ If you're unfamiliar with **Requests**, it is an HTTP Module for Python that
 strives to keep things as simple as possible. `Lean more
 <http://python-requests.org>`_.
 
-Since the initial release, 3 months ago, Requests quickly became my most popular
-
 It is being used internally at Twitter, Inc and The Library of Congress.
 If your company (or project) is using Requests internally, send me an email!
 
+Since the initial release, 3 months ago, Requests quickly became my most popular
 Python project. It's approaching
 `200 Watchers <https://github.com/kennethreitz/requests/watchers>`_
 `on GitHub <https://github.com/kennethreitz/requests>`_, and has a number
@@ -23,7 +22,7 @@ of happy repetitive users:
 
 
 **Daniel Greenfeld**
-    Nuked a 1200 LOC spaghetti code library with 10 lines of code thanks to @kennethreitz’s request library. Today has been AWESOME
+    Nuked a 1200 LOC spaghetti code library with 10 lines of code thanks to @kennethreitz’s request library. Today has been AWESOME!
 
 **Kenny Meyers**
     Python HTTP: When in doubt, or when not in doubt, use Requests. Beautiful, simple, Pythonic.
