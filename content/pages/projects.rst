@@ -4,14 +4,14 @@ Open Projects
 :hide: True
 
 
-Hitchhiker's Guide to Python
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Hitchhiker's Guide to Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Work in Progress**
 
 This opinionated guide exists to provide both novice and expert Python developers a best-practice handbook to the installation, configuration, and usage of Python on a daily basis.
 
-`python-guide.org <http://python-guide.org>`_.
+{ `python-guide.org <http://python-guide.org>`_ }
 
 
 -------------------
@@ -27,7 +27,7 @@ parameters with simple Python dictionaries, and access the response data
 in the same way. It’s powered by urllib2, but it does all the hard work
 and crazy hacks for you.
 
-`python-requests.org <http://python-requests.org>`_.
+{ `python-requests.org <http://python-requests.org>`_ }
 
 
 
@@ -39,7 +39,7 @@ you create tables of data using standard Python datatypes, manipulate
 them, and easily export them to Excel, JSON, YAML, CSV, TSV, HTML
 Tables, and OpenDocument Format.
 
-`Tablib.org <http://tablib.org>`_.
+{ `Tablib.org <http://tablib.org>`_ }
 
 
 
@@ -51,4 +51,4 @@ commandline applications. Implicit argument parser, cross platform
 terminal colors, simple unix pipes, printable columns, indents, progress
 bars, and much much more.
 
-`kennethreitz/clint <https://github.com/kennethreitz/clint>`_.
+{ `kennethreitz/clint <https://github.com/kennethreitz/clint>`_ }
