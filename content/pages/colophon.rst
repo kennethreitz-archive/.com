@@ -2,7 +2,11 @@ Colophon
 ########
 
 
-During they day, I spend my days at Network Appliance, Inc – the world’s premier storage company. At night, I’m either spending time with my significant other (Bessie), or hacking on a number of open source projects.
+Soon, I will spend my days at Arc90, making Readability awesome. My nights are spent passionately contributing to open source projects and hacking on upcoming software products. For times away from the machine, I also enjoy digital photography.
+
+I author a weekly blog post for The GitHub Blog and occasionally cohost The Changelog.
+
+The US Library of Congress, Twitter, Digg, Northrop Gruman, National Geographic, and Discovery Channel use my open source software.
 
 
 A Little Context
