@@ -1,5 +1,5 @@
-Joining the Arc90 + Readability Team
-####################################
+Joining Arc90 + Readability
+###########################
 
 :date: 2011-05-27 22:35
 :category: python
