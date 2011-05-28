@@ -9,7 +9,7 @@ I'm extremely happy to announce that I am joining the `Arc90 <http://arc90.com>`
 
 Arc90 is a NYC-based software consultancy firm, r&d lab, and product incubator.
 The company is a design-driven group, built around skills rather than
-hierarchy. They strive to create *best software possible*; passion and design
+hierarchy. They strive to create the *best software possible*; passion and design
 pours out of everything they ship. I love that.
 
 As a self-professed software aficionado, I couldn't have picked a more
