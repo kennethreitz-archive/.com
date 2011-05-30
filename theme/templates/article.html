@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
-        <h1> {{ article.title }} </h1>
+        <h1 class="entry-title"> {{ article.title }} </h1>
 
         <div style="float:left;">
           {% include 'article_infos.html' %}
@@ -23,7 +23,9 @@
 
         <div style="clear: both;"></div>
 
-        {{ article.content }}
+        <div class="entry-content">
+          {{ article.content }}
+        </div>
 
         <!-- /.entry-content -->
         {% if DISQUS_SITENAME %}
