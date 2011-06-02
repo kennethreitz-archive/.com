@@ -9,16 +9,16 @@
 
 
         <div style="float:right">
-            <div id='rdbWrapper'></div><script type='text/javascript'>
-              (function() {
-                  var s     = document.getElementsByTagName('script')[0],
-                      rdb   = document.createElement('script');
-                  rdb.type  = 'text/javascript';
-                  rdb.async = true;
-                  rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
-                  s.parentNode.insertBefore(rdb, s);
-              })();
-              </script>
+          <div class='rdbWrapper' data-show-send-to-kindle="1" data-show-read="1"></div><script type='text/javascript'>
+            (function() {
+            var s     = document.getElementsByTagName('script')[0],
+                rdb   = document.createElement('script');
+            rdb.type  = 'text/javascript';
+            rdb.async = true;
+            rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+            s.parentNode.insertBefore(rdb, s);
+            })();
+        </script>
         </div>
 
         <div style="clear: both;"></div>
