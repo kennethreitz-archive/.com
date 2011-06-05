@@ -36,7 +36,6 @@ I Support
 I Oppose
 ~~~~~~~~
 
-- Java
 - Close-mindedness
 - Intolerance | Prejudice
 
@@ -44,7 +43,7 @@ I Oppose
 Favorite Things
 ~~~~~~~~~~~~~~~
 
-- My Dearest Fiancé
+- My Dearest Fiancée
 - B & W P5 Headphones
 - OS X & My MacBook Pro
 - Moleskine Notebooks (Large Journals, Squared)
