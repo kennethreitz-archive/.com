@@ -3,6 +3,7 @@ Announcing HttpBin.org
 
 :date: 2011-06-13 01:00
 :category: Python
+:featured: True
 
 
 The development of `Requests <https://python-requests.org>`_, the Python HTTP
