@@ -30,21 +30,19 @@ To get a feel for what **HttpBin** does, here are a few endpoint examples:
 
 ``$ curl http://httpbin.org/user-agent`` ::
 
-    {"user-agent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; en-us) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1"}
+    {"user-agent": "curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8l zlib/1.2.3"}
 
 ``$ curl http://httpbin.org/get`` ::
 
     {
        "args": {},
        "headers": {
-          "Accept": "application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
-          "Accept-Encoding": "gzip, deflate",
-          "Accept-Language": "en-us",
+          "Accept": "*/*",
           "Connection": "close",
           "Content-Length": "",
           "Content-Type": "",
           "Host": "httpbin.org",
-          "User-Agent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; en-us) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1",
+          "User-Agent": "curl/7.19.7 (universal-apple-darwin10.0) libcurl/7.19.7 OpenSSL/0.9.8l zlib/1.2.3",
           "X-Forwarded-For": "::ffff:24.127.96.129",
           "X-Forwarded-Protocol": ""
        },
