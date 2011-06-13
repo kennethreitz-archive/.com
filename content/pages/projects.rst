@@ -4,6 +4,7 @@ Open Projects
 :hide: True
 
 
+
 The Hitchhiker's Guide to Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14,7 +15,9 @@ This opinionated guide exists to provide both novice and expert Python developer
 { `python-guide.org <http://python-guide.org>`_ }
 
 
+
 -------------------
+
 
 
 Requests: Python HTTP for Humans
@@ -43,6 +46,17 @@ Tables, and OpenDocument Format.
 
 
 
+HTTPBin: HTTP Client Testing Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+HTTPBin is a simple service, similar to PostBin.org, that simply reports
+HTTP Request data in a simple JSON format. It's extremely useful for debugging
+and testing HTTP Clients.
+
+{ `httpbin.org <http://httpbin.org>`_ }
+
+
+
 Clint: Command Line Application Tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,3 +66,5 @@ terminal colors, simple unix pipes, printable columns, indents, progress
 bars, and much much more.
 
 { `kennethreitz/clint <https://github.com/kennethreitz/clint>`_ }
+
+
