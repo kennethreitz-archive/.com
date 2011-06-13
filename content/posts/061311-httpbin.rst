@@ -67,7 +67,7 @@ Moving Forward
 
 **HttpBin** will be packaged and released on PyPi soon, for local development
 use and requests-tests runs on `ci.kennethreitz.com <http://ci.kennethreitz.com>`_.
-I need to determine a decent pi for this.
+I need to determine a portable pattern for this.
 
 In the coming weeks, I'd like to add a few new new endpoints: ``/deflate``, ``/basic-auth``, *&c*. Contributions to **httpbin** are welcome.
 
