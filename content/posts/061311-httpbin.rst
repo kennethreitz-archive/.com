@@ -69,11 +69,12 @@ Moving Forward
 use and requests-tests runs on `ci.kennethreitz.com <http://ci.kennethreitz.com>`_.
 I need to determine a portable pattern for this.
 
-In the coming weeks, I'd like to add a few new new endpoints: ``/deflate``, ``/basic-auth``, *&c*. Contributions to **httpbin** are welcome.
+In the coming weeks, I'd like to add a few new new endpoints: ``/deflate``, ``/basic-auth``, *&c*. Contributions are welcome.
 
-I'm considering adding request logging / history to the service. A new ``/post`` request, for example, would be redirected to a new URL (e.g. ``/post/c1548ed``)
-that can be POSTed to repetitively. This will give **HttpBin** feature parity
-with postbin.
+I'm considering adding optional request logging / history to the service,
+powered by Redis. A new ``/post`` request, for example, would be redirected to
+a new URL (e.g. ``/post/c1548ed``) that can be POSTed to repetitively. This
+will give **HttpBin** feature parity with postbin.
 
 
 Source Code
