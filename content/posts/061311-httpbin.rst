@@ -79,7 +79,7 @@ will give **HttpBin** feature parity with postbin.
 Source Code
 -----------
 
-**HttpBin** is open source (ISC Licensed), and is powered by
+**HttpBin** is open source (ISC Licensed), powered by
 `Flask <http://flask.pocoo.org/>`_, `Werkzeug <http://werkzeug.pocoo.org/>`_,
 and good intentions.
 
