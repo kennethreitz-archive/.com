@@ -68,3 +68,38 @@ bars, and much much more.
 { `kennethreitz/clint <https://github.com/kennethreitz/clint>`_ }
 
 
+Other Projects
+--------------
+- `python-github3 <https://github.com/kennethreitz/python-github3>`_:
+  Python wrapper for the GitHub API v3.
+- `redi <https://github.com/kennethreitz/redi>`_:
+  Redis-py interaction layer. Treats all data as JSON.
+- `humble <https://github.com/kennethreitz/humble>`_:
+  Python clone of the vain gem. Lists a GH user's repos and watchers.
+- `ghsync <https://github.com/kennethreitz/ghsync>`_:
+  GitHub account repository syncer.
+- `pyandoc <https://github.com/kennethreitz/pyandoc>`_:
+  Simple Python object wrapper around the Pandoc cli tool.
+- `python-gistapi <https://github.com/kennethreitz/gistapi.py>`_:
+  Python wrapper for the Gist API. Deprecated soon for python-github3.
+- `xerox <https://github.com/kennethreitz/xerox>`_:
+  Simple system copy+paste API for OSX, Windows, and Linux.
+- `instareader <https://github.com/kennethreitz/instareader.py>`_:
+  Sends Google Reader Starred Articles to your Instapaper account.
+- `showme <https://github.com/kennethreitz/showme>`_:
+  Set of debugging decorators for Python.
+
+
+
+
+Works in Progress
+-----------------
+
+- `python-boom`:
+  Python implimentation of holman/boom.
+- `unzipit`:
+  I'll never remember the ``tar`` flags. Now, I don't have to.
+- `backitup`:
+  Server backup utility.
+- `python-convore`:
+  Python wrapper for the Convore API.
