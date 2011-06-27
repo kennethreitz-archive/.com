@@ -39,8 +39,8 @@ This makes the ``legit`` command available. Run it within a repository.
 
 **Available commands**:
 
-``sync``
-    Syncronizes the current branch.
+``sync [<branch>]``
+    Syncronizes the given branch. Defaults to current branch.
     Stash, Fetch, Auto-Merge/Rebase, Push, and Unstash.
 
 ``branches``
@@ -50,8 +50,9 @@ This makes the ``legit`` command available. Run it within a repository.
     Switches to specified branch.
     Automatically stashes and unstashes any changes.
 
-``sprout <off-branch> <new-branch>``
+``sprout [<branch>] <new-branch>``
     Creates a new branch off of the specified branch.
+    Defaults to current branch.
     Swiches to it immediately.
 
 ``graft <branch> <into-branch>``
@@ -63,10 +64,6 @@ This makes the ``legit`` command available. Run it within a repository.
 
 ``unpublish <branch>``
     Removes specified branch from the remote.
-
-``add`` & ``commit`` are also available, but you should just use ``git`` for those.
-
-
 
 
 Moving Forward
