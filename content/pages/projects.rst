@@ -68,10 +68,18 @@ bars, and much much more.
 { `kennethreitz/clint <https://github.com/kennethreitz/clint>`_ }
 
 
+Legit: The Sexy Git CLI
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Legit is a new tool that allows you to interface with a Git respository
+much like you would with GitHub for Mac—from the command line.
+
+{ `kennethreitz/legit <https://github.com/kennethreitz/legit>`_ }
+
+
+
 Other Projects
 --------------
-- `python-github3 <https://github.com/kennethreitz/python-github3>`_:
-  Python wrapper for the GitHub API v3.
 - `redi <https://github.com/kennethreitz/redi>`_:
   Redis-py interaction layer. Treats all data as JSON.
 - `humble <https://github.com/kennethreitz/humble>`_:
@@ -94,7 +102,8 @@ Other Projects
 
 Works in Progress
 -----------------
-
+- `python-github3 <https://github.com/kennethreitz/python-github3>`_:
+  Python wrapper for the GitHub API v3.
 - `python-boom`:
   Python implimentation of holman/boom.
 - `unzipit`:
