@@ -1,7 +1,7 @@
 Legit: The Sexy Git CLI
 #######################
 
-:date: 2011-06-13 01:00
+:date: 2011-06-27 02:00
 :category: python
 :featured: True
 :gh: https://github.com/kennethreitz/legit
