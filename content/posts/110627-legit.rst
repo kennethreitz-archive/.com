@@ -81,7 +81,7 @@ Source Code
 -----------
 
 **Legit** is open source (BSD Licensed), powered by
-`Clint <https://gitub.com/kennethreitz/clint>`_, `GitPython <http://pypi.python.org/pypi/GitPython/>`_,
+`Clint <https://github.com/kennethreitz/clint>`_, `GitPython <http://pypi.python.org/pypi/GitPython/>`_,
 and good intentions.
 
 - `Code on GitHub <https://github.com/kennethreitz/legit>`_
