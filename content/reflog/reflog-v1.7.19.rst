@@ -28,7 +28,7 @@ While not entirely practical for actual application development, this
 project aims to be a great avenue for teaching kids about programming.
 
 Wii-js supports up to four wiimotes interacting with a page at a time.
-Check out the `demo page <http://venodesigns.net/wii/>`_ (on your wii)
+Check out `the demo page <http://venodesigns.net/wii/>`_ (on your wii)
 to see it in action.
 
 Awesome Repo of the Week
