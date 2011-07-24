@@ -9,8 +9,9 @@ Requests v0.5.1 Released
 
 Requests v0.5.1 was just released.
 
-If you're unfamiliar with **Requests**, it is the HTTP Module for Humans. It
-strives to keep things as simple as possible. `Learn more <http://python-requests.org>`_.
+If you're unfamiliar with **Requests**, the HTTP Module for Humans, it
+strives to keep things as simple and elegant as possible.
+`Learn more <http://python-requests.org>`_.
 
 
 Community Update
@@ -20,6 +21,8 @@ I'm really happy with the direction that Requests is going. The repo is
 approaching `400 watchers on GitHub <https://github.com/kennethreitz/requests>`_
 (trailing just behind the Pyramid framework), and has been downloaded over 1100
 times from PyPi in the last month alone.
+
+Another big milestone: we now have 20 contributors!
 
 If you head over to `python-requests.org <http://python-requests.org>`_,
 you'll be greeted by the new Requests mascot, Rez the sea turtle.
@@ -58,9 +61,9 @@ Moving Forward
 --------------
 
 In the short-term, I plan to remove Request's dependency on Poster, and
-replace the multipart file upload functionality with internal code.
+replace the multi-part file upload functionality with internal code.
 
-Once Poster is removed, Python3.1+ support will be added.
+Once Poster is removed, Python 3.1+ support will be added.
 
 Once the port to Python3 is complete, elegant HTTPS certificate verification
 will be added.
@@ -76,4 +79,4 @@ Source Code
 **Requests** is open source (ISC Licensed), and will make you life awesome.
 
 - `Code on GitHub <https://github.com/kennethreitz/legit>`_
-- ``_
+- `python-requests.org <http://python-requests.org>`_
