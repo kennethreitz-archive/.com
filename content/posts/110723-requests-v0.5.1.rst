@@ -27,7 +27,7 @@ Another big milestone: we now have 20 contributors!
 If you head over to `python-requests.org <http://python-requests.org>`_,
 you'll be greeted by the new Requests mascot, Rez the sea turtle.
 
-This October, I'll presenting at `PyCodeConf <http://py.codeconf.com/>`_
+This October, I'll be presenting at `PyCodeConf <http://py.codeconf.com/>`_
 in Miami, FL. Topics will include Requests' API design and how libraries
 like it help to make Python more accessible.
 
