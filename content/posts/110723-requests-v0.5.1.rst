@@ -17,9 +17,9 @@ Community Update
 ----------------
 
 I'm really happy with the direction that Requests is going. The repo is
-approaching `400 watchers on GitHub`_ (trailing just behind the Pyramid
-framework), and has been downloaded over 1100 times from PyPi in the last
-month alone.
+approaching `400 watchers on GitHub <https://github.com/kennethreitz/requests>`_
+(trailing just behind the Pyramid framework), and has been downloaded over 1100
+times from PyPi in the last month alone.
 
 If you head over to `python-requests.org <http://python-requests.org>`_,
 you'll be greeted by the new Requests mascot, Rez the sea turtle.
@@ -35,9 +35,6 @@ like it help to make Python more accessible.
     entry that clutter the Python landscape. We'll discuss ways to make
     Python more accessible for newcomers and less of a headache for
     seasoned veterans.
-
-
-If you are using Requests in a project, `let me know <mailto:me@kennethreitz.com>`_
 
 New Features
 ------------
