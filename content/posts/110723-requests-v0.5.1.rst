@@ -62,7 +62,8 @@ replace the multipart file upload functionality with internal code.
 
 Once Poster is removed, Python3.1+ support will be added.
 
-Once the port to Python3 is complete, elegant HTTPS certificate checking will
+Once the port to Python3 is complete, elegant HTTPS certificate verification
+will be added.
 
 While those development tasks are being carried out, I'm planning on adding
 some more exhaustive documentation to the website: tutorials, FAQ, use
