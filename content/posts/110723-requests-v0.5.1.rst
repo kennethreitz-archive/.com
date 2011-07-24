@@ -76,7 +76,7 @@ cases recipes, scenarios, &c.
 Source Code
 -----------
 
-**Requests** is open source (ISC Licensed), and will make you life awesome.
+**Requests** is open source (ISC Licensed), and will make your world a better place.
 
 - `Code on GitHub <https://github.com/kennethreitz/legit>`_
 - `python-requests.org <http://python-requests.org>`_
