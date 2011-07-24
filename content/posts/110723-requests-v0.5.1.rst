@@ -22,9 +22,7 @@ approaching `400 watchers on GitHub <https://github.com/kennethreitz/requests>`_
 (trailing just behind the Pyramid framework), and has been downloaded over 1100
 times from PyPi in the last month alone.
 
-Many thanks to everyone involved :)
-
-Another big milestone: we now have 20 contributors!
+Another big milestone: we now have 20 contributors! Many thanks to everyone involved :)
 
 If you head over to `python-requests.org <http://python-requests.org>`_,
 you'll be greeted by the new Requests mascot, Rez the sea turtle.
