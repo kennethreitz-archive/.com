@@ -22,7 +22,7 @@ There are a number of new Heroku-like Python hosts out there, but most
 of them leave a bad taste in my mouth. This is mostly because they only
 support Django, and not generic WSGI (e.g. Flask apps).
 
-Ep.io supports any WSGI application. It charges based on usage, and
+Ep.io supports any WSGI application. It charges based on usage and
 offers a generous amount of free usage *per application*. Redis support.
 Cron jobs. Optional git/mercurial integration. The architecture and
 configurations are *very* elegant. I love it.
@@ -37,7 +37,7 @@ gaug.es
 -------
 
 Google Analytics is an extremely power analytics platform that can be
-used to drive important business devisions and analyze deep trends.
+used to drive important business decisions and analyze deep trends.
 
 I don't need any of that.
 
