@@ -78,5 +78,5 @@ Source Code
 
 **Requests** is open source (ISC Licensed), and will make your world a better place.
 
-- `Code on GitHub <https://github.com/kennethreitz/legit>`_
+- `Code on GitHub <https://github.com/kennethreitz/requests>`_
 - `python-requests.org <http://python-requests.org>`_
