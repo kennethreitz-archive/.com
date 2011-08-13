@@ -26,7 +26,6 @@ I Support
 
 - Distributed Source Control
 - The MIT/BSD/ISC License
-- Python
 - The Serial Comma
 - Singular “They”
 - Fallibilism
