@@ -67,8 +67,8 @@ Dict Cookies
 
 Requests has had CookieJar support for a while, but that's far from ideal.
 CookieJars require an enormous amount of manual code. So, now you can give
-Requests a simple dictionary wherever it , and it'll automatically generate
-a CookieJar for you!
+Requests a simple dictionary wherever it expects a CookieJar, and it'll
+automatically generate a CookieJar for you!
 
 Best yet, if a server responds with Cookies in any request, you'll have
 a simple dictionary waiting for you in ``Response.cookies``. If you
