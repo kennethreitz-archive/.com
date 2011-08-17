@@ -13,11 +13,9 @@ If you're unfamiliar with **Requests**, the Python HTTP Module for
 Humans, it strives to keep things as simple and elegant as possible.
 `Learn more <http://python-requests.org>`_.
 
-The Highlights
---------------
 
 Sessions
-~~~~~~~~
+--------
 
 I'm extremely happy to announce that Requests now has support for sessions!
 
@@ -43,7 +41,7 @@ throughout all requests within a session.
 
 
 Status Code Reference
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 When reading HTTP code, remembering the exact meaning for every
 status_code can be difficult. Especially if you're working with a robust
@@ -55,7 +53,7 @@ within your code.
     >>> requests.codes.ok
     200
 
-    >>> requests.codes.IM_A_TEAPOT
+    >>> requests.codes.im_a_teapot
     418
 
     >>> requests.codes['precondition_failed']
@@ -63,7 +61,7 @@ within your code.
 
 
 Dict Cookies
-~~~~~~~~~~~~
+------------
 
 Requests has had CookieJar support for a while, but that's far from ideal.
 CookieJars require an enormous amount of manual code. So, now you can give
@@ -76,7 +74,7 @@ want the full CookieJar, you can access it at ``Response.request.cookiejar``.
 
 
 Hook System
-~~~~~~~~~~~
+-----------
 
 I've added a new hooks system for both signaling and modifying the
 method arguments, requests, and responses during the request lifecycle.
@@ -90,7 +88,7 @@ as a few callbacks within a session.
 
 
 *&c*
-~~~~
+----
 
 I saw a large number of users relying on the order of the request
 function parmaters, instead of naming the arguments explicitly.
