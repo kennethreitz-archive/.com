@@ -42,7 +42,7 @@ you create tables of data using standard Python datatypes, manipulate
 them, and easily export them to Excel, JSON, YAML, CSV, TSV, HTML
 Tables, and OpenDocument Format.
 
-{ `Tablib.org <http://tablib.org>`_ }
+{ `Tablib.org <http://python-tablib.org>`_ }
 
 
 
