@@ -9,3 +9,5 @@ init:
 	pip install -r reqs.txt
 	mkdir -p output
 	cd output; git init
+	touch output/index.php
+	echo 'php_flag engine off' > output/.htaccess
