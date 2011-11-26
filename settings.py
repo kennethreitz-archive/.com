@@ -24,7 +24,7 @@ SOCIAL = (
 
 PROJECTS = (
     ('Requests', 'http://python-requests.org', 'HTTP Module for Humans'),
-    ('Tablib', 'http://tablib.org', 'Tabular Data Library'),
+    ('Tablib', 'http://python-tablib.org', 'Tabular Data Library'),
     ('Clint', 'https://github.com/kennethreitz/clint', 'Command Line Interface Tools'),
     ('HTTPBin', 'http://httpbin.org', 'HTTP Request and Response Service'),
     ('Legit', 'https://github.com/kennethreitz/legit', 'Sexy Git CLI'),
