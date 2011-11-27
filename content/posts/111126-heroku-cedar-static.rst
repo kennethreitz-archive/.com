@@ -32,7 +32,7 @@ Next, we can fully disable Apache's PHP engine::
     $ echo 'php_flag engine off' > .htaccess
 
 When you push this up, you'll have a bare Apache instance serving up the
-contents of your site to the world. Best yet, you do all of the
+contents of your site to the world. Best yet, you can do all of the
 `stupid .htaccess tricks <http://perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/>`_
 that you could on on any traditional shared hosting platform.
 
