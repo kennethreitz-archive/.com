@@ -131,3 +131,21 @@ ul {
     background-color: #ccc;
     -webkit-border-radius: 3px;
 }
+
+
+@media screen and (max-width: 870px) {
+
+  #sidebar {
+    display: none;
+  }
+
+  .github {
+    display: none;
+  }
+
+  #container {
+    margin: 0;
+    width: auto;
+  }
+
+}
