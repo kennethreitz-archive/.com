@@ -151,5 +151,8 @@ ul {
     margin: 0;
     width: auto;
   }
+  pre {
+    width: auto;
+  }
 
 }
