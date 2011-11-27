@@ -2,6 +2,7 @@ Static Sites on Heroku Cedar
 ############################
 
 :date: 2011-11-26 05:20
+:category: python
 :featured: True
 
 Heroku's excellent `Cedar Stack <http://devcenter.heroku.com/articles/cedar>`_
