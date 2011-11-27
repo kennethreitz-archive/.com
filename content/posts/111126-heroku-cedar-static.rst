@@ -14,7 +14,7 @@ The Cedar stack has a unofficial support for
 `Custom Build Packs <https://github.com/heroku/heroku-buildpack-python>`_,
 which allow you to compile your own language runtime on top of Cedar.
 My plan was to build an custom nginx build pack for Cedar, but that turned out
-to be completely unneccesary.
+to be completely unnecessary.
 
 Did you you know that Cedar has full (unofficial)
 support for PHP applications, fronted with Apache? When you push up a repository
