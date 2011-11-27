@@ -143,6 +143,10 @@ ul {
     display: none;
   }
 
+  .infos {
+    display: none;
+  }
+
   #container {
     margin: 0;
     width: auto;
