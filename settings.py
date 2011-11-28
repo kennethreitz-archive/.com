@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 AUTHOR = u'Kenneth Reitz'
 SITENAME = u'Kenneth Reitz'
-SITEURL = 'http://www.kennethreitz.com/'
+SITEURL = 'http://www.kennethreitz.com'
 
 GITHUB_URL = 'https://github.com/kennethreitz/'
 DISQUS_SITENAME = 'kennethreitz'
