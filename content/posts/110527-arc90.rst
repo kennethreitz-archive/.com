@@ -3,7 +3,7 @@ Joining Arc90 + Readability
 
 :date: 2011-05-27 22:35
 :category: python
-:featured: True
+:featured: False
 
 I'm extremely happy to announce that I am joining the `Arc90 <http://arc90.com>`_ team to work on Readabilty!
 
