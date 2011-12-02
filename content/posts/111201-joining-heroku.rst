@@ -18,8 +18,8 @@ Python deployment. However, a few months ago, Heroku added
 `official Python support <http://blog.heroku.com/archives/2011/9/28/python_and_django/>`_
 to the Cedar stack — it is *beautiful*.
 
-The Job
-~~~~~~~
+The Role
+~~~~~~~~
 
 I will be responsible for the technical design of Heroku's Python offering, as well as Heroku’s voice in the Python community.
 
