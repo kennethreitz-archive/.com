@@ -3,26 +3,7 @@
 {% block content %}
         <h1 class="entry-title"> {{ article.title }} </h1>
 
-        <div style="float:left;" class='infos'>
           {% include 'article_infos.html' %}
-        </div>
-
-
-        <div style="float:right" class='rdd'>
-          <div class='rdbWrapper' style="width: 170px;"></div>
-          <script type='text/javascript'>
-            (function() {
-            var s     = document.getElementsByTagName('script')[0],
-                rdb   = document.createElement('script');
-            rdb.type  = 'text/javascript';
-            rdb.async = true;
-            rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
-            s.parentNode.insertBefore(rdb, s);
-            })();
-        </script>
-        </div>
-
-        <div style="clear: both;"></div>
 
         <div class="entry-content">
           {{ article.content }}
