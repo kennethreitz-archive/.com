@@ -2,7 +2,7 @@ Colophon
 ########
 
 
-I spend my days at Arc90, making Readability awesome. My nights are spent passionately contributing to open source projects and hacking on upcoming software products. For times away from the machine, I also enjoy digital photography.
+My days are spent on the technical design of Heroku's Python Stack. My nights are spent passionately contributing to open source projects and hacking on upcoming software products. For times away from the machine, I also enjoy digital photography.
 
 I author a weekly blog post for The GitHub Blog and occasionally cohost The Changelog.
 
