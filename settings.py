@@ -28,4 +28,5 @@ PROJECTS = (
     ('Clint', 'https://github.com/kennethreitz/clint', 'Command Line Interface Tools'),
     ('HTTPBin', 'http://httpbin.org', 'HTTP Request and Response Service'),
     ('Legit', 'https://github.com/kennethreitz/legit', 'Sexy Git CLI'),
+    ('Photos', 'http://photos.kennethreitz.com', 'Photography'),
 )
