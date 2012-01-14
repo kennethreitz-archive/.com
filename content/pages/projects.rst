@@ -8,9 +8,9 @@ Open Projects
 The Hitchhiker's Guide to Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Work in Progress**
-
-This opinionated guide exists to provide both novice and expert Python developers a best-practice handbook to the installation, configuration, and usage of Python on a daily basis.
+This opinionated guide exists to provide both novice and expert Python
+developers a best-practice handbook to the installation, configuration,
+and usage of Python on a daily basis.
 
 { `python-guide.org <http://python-guide.org>`_ }
 
@@ -27,8 +27,7 @@ Requests is an elegant and simple HTTP library for Python, built for
 human beings. It allows you to send GET, HEAD, PUT, POST, and DELETE
 HTTP requests. You can add headers, form data, multipart files, and
 parameters with simple Python dictionaries, and access the response data
-in the same way. It’s powered by urllib2, but it does all the hard work
-and crazy hacks for you.
+in the same way. It’s powered by httplib, urllib3, and good intentions.
 
 { `python-requests.org <http://python-requests.org>`_ }
 
@@ -50,8 +49,8 @@ HTTPBin: HTTP Client Testing Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 HTTPBin is a simple service, similar to PostBin.org, that simply reports
-HTTP Request data in a simple JSON format. It's extremely useful for debugging
-and testing HTTP Clients.
+HTTP Request data in a simple JSON format. It's extremely useful for
+debugging and testing HTTP Clients.
 
 { `httpbin.org <http://httpbin.org>`_ }
 
@@ -68,8 +67,8 @@ bars, and much much more.
 { `kennethreitz/clint <https://github.com/kennethreitz/clint>`_ }
 
 
-Legit: The Sexy Git CLI
-~~~~~~~~~~~~~~~~~~~~~~~
+Legit: Git for Humans
+~~~~~~~~~~~~~~~~~~~~~
 
 Legit is a new tool that allows you to interface with a Git respository
 much like you would with GitHub for Mac—from the command line.
@@ -77,9 +76,39 @@ much like you would with GitHub for Mac—from the command line.
 { `kennethreitz/legit <https://github.com/kennethreitz/legit>`_ }
 
 
+Envoy: Subprocess for Humans
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An simple wrapper around the powerful ``subprocess`` module.
+
+{ `kennethreitz/envoy <https://github.com/kennethreitz/envoy>`_ }
+
+
+GitHub3
+~~~~~~~
+
+A Python wrapper for the Github API. Simple and elegant. Powered by Requests.
+
+{ `heroku/heroku.py <https://github.com/heroku/heroku.py>`_ }
+
+
+Heroku.py
+~~~~~~~~~
+
+A Python wrapper for the Heroku API. Simple and elegant. Powered by Requests.
+
+{ `heroku/heroku.py <https://github.com/heroku/heroku.py>`_ }
+
 
 Other Projects
 --------------
+
+- `osx-gcc-installer <https://github.com/kennethreitz/osx-gcc-installer>`_:
+  Install GCC without Xcode on your Mac.
+- `spark.py <https://github.com/kennethreitz/spark.py>`_ :
+  Sparklines in your CLI.
+- `pyandoc <https://github.com/kennethreitz/pyandoc>`_ :
+  A simple wrapper for Pandoc document conversion.
 - `redi <https://github.com/kennethreitz/redi>`_:
   Redis-py interaction layer. Treats all data as JSON.
 - `humble <https://github.com/kennethreitz/humble>`_:
