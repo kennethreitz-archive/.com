@@ -6,7 +6,7 @@ ci: init html
 	cd output; git add -A; git commit -m 'update'; git push git@heroku.com:kennethreitz.git master
 
 init:
-	pip install -r reqs.txt
+	pip install -r requirements.txt
 	mkdir -p output
 	cd output; git init
 	touch output/index.php
