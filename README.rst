@@ -1,8 +1,8 @@
 KennethReitz.com
 ================
 
-This is the first iteration of the statically generated website of Kenneth 
-Reitz. It is generated with pelican_.
+This is the first iteration of the statically generated website of Kenneth
+Reitz. Generated with pelican_.
 
 
 Tools
@@ -10,7 +10,7 @@ Tools
 
 
 `migrate.py`
-    This script takes all posts from KennethReitz.com and creates a folder 
+    This script takes all posts from KennethReitz.com and creates a folder
     filled with ReSt documents. Requires pyandoc, and pandoc.
 
 
