@@ -131,13 +131,8 @@ Other Projects
 
 Works in Progress
 -----------------
-- `python-github3 <https://github.com/kennethreitz/python-github3>`_:
-  Python wrapper for the GitHub API v3.
-- `python-boom`:
-  Python implimentation of holman/boom.
-- `unzipit`:
-  I'll never remember the ``tar`` flags. Now, I don't have to.
-- `backitup`:
-  Server backup utility.
-- `python-convore`:
-  Python wrapper for the Convore API.
+- `python-github3 <https://github.com/kennethreitz/python-github3>`_: Python wrapper for the GitHub API v3.
+- python-boom: Python implimentation of holman/boom.
+- unzipit: I'll never remember the ``tar`` flags. Now, I don't have to.
+- backitup: Server backup utility.
+- python-convore: Python wrapper for the Convore API.
