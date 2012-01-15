@@ -1,13 +1,22 @@
 {% extends "base.html" %}
-
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block content %}
 
-<section id="content" class="body">
+<hr class="implied">
+  <article class="G4 GR GS" id="content">
+  <header>
+    <h1>{{ page.title }} </h1>
+  </header>
 
-    <h1 class="entry-title">{{ page.title }}</h1>
-
+  <div class="formatted">
     {{ page.content }}
-</section>
+  </div>
+
+  <hr>
+  <p>Follow me on GitHub as <a href="http://github.com/kennethreitz">kennethreitz</a>.</p>
+
+
+  </article>
+
 {% endblock %}

@@ -1,27 +1,55 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }}{% endblock %}
+
 {% block content %}
-        <h1 class="entry-title"> {{ article.title }} </h1>
 
-          {% include 'article_infos.html' %}
+<hr class="implied">
+  <section class="G4 GR GS" id="content">
+  <article class="G4 GR GS" id="content">
+  <header>
+    <h1>{{ article.title }} </h1>
+    <h2>
+      <time datetime="2009-08-31T07:52:58+00:00" pubdate="pubdate">{{ article.date.strftime('%B %d, %Y') }}</time>
+      by Kenneth Reitz.
+    </h2>
 
-        <div class="entry-content">
-          {{ article.content }}
-        </div>
-
-        <!-- /.entry-content -->
-        {% if DISQUS_SITENAME %}
-        <div class="comments">
-            <div id="disqus_thread"></div>
-            <script type="text/javascript">
-               var disqus_identifier = "{{ article.url }}";
-               (function() {
-               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-               dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-              })();
-            </script>
-        </div>
+    <nav>
+      <ul>
+        {% if not article == articles[-1] %}
+          <li><a href="/{{ articles[ articles.index(article) + 1].url}}" rel="prev">&laquo; Previous </a></li>
         {% endif %}
+
+        {% if (articles.index(article) - 1) >= 0 %}
+          <li><a href="/{{ articles[ articles.index(article) - 1].url}}" rel="next">Next &raquo;</a></li>
+        {% endif %}
+
+      </ul>
+    </nav>
+  </header>
+
+  <div class="formatted">
+    {{ article.content }}
+  </div>
+
+  <hr>
+  <p>Follow me on GitHub as <a href="http://github.com/kennethreitz">kennethreitz</a>.</p>
+
+  {% if DISQUS_SITENAME %}
+  <div class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+         var disqus_identifier = "{{ article.url }}";
+         (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+  </div>
+  {% endif %}
+
+
+  </article>
+  </section><!-- #content.G4.GR.GS -->
 
 {% endblock %}

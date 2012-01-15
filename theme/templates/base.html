@@ -1,103 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" class="">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/site.css" type="text/css" />
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/highlight.css" type="text/css" />
+  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 
 
   <link href="{{ SITEURL }}/{{ FEED }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed" />
-
   {% if FEED_RSS %}
     <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
 
-  <script src="{{ SITEURL }}/theme/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="{{ SITEURL }}/theme/highlight.js" type="text/javascript" charset="utf-8"></script>
-
-  <script type="text/javascript" charset="utf-8">
-    hljs.initHighlightingOnLoad();
-  </script>
-</head>
 
 
+<link rel="stylesheet" href="{{ SITEURL }}/theme/style.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style-ia3-1.0.2.css">
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/style-fancybox-1.3.4.css">
+
+    <body class="single">
+        <div id="screen">
+            <header>
+    <h1 class="G2 GS">
+        <a class="G1 GS" href="/"><img alt="iA" src="/{{ SITEURL }}/theme/kr.gif"></a>
+    </h1><!-- .G2.GS -->
+    <nav>
+        <ul class="containsGrid G3" id="headerOne">
+            <li class="G1 GS">
+                <h2 class="HSC">About</h2>
+                <ul>
+                    <li><a href="/pages/colophon.html">Colophon</a></li>
+                    <li><a href="/pages/open-projects.html">Projects</a></li>
+                    <li><a href="mailto:_@kennethreitz.com">Contact</a></li>
+                </ul>
+            </li>
+            <li class="G1">
+                <h2 class="HSC">Works</h2>
+                <ul>
+                    <li><a href="/archives.html">Articles</a></li>
+                    <li><a href="/pages/open-projects.html">Projects</a></li>
+                    <li><a href="http://photos.kennethreitz.com">Photos</a></li>
+                </ul>
+            </li>
+            <li class="G1">
+                <h2 class="HSC">Projects</h2>
+                <ul>
+                    <li><a href="http://docs.python-requests.org">Requests</a></li>
+                    <li><a href="http://docs.python-guide.org">Python Guide</a></li>
+                    <li><a href="http://docs.python-tablib.org">Tablib</a></li>
+                </ul>
+            </li>
+        </ul><!-- .containsGrid.G3#headerOne -->
+        <ul class="containsGrid G1" id="headerTwo">
+            <li class="G1 GS">
+                <h2 class="HSC">Contact</h2>
+                <ul>
+                    <li><strong><a href="/">Blog</a></strong></li>
+                    <li><a href="http://twitter.com/kennethreitz">Twitter</a></li>
+                    <li><a href="https://github.com/kennethreitz">GitHub</a></li>
+                </ul>
+            </li>
+        </ul><!-- .containsGrid.G1#headerTwo -->
+    </nav>
+</header>
 
 
-<body>
+{% block content %}
+{% endblock %}
 
 
-<aside id="sidebar">
+<hr class="implied">
 
-  <a href="/"><img alt="Kenneth Reitz" src="{{ SITEURL }}/theme/kr.gif" class="firstChild lastChild" style="margin-top: 10px; margin-bottom: 10px; margin-left: -60px;"></a>
+<footer>
+    <nav>
 
-  <div style="margin-bottom: 30px; line-height: 13px;">
-    {% for link in LINKS %}
-      <a href="{{ link[1] }}"> {{ link[0] }} </a>
-    {% endfor %}
-  </div>
+        <ul class="G6 GS" id="footerTwo">
+            <li><a href="{{ SITEURL }}/{{ FEED_RSS }}">RSS</a></li>
+            <li><a href="https://github.com/kennethreitz">GitHub</a></li>
+            <li><a href="http://twitter.com/iA/">Twitter</a></li>
+            <li>&copy; 2012 Kenneth Reitz.</li>
+        </ul><!-- G6.GS#footerOne -->
+    </nav>
+</footer>
+<script>!window.$ && document.write('<script src="{{ SITEURL }}/theme/js/external/jquery-1.6.1.min.js"><\/script>');</script>
+<script src="http://www.informationarchitects.jp/en/wp-content/themes/iA3 1.2.2/assets/js/external/jquery.fancybox-1.3.4.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/external/jquery.timeago-0.9.3.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/ia3.js"></script>
+<script>
+    jQuery.noConflict();
 
+    jQuery(document).ready(function() {
+        jQuery(document).trigger('CORE:HAS_INITIALIZED');
+    });
 
-  <h3>Recent Articles</h3>
+    jQuery(window).resize(function() {
+        jQuery(document).trigger('CORE:HAS_RESIZED');
+    });
+</script>
 
-  <ul>
-    {% for article in (dates|reverse|list)[0:6] %}
-      {% if not article.project %}
-
-        <li>
-          <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
-        </li>
-
-      {% endif %}
-    {% endfor %}
-
-  </ul>
-
-  <h3>Projects</h3>
-
-  <ul>
-    {% for link in PROJECTS %}
-    <li>
-      <a href="{{ link[1] }}"> {{ link[0] }} </a>
-    </li>
-    {% endfor %}
-
-
-
-
-  </ul>
-
-  <h3>Get in Touch</h3>
-
-  <ul>
-  {% for link in SOCIAL %}
-    <li>
-      <a href="{{ link[1] }}"> {{ link[0] }} </a>
-    </li>
-  {% endfor %}
-  </ul>
-
-</aside>
-
-
-
-
-{% include 'github.html' %}
-
-<article id="container" class="hentry">
-
-  {% block content %}
-  {% endblock %}
-
-</article>
-
-
-
-{% include 'body-js.html' %}
+</div><!-- #screen -->
 
 {% include 'analytics.html' %}
 
-
-</body>
-</html>
+</body></html>

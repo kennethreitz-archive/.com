@@ -1,36 +1,50 @@
 {% extends "base.html" %}
+{% block title %} {{ SITENAME }} Archives{% endblock %}
+
 {% block content %}
-<section id="content" class="body">
-<h1>Archives for {{ SITENAME }}</h1>
 
-<dl>
-  {% set current_year = 0 %}
-  {% set in_list = False %}
+<hr class="implied">
+  <article class="G4 GR GS" id="content">
+  <header>
+    <h1>Archives for {{ SITENAME }}</h1>
+  </header>
 
-  {% for article in dates|reverse %}
+  <div class="formatted">
+    <dl>
+      {% set current_year = 0 %}
+      {% set in_list = False %}
 
-    {% if not article.project %}
+      {% for article in dates|reverse %}
 
-      {% if article.date.year != current_year %}
+        {% if not article.project %}
 
-        {% if in_list %}
-          </ul>
+          {% if article.date.year != current_year %}
+
+            {% if in_list %}
+              </ul>
+            {% endif %}
+
+            <h2>{{ article.date.year }}</h2>
+            {% set current_year = article.date.year %}
+            {% set in_list = True %}
+            <ul>
+
+          {% endif %}
+
+          <li>
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
+          </li>
+
         {% endif %}
 
-        <h2>{{ article.date.year }}</h2>
-        {% set current_year = article.date.year %}
-        {% set in_list = True %}
-        <ul>
+      {% endfor %}
+    </dl>
+  </div>
 
-      {% endif %}
+  <hr>
+  <p>Follow me on GitHub as <a href="http://github.com/kennethreitz">kennethreitz</a>.</p>
 
-      <li>
-        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"title="Permalink to {{ article.title}}">{{ article.title }}</a>
-      </li>
 
-    {% endif %}
+  </article>
 
-  {% endfor %}
-</dl>
-</section>
 {% endblock %}

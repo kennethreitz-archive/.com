@@ -1,8 +1,22 @@
 {% extends "base.html" %}
-{% block content_title %}{% endblock %}
+{% block title %}{{ SITE_TITLE }}{% endblock %}
+
 {% block content %}
 
-{% include 'index-content.html' %}
+<hr class="implied">
+  <article class="G4 GR GS" id="content">
+  <header>
+    <h1>Hi, There.</h1>
+  </header>
+
+  <div class="formatted">
+    {% include 'index-content.html' %}
+  </div>
+
+  <hr>
+  <p>Follow me on GitHub as <a href="http://github.com/kennethreitz">kennethreitz</a>.</p>
 
 
-{% endblock content %}
+  </article>
+
+{% endblock %}

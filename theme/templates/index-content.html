@@ -1,12 +1,10 @@
- <h1>Hi, there.</h1>
-
 <p>
-  <strong>
-    My name is Kenneth Reitz.
+My name is Kenneth Reitz.
+  <i>
       <span class="heroku">
         I work for Heroku.
       </span>
-  </strong>
+  </i>
 
 </p>
 <p>
@@ -23,7 +21,7 @@
    I also enjoy <a href="http://photos.kennethreitz.com/">digital photography</a>.
 </p>
 
-<h1>Articles</h1>
+<h2>Selected Articles</h2>
 
 
   {% set current_year = 0 %}
@@ -39,7 +37,7 @@
           </ul>
         {% endif %}
 
-        <h2>{{ article.date.year }}</h2>
+        <h3>{{ article.date.year }}</h3>
         {% set current_year = article.date.year %}
         {% set in_list = True %}
         <ul>
