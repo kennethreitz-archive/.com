@@ -2183,3 +2183,7 @@ color:#AA0000;
     background-image:none !important
     }
 }
+
+#dsq-pagination, #dsq-trackback-url {
+    display: none;
+}
