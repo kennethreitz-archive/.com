@@ -56,7 +56,7 @@ We've since become good friends. Open source is awesome.
 Thanks to the urllib3 collaboration, Requests has first class support
 for HTTP/1.1 Keep-alive and Connection Pooling::
 
-    s = requests.session(prefetch=True)
+    s = requests.session()
 
     # New connection to Httpbin.org.
     s.get('http://httpbin.org/get')
