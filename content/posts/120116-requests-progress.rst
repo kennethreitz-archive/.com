@@ -53,7 +53,7 @@ By random chance, I had the opportunity to get to know Andrey at
 `PyCodeConf <http://py.codeconf.com>`_, while all of this was in the making.
 We've since become good friends. Open source is awesome.
 
-Thanks to the *urllib3* collaboration, Requests has first class support
+Thanks to the urllib3 collaboration, Requests has first class support
 for HTTP/1.1 Keep-alive and Connection Pooling::
 
     s = requests.session(prefetch=True)
