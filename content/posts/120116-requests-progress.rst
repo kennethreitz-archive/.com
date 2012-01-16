@@ -97,6 +97,11 @@ For example, this website doesn't have a valid certificate::
     ...
     requests.exceptions.SSLError: hostname 'kennethreitz.com' doesn't match either of '*.herokuapp.com', 'herokuapp.com'
 
+And Github does::
+
+    >>> requests.get('https://github.com')
+    <Response [200]>
+
 Of course, you can disable this functionality explicitly or specify your own
 private CA Bundle in your codebase. Requests will also honor the
 ``REQUESTS_CA_BUNDLE`` and ``CURL_CA_BUNDLE`` environment variables, just like curl.
