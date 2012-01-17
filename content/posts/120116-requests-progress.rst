@@ -62,10 +62,10 @@ for HTTP/1.1 Keep-alive and Connection Pooling::
     s.get('http://httpbin.org/get')
 
     # New connection to Github.com.
-    s.get('http://github.com/get')
+    s.get('http://github.com/kennethreitz')
 
     # Reuse old connection to Httpbin.org.
-    s.get('http://github.com/get')
+    s.get('http://httpbin.com/ip')
 
 
 Elegant. Thread-safe. Automatic. Awesome.
