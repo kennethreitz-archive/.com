@@ -8,6 +8,3 @@ ci: init html
 init:
 	pip install -r requirements.txt
 	mkdir -p output
-	cd output; git init
-	touch output/index.php
-	echo 'php_flag engine off' > output/.htaccess
