@@ -24,11 +24,11 @@ The first step to developing something great is to have a real problem. You can'
 
 On the consumer app side of things, a great example of this is Microsoft OneNote. Have you used Mictosoft's OneNote? It's incredible.
 
-Essentially, OneNote is a hierarchical freeform note-taking software that assumes nothing: you can type, use handwriting, embed files, cross-link notes, sync them online, &c.
+Essentially, OneNote is a hierarchical freeform note-taking software that assumes nothing: you can type, use handwriting, embed files, cross-link notes, sync them online, *&c*.
 
 Unfortunately, OneNote is only available on Windows. This kills me. I would love to think that Microsoft's would port this lovely peice of software to OS X, but I doubt it will ever happen.
 
-If I ever decide to actually ship a consumer product, it will be something akin to OneNote for OS X. It would be incredible. It may not be for many, but for people that resonate with my problem, it will work wonderful. It would be a reaction to a real problem, not an engineered app an entrepreneur thinks will fill a gap so he can make some fast cash.
+If I ever decide to actually ship a consumer product, it will be something akin to OneNote for OS X. It would be incredible. It may not be for many, but for people that resonate with my problem, it will work wonderfully. It would be a reaction to a real problem, not an engineered app an entrepreneur thinks will fill a gap so he can make some fast cash.
 
 GitHub wasn't built for the developer community at large; the founders built GitHub for themselves. The problem they solved simply happened to resonate with millions of developers because they themselves happen to be developers.
 
