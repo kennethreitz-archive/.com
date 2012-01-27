@@ -56,7 +56,7 @@ This has an incredible effect: instead of engineering something that will only g
 
 You discover it. You respond to it.
 
-Great sculptures aren't manufactured — they're discovered. The sculptor studies and listens to the slab of marble. He identifies with the stone. Then, he responds. He enables the marble to speak for itself, setting free something beautiful that hidden inside all along.
+Great sculptures aren't manufactured — they're discovered. The sculptor studies and listens to the slab of marble. He identifies with the stone. Then, he responds. He enables the marble to speak for itself, setting free something beautiful that hidden was inside all along.
 
 He *responds*.
 
