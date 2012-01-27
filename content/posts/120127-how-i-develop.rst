@@ -20,7 +20,7 @@ Why should consumer apps and developer APIs be treated differently?
 Have an Issue
 -------------
 
-The first step to developing something great is to have a real problem. You can't solve a problem properly if you don't experience properly.
+The first step to developing something great is to have a real problem. You can't solve a problem properly if you don't experience it firsthand.
 
 On the consumer app side of things, a great example of this is Microsoft OneNote. Have you used OneNote? It's incredible.
 
