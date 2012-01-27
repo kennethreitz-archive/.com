@@ -7,10 +7,10 @@ How I Develop Things and Why
 
 I've always considered myself a bit of a software junkie. Nothing excites me more than a great piece of new software.
 
-Some of my best childhood memories are our trips to Grandma's house, where I'd have access to a computer with a dial-up connection that I'd use obtain freewares and sharewares.
+Some of my best childhood memories are our trips to Grandma's house, where I'd have access to a computer with a dial-up connection that I'd use to obtain freeware and shareware.
 I'd bring 4 or 5 floppies with me and try to cram all the games, waveform editors, and utilities that I could sneaker-net home.
 
-Luckily today, excellent software filled with passion oozes out of the app ecosystem. OS X and the App Store really fuel an economy of software built for humans by people that care.
+Luckily today, excellent software written with passion oozes out of the app ecosystem. OS X and the App Store really fuel an economy of software built for humans by people that care.
 
 Unfortunately, this doesn't always hold true in developer software — text editors, modules, libraries, toolchains, &c. We are forced to deal with APIs on a daily basis that were not built with the user in mind. Over-engineering surrounds us as developers. Things that should be simple are often needlessly complex for the sake of being complex and "proper".
 
