@@ -22,7 +22,7 @@ Have an Issue
 
 The first step to developing something great is to have a real problem. You can't solve a problem properly if you don't experience properly.
 
-On the consumer app side of things, a great example of this is Microsoft OneNote. Have you used Mictosoft's OneNote? It's incredible.
+On the consumer app side of things, a great example of this is Microsoft OneNote. Have you used OneNote? It's incredible.
 
 Essentially, OneNote is a hierarchical freeform note-taking software that assumes nothing: you can type, use handwriting, embed files, cross-link notes, sync them online, *&c*.
 
@@ -42,7 +42,7 @@ Let's go back to the developer's side of things.
 
 A great example is my `Requests <http://docs.python-requests.org/>`_ module. I was a heavy user of `Convore <http://convore.com>`_ at the time, and I wanted to interface with it programmatically. So, I set out to build a Python module that wrapped the Convore HTTP API. Unfortunately, this was easier said than done. Dealing with Python's standard library for HTTP was a complete and total nightmare. It was over-engineered.
 
-I love Python because it's a language designed for Humans. Why should modern HTTP be so difficult? So, I sat out to discovered what it was that I wanted, and built exactly what I needed. It resonated well with others.
+I love Python because it's a language designed for Humans. Why should modern HTTP be so difficult? So, I sat out to discover what it was that I wanted, and built exactly what I needed. It resonated well with others.
 
 Nothing is more satisfying than using your own tools to Get Things Done.
 
