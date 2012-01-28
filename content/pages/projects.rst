@@ -89,7 +89,7 @@ GitHub3
 
 A Python wrapper for the Github API. Simple and elegant. Powered by Requests.
 
-{ `heroku/heroku.py <https://github.com/kennethreitz/python-github3>`_ }
+{ `kennethreitz/python-github3 <https://github.com/kennethreitz/python-github3>`_ }
 
 
 Heroku.py
