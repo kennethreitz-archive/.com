@@ -262,7 +262,7 @@ color:#AA0000;
     kbd,
     samp,
     .literal {
-    font-family: menlo, monospace,sans-serif
+    font-family: 'ubuntu mono', menlo, monospace,sans-serif
     }
 
     button,
