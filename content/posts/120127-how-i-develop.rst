@@ -34,7 +34,7 @@ GitHub wasn't built for the developer community at large; the founders built Git
 
 37Signals didn't build Basecamp for a world full of project managers and consultants; they built it for themselves. They also developed Ruby on Rails for themselves, as Ruby developers that were repeating themselves too often.
 
-How pragmatic.
+How *pragmatic*.
 
 These companies didn't need to commission lengthy case studies and perform market analysis. They didn't setup faux AdWords to measure the effectiveness of various marketing copy. Yet, they are astronomically successful. How is this possible? They know exactly what they want to build, how it should function, and how it should look because they were building it for themselves and not for others.
 
