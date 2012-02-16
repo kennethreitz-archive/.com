@@ -45,7 +45,7 @@ Command Line Tools for Xcode
 ----------------------------
 
 Today, Apple added a beautiful new package to their official developer tools suite:
-*Command Line Tools for Xcode*. It's a 171 MB download that includes all of the
+**Command Line Tools for Xcode**. It's a 171 MB download that includes all of the
 tools a Homebrew should ever need. Best of all, it contains the proprietary
 headers that I couldn't ship myself.
 
