@@ -52,12 +52,13 @@ headers that I couldn't ship myself.
 You can `download and try it out <http://developer.apple.com/downloads>`_ today.
 All you need is a free Apple ID.
 
-To uninstall your existing Xcode installation, run the following command::
+You'll want to uninstall Xcode first::
 
     $ sudo /Developer/Library/uninstall-devtools --mode=all /thx
 
-Major props to Apple, and a very special thanks to the Product Manager of Xcode,
-`Tim Triemstra <https://twitter.com/timtr>`_, for making this happen.
+Major props to Apple, and a very special thanks to
+`Tim Triemstra <https://twitter.com/timtr>`_, Product Manager of Xcode,
+for making this happen.
 
 
 The Future
