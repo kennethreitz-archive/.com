@@ -16,7 +16,7 @@ These SDKs include CoreAudio, CoreData, OpenGL, and more. Most software that isn
 specifically for OSX would build perfectly. Unfortunately, some software added some
 needless system dependencies, though (I'm looking at you, Node).
 
-I stuck it up on GitHub, and much to my delight, it became a pretty bit hit.
+I stuck it up on GitHub, and much to my delight, it became a pretty big hit.
 It solved a lot of headaches for a lot of people.
 
 Today, the project has 1319 watchers on GitHub and has been downloaded 33,200 times.
