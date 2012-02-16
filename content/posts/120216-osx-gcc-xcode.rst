@@ -56,9 +56,7 @@ You'll want to uninstall Xcode first::
 
     $ sudo /Developer/Library/uninstall-devtools --mode=all /thx
 
-Major props to Apple, and a very special thanks to
-`Tim Triemstra <https://twitter.com/timtr>`_, Product Manager of Xcode,
-for making this happen.
+Major props to Apple for making this happen.
 
 
 The Future
