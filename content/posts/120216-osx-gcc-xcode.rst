@@ -25,7 +25,7 @@ generous hosting.
 
 Homebrew did their best to support the project, but the official stance was "if
 you buy a Mac, you buy the whole package", pointing everyone to install full Xcode
-if they had any problems. Far from idea, but I was content.
+if they had any problems. Far from ideas, but I was content.
 
 
 Apple's Interest
