@@ -54,7 +54,7 @@ All you need is a free Apple ID.
 
 You'll want to uninstall Xcode first::
 
-    $ sudo /Developer/Library/uninstall-devtools --mode=all /thx
+    $ sudo /Developer/Library/uninstall-devtools --mode=all
 
 Major props to Apple for making this happen.
 
