@@ -84,6 +84,15 @@ An simple wrapper around the powerful ``subprocess`` module.
 { `kennethreitz/envoy <https://github.com/kennethreitz/envoy>`_ }
 
 
+Autoenv: Automatic Shell Environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Magic per-project shell environments. Very pretentious. If a directory contains
+a ``.env`` file, it will automatically be excecuted when you ``cd`` into it.
+
+{ `kennethreitz/autoenv <https://github.com/kennethreitz/autoenv>`_ }
+
+
 GitHub3
 ~~~~~~~
 
