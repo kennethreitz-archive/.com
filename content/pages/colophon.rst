@@ -18,7 +18,7 @@ A Little Context
 - I went to George Mason University for a bit, but walked away fast.
 - Years ago, my primary focus was Graphic Design and Photography.
 - I’ve avidly played the drums for over a decade. I use traditional grip.
-- My Father is currently persuing a Doctorate in Computational Science.
+- My Father is currently perusing a Doctorate in Computational Physics.
 
 
 I Support
