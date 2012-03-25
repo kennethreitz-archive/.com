@@ -41,8 +41,16 @@ you create tables of data using standard Python datatypes, manipulate
 them, and easily export them to Excel, JSON, YAML, CSV, TSV, HTML
 Tables, and OpenDocument Format.
 
-{ `Tablib.org <http://python-tablib.org>`_ }
+{ `python-tablib.org <http://python-tablib.org>`_ }
 
+
+Legit: Git for Humans
+~~~~~~~~~~~~~~~~~~~~~
+
+Legit is a new tool that allows you to interface with a Git respository
+much like you would with GitHub for Mac—from the command line.
+
+{ `git-legit.org <http://www.git-legit.org/>`_ }
 
 
 HTTPBin: HTTP Client Testing Service
@@ -65,15 +73,6 @@ terminal colors, simple unix pipes, printable columns, indents, progress
 bars, and much much more.
 
 { `kennethreitz/clint <https://github.com/kennethreitz/clint>`_ }
-
-
-Legit: Git for Humans
-~~~~~~~~~~~~~~~~~~~~~
-
-Legit is a new tool that allows you to interface with a Git respository
-much like you would with GitHub for Mac—from the command line.
-
-{ `kennethreitz/legit <https://github.com/kennethreitz/legit>`_ }
 
 
 Envoy: Subprocess for Humans
