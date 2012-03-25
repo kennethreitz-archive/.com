@@ -19,8 +19,8 @@ needless system dependencies, though (I'm looking at you, Node).
 I stuck it up on GitHub, and much to my delight, it became a pretty big hit.
 It solved a lot of headaches for a lot of people.
 
-Today, the project has 1319 watchers on GitHub and has been downloaded 33,200 times.
-That's **8.3 Terabytes** of transfer. Thanks, GitHub, for the
+Today, the project has 1649 watchers on GitHub and has been downloaded 53,400 times.
+That's **13.7 Terabytes** of transfer. Thanks, GitHub, for the
 generous hosting.
 
 Homebrew did their best to support the project, but the official stance was "if
