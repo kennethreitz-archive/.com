@@ -92,6 +92,15 @@ a ``.env`` file, it will automatically be excecuted when you ``cd`` into it.
 { `kennethreitz/autoenv <https://github.com/kennethreitz/autoenv>`_ }
 
 
+Heroku.py
+~~~~~~~~~
+
+A Python wrapper for the Heroku API. Simple and elegant. Powered by Requests.
+
+{ `heroku/heroku.py <https://github.com/heroku/heroku.py>`_ }
+
+
+
 GitHub3
 ~~~~~~~
 
@@ -100,12 +109,6 @@ A Python wrapper for the Github API. Simple and elegant. Powered by Requests.
 { `kennethreitz/python-github3 <https://github.com/kennethreitz/python-github3>`_ }
 
 
-Heroku.py
-~~~~~~~~~
-
-A Python wrapper for the Heroku API. Simple and elegant. Powered by Requests.
-
-{ `heroku/heroku.py <https://github.com/heroku/heroku.py>`_ }
 
 
 Other Projects
@@ -133,6 +136,10 @@ Other Projects
   Sends Google Reader Starred Articles to your Instapaper account.
 - `showme <https://github.com/kennethreitz/showme>`_:
   Set of debugging decorators for Python.
+- `stathat <https://github.com/kennethreitz/stathat.py>`_:
+  A simple API wrapper for the StatHat api.
+- `diveintomark <https://github.com/diveintomark>`_:
+  Legacy, yet maintained, mirror of Mark Pilgrim's public repositories.
 
 
 
