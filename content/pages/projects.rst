@@ -153,7 +153,7 @@ Other Projects
 - `vaincheese <https://github.com/kennethreitz/vaincheese>`_:
   A simple webservice for reporting PyPi download stats.
 - `fortune-service <https://github.com/kennethreitz/fortune-service>`_:
-  A simple webservice for the classic `fortune` tool.
+  A simple webservice for the classic fortune tool.
 - `tablib-service <https://github.com/kennethreitz/tablib-service>`_:
   A simple webservice for tablib.
 - `readability-api <https://github.com/arc90/python-readability-api>`_:
