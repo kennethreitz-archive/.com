@@ -35,7 +35,7 @@ The root of the problem is that WSGI doesn't map ``1:1`` to HTTP.
 So, instead of taking the WebOb approach of using WSGI as the common protocol between services,
 why not use HTTP itself? The rest of the world uses HTTP as the most-common denominator after all.
 
-After a few hours, we drafted up an elegant plan:
+After a few hours, we drafted up a solid plan:
 
 - Consolidate shared code between Requests and Werkzeug into a new ``httpcore`` module.
 - Move WSGI-specific Werkzeug code into a new ``wsgicore`` module.
