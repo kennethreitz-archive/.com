@@ -111,7 +111,7 @@ fantastic mechanism for distributed services.
 
 In Requests, you'll be able to *mount* external services to the routing mechanism
 by *mocking* HTTP. To Requests, it'll be an HTTP Service, but in reality the
-service could be anything: a random number generator, 0mq socket, proxy,
+service could be anything: a random number generator, ZeroMQ socket, proxy,
 WSGI application, *&c*.
 
 Here's some theoretical example code::
