@@ -49,7 +49,7 @@ The Architecture
 Requests, Flask, and Werkzeug will remain the same to the end user.
 
 Behind the scenes, the same functions used to generate a request will be used to consume it.
-For example, stream handling, header parsing and form-encoding will all be synchronous functions
+For example, stream handling, header parsing, and form-encoding will all be synchronous functions
 from ``httpcore``.
 
 .. figure:: http://cl.ly/1n0M093z3l0Z390u1121/Screen%20Shot%202012-04-02%20at%202.05.29%20AM.png
