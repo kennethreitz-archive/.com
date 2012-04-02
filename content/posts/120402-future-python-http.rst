@@ -85,7 +85,7 @@ Specifically, it will provide:
 - General HTTP Utilities
 - Common Data Structures (``MultiDict``, ``CaseInsensitiveDict``)
 - Common Data Structure Utilities (``merge_kwargs``)
-- Stream Handling (``make_line_iter``, ``make_sunk_iter``)
+- Stream Handling (``make_line_iter``, ``make_chunk_iter``)
 - HTTP Parsing (``http-parser``)
 - URI/IRI Parsing and Handling Functions (``uricore``)
 - SSL Utilities
