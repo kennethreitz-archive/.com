@@ -19,7 +19,7 @@ So, why are they separate projects?
 Brainstorming
 -------------
 
-At PyCon 2012 a few weeks ago, Andrey Petrov, Armin Ronacher, Paul McMillian, and myself got
+At PyCon 2012 a few weeks ago, Andrey Petrov, Armin Ronacher, Paul McMillan, and myself got
 into a room for a brainstorming session around the possibility of formally combining our efforts.
 
 My expectations going in weren't that high, but that quickly changed once we were
