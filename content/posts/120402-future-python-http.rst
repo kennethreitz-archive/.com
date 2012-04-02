@@ -99,7 +99,7 @@ WSGICore will extend the framework that HTTPCore provides to be used by WSGI app
 It will replace the WSGI-specific parts of Werkzeug:
 
 - Request and Response objects
-- WSGI Transport Adapter (``HTTP <-> WGI``)
+- WSGI Transport Adapter (``HTTP <-> WSGI``)
 - WSGI Utility Functions
 
 
@@ -107,7 +107,7 @@ Distributed Services
 --------------------
 
 In addition to testing web applications, this new Adapter system will provide a
-fantastic mechanism for for distributed services.
+fantastic mechanism for distributed services.
 
 In Requests, you'll be able to *mount* external services to the routing mechanism
 by *mocking* HTTP. To Requests, it'll be an HTTP Service, but in reality the
