@@ -119,7 +119,7 @@ Here's some theoretical example code::
     import requests
 
     from webscale import DevNullAdpater
-    from httpcore.adapters import WsgiAdapter
+    from wsgicore.adapters import WsgiAdapter
     from haystack.core import app as haystack
 
     s = requests.session()
