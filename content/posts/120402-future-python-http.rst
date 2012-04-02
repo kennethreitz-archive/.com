@@ -120,7 +120,7 @@ Here's some theoretical example code::
 
     from webscale import DevNullAdpater
     from wsgicore.adapters import WsgiAdapter
-    from httpbin.core import app as httpbin
+    from haystackapp.core import app as haystack
 
     s = requests.session()
     s.mount('null:', DevNullAdapter())
@@ -129,8 +129,8 @@ Here's some theoretical example code::
     # Make a request via DevNullAdapter
     r = s.get('null:/someurl')
 
-    # Make a request via Httpbin WSGI App
-    r = s.get('http://httpbin/index')
+    # Make a request via Haystack WSGI App
+    r = s.get('http://haystack/index')
 
     # Make a request via standard HTTP
     r = s.get('http://github.com')
