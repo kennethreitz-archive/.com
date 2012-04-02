@@ -132,8 +132,8 @@ Here's some theoretical example code::
     # Make a request via Haystack WSGI App
     r = s.get('http://haystack/index')
 
-    # Make a request via standard HTTP
-    r = s.get('http://github.com')
+    # Make a request via standard HTTPS
+    r = s.get('https://github.com/')
 
 Long-term Advantages
 --------------------
