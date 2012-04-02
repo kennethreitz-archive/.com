@@ -127,7 +127,7 @@ Here's some theoretical example code::
     s.mount('http://haystack', WsgiAdapter(app=haystack))
 
     # Make a request via DevNullAdapter
-    r = s.get('null:/someurl')
+    r = s.get('null://someurl')
 
     # Make a request via Haystack WSGI App
     r = s.get('http://haystack/index')
