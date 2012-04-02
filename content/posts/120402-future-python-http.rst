@@ -149,7 +149,7 @@ There's a number of advantages to this design and approach in the future:
 Development
 -----------
 
-If you have thoughts to share, feel free to discuss this with us on Freeode ``#cores``.
+If you have thoughts to share, feel free to discuss this with us on Freenode at ``#cores``.
 
 There's little code to show at the moment, but you can track the development over on GitHub:
 
