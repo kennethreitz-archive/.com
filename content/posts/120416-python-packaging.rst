@@ -40,15 +40,15 @@ Sample Repository
 
     README.rst
     LICENSE
-    requirements.txt
     setup.py
+    requirements.txt
     sample/__init__.py
     sample/core.py
     sample/helpers.py
-    tests/test_basic.py
-    tests/test_advanced.py
     docs/conf.py
     docs/index.rst
+    tests/test_basic.py
+    tests/test_advanced.py
 
 Let's get into some specifics.
 
