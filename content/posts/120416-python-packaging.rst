@@ -39,6 +39,7 @@ Sample Repository
 ::
 
     README.rst
+    LICENSE
     setup.py
     sample/__init__.py
     sample/core.py
@@ -67,6 +68,17 @@ If your module consists of only a single file, you can place it directly in the 
     ./sample.py
 
 Your code does not belong in an ambiguous ``src`` or ``python`` subdirectory.
+
+License
+-------
+
+========  ==  =====================
+Location      ``./LICENSE``
+Purpose       Lawyering up.
+========  ==  =====================
+
+This is arguably the most important part of your repository, aside from the source code itself.
+The full license text and copyright claims should exist in this file. No excuses.
 
 
 Setup.py
