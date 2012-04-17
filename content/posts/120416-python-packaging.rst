@@ -110,7 +110,7 @@ If your project has no development dependencies, this file is unnecessary.
 Documentation
 -------------
 
-========  ==  =================================
+========  ==  ==================================
 Location      ``./docs/``
 Purpose       Package reference documentation.
 ========  ==  ==================================
