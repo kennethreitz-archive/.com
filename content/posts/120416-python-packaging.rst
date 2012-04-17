@@ -40,6 +40,7 @@ Sample Repository
 
     README.rst
     LICENSE
+    requirements.txt
     setup.py
     sample/__init__.py
     sample/core.py
@@ -92,6 +93,17 @@ Purpose       Package and distribution management.
 ========  ==  ============
 
 If your module package is at the root of your repository, this should obviously be at the root as well.
+
+Requirements File
+-----------------
+
+========  ==  ============
+Location      ``./requirements.txt``
+Purpose       Development dependencies.
+========  ==  ============
+
+A `Pip requirements file <http://www.pip-installer.org/en/latest/requirements.html>`_
+should be placed at the root of the repository. It should specify the dependencies required to contribute to the project: testing, building, and documenting.
 
 
 Documentation
