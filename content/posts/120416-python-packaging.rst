@@ -12,7 +12,7 @@ It is based on the recommendations of the Distribute project, personal experienc
 It's Important.
 ---------------
 
-Just as Code Style, API Design, and Automation are essential for a healthy development cycle, Repository structure is a crucial part of your codebase's architecture.
+Just as Code Style, API Design, and Automation are essential for a healthy development cycle, Repository structure is a crucial part of your project's architecture.
 
 When a potential user or contributor lands on your repository's page, they see a few things:
 
