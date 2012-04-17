@@ -78,7 +78,9 @@ Purpose       Lawyering up.
 ========  ==  =====================
 
 This is arguably the most important part of your repository, aside from the source code itself.
-The full license text and copyright claims should exist in this file. No excuses.
+The full license text and copyright claims should exist in this file.
+
+No excuses.
 
 
 Setup.py
