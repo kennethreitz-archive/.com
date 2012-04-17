@@ -18,7 +18,7 @@ When a potential user or contributor lands on your repository's page, they see a
 
 - Project Name
 - Project Description
-- A Bunch O' Files
+- Bunch O' Files
 
 Only when they scroll below the fold will the user see your project's README.
 
