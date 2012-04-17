@@ -54,14 +54,17 @@ The Actual Module
 -----------------
 
 ========  ==  =====================
-Location      ``./sample/``
+Location      ``./sample/`` or ``./sample.py``
 Purpose       The code of interest.
 ========  ==  =====================
 
-If your module consists of only a single file (e.g. ``sample.py``), you can place it directly in the root of your repository::
+Your module package is the core focus of the repository. It should not be tucked away::
+
+    ./sample/
+
+If your module consists of only a single file, you can place it directly in the root of your repository::
 
     ./sample.py
-
 
 Your code does not belong in an ambiguous ``src`` or ``python`` subdirectory.
 
