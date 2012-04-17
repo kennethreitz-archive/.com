@@ -97,10 +97,10 @@ If your module package is at the root of your repository, this should obviously 
 Requirements File
 -----------------
 
-========  ==  ============
+========  ==  ==========================
 Location      ``./requirements.txt``
 Purpose       Development dependencies.
-========  ==  ============
+========  ==  ===========================
 
 A `Pip requirements file <http://www.pip-installer.org/en/latest/requirements.html>`_
 should be placed at the root of the repository. It should specify the dependencies required to contribute to the project: testing, building, and documenting.
@@ -110,10 +110,10 @@ If your project has no development dependencies, this file is unnecessary.
 Documentation
 -------------
 
-========  ==  ============
+========  ==  =================================
 Location      ``./docs/``
 Purpose       Package reference documentation.
-========  ==  ============
+========  ==  ==================================
 
 There is little reason for this to exist elsewhere.
 
@@ -176,7 +176,7 @@ Sample ``Makefile``::
         pip install -r requirements.txt
 
     test:
-        nosetests tests/**.py
+        nosetests tests
 
 Other generic management scripts (e.g. ``manage.py`` or ``fabfile.py``) belong at the root of the repository as well.
 
