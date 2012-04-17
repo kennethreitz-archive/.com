@@ -97,7 +97,7 @@ If your module package is at the root of your repository, this should obviously 
 Requirements File
 -----------------
 
-========  ==  ==========================
+========  ==  ===========================
 Location      ``./requirements.txt``
 Purpose       Development dependencies.
 ========  ==  ===========================
