@@ -34,7 +34,7 @@ Sample Repository
 
 **tl;dr**: This is what I recommend.
 
-.. This repository is `available on GitHub <https://github.com/kennethreitz/samplemod>`_.
+This repository is `available on GitHub <https://github.com/kennethreitz/samplemod>`_.
 
 ::
 
