@@ -68,7 +68,7 @@ If your module consists of only a single file, you can place it directly in the 
 
     ./sample.py
 
-Your code does not belong in an ambiguous ``src`` or ``python`` subdirectory.
+Your library does not belong in an ambiguous ``src`` or ``python`` subdirectory.
 
 License
 -------
