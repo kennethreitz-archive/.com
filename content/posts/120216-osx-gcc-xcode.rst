@@ -11,7 +11,7 @@ installer for GCC. It ended up being ~200MB in size. It took 2 minutes to downlo
 
 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer/>`_ was born. Perfect.
 
-Unfortunately, I couldn't include the 10.6/7 SDKs due to licensing restrictions.
+Unfortunately, I couldn't include the 10.6/7 SDKs due to `licensing restrictions <http://www.amazon.com/gp/product/0596517963/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596517963>`_.
 These SDKs include CoreAudio, CoreData, OpenGL, and more. Most software that isn't build
 specifically for OSX would build perfectly. Unfortunately, some software added some
 needless system dependencies, though (I'm looking at you, Node).
