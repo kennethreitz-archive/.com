@@ -12,7 +12,7 @@ says it best:
 
     They haven't re-created the git CLI tool in a GUI, they've created something different. They've created a tool that makes Git more accessible. Little things like auto-stashing when you switch branches will confuse git veterans, but it will make Git much easier to grok for newcomers because of the assumptions it makes about your Git workflow.
 
-Why not bring this innovation back to the command line?
+Why not bring this innovation back to the `command line Git interface <http://www.amazon.com/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1430218339>`_?
 
 Enter Legit
 -----------
@@ -28,8 +28,6 @@ Managing remote branches becomes as simple as ``publish branch`` and ``unpublish
 
 Installation
 ------------
-
-**Warning**: don't use this for anything mission critical. It's still new.
 
 Installing Legit is easy with pip (Python 2.6 or 2.7 required)::
 
