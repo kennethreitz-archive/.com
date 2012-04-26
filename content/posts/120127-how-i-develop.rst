@@ -12,7 +12,7 @@ I'd bring 4 or 5 floppies with me and try to cram all the games, waveform editor
 
 Luckily today, excellent software written with passion oozes out of the app ecosystem. OS X and the App Store really fuel an economy of software built for humans by people that care.
 
-Unfortunately, this doesn't always hold true in developer software — text editors, modules, libraries, toolchains, &c. We are forced to deal with APIs on a daily basis that were not built with the user in mind. Over-engineering surrounds us as developers. Things that should be simple are often needlessly complex for the sake of being complex and "proper".
+Unfortunately, this doesn't always hold true in developer software — text editors, modules, libraries, toolchains, &c. We are forced to deal with APIs on a daily basis that were not built with the user in mind. `Over-engineering surrounds us <http://www.amazon.com/gp/product/059651798X/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=059651798X>`_ as developers. Things that should be simple are often needlessly complex for the sake of being complex and "proper".
 
 Why should consumer apps and developer APIs be treated differently?
 
