@@ -9,7 +9,7 @@ I’m happy to announce the release of my latest Python module: **Requests**.
 
 One of the most frustrating experiences I have to face, as a Python developer, is the pain of making HTTP requests. The available APIs are insane. I have to look up everything that I want to do and constantly refer to the documentation. I skip writing fun tools from time to time, simply because I don’t want to go through the pain of making a simple PUT request with Basic Authentication.
 
-Things shouldn’t be this way. Not in Python.
+Things shouldn’t be this way. `Not in Python <http://www.amazon.com/gp/product/0521725968/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0521725968>`_.
 
 
 Enter Requests
