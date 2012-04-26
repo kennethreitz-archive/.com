@@ -32,7 +32,7 @@ If I ever decide to actually ship a consumer product, it will be something akin 
 
 GitHub wasn't built for the developer community at large; the founders built GitHub for themselves. The problem they solved simply happened to resonate with millions of developers because they themselves happen to be developers.
 
-37Signals didn't build Basecamp for a world full of project managers and consultants; they built it for themselves. They also developed Ruby on Rails for themselves, as Ruby developers that were repeating themselves too often.
+37Signals `didn't build Basecamp <http://www.amazon.com/gp/product/0307463745/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0307463745>`_ for a world full of project managers and consultants; they built it for themselves. They also developed Ruby on Rails for themselves, as Ruby developers that were repeating themselves too often.
 
 How *pragmatic*.
 
