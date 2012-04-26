@@ -60,7 +60,7 @@ Great sculptures aren't manufactured — they're discovered. The sculptor studie
 
 He *responds*.
 
-This is what `responsive design <http://www.abookapart.com/products/responsive-web-design>`_ is all about. It's not merely a method to engineer a web design that will function on a phone, tablet, and desktop.
+This is what `responsive design <http://www.amazon.com/gp/product/B005SYWGXW/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B005SYWGXW>`_ is all about. It's not merely a method to engineer a web design that will function on a phone, tablet, and desktop.
 
     Beware lest you lose the substance by grasping at the shadow.
 
