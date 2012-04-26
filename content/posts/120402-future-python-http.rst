@@ -24,7 +24,7 @@ into a room for a brainstorming session around the possibility of formally combi
 
 My expectations going in weren't that high, but that quickly changed once we were
 all in the same room. We discussed the general state of Python HTTP, security concerns,
-distributed services, and web application testing.
+`distributed services <http://www.amazon.com/gp/product/0596529554/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0596529554>`_, and web application testing.
 
 Today, making *real* HTTP Requests to an in-process WSGI app with a *real* HTTP client is not simple.
 Can you imagine writing *real* OAuth tests for your application with the same HTTP consumer
