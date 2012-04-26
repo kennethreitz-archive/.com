@@ -110,7 +110,7 @@ In addition to testing web applications, this new Adapter system will provide a
 fantastic mechanism for distributed services.
 
 In Requests, you'll be able to *mount* external services to the routing mechanism
-by *mocking* HTTP. To Requests, it'll be an HTTP Service, but in reality the
+by *mocking* HTTP. To Requests, it'll be an `HTTP Service <http://www.amazon.com/gp/product/B0043D2ED6/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B0043D2ED6>`_, but in reality the
 service could be anything: a random number generator, ZeroMQ socket, proxy,
 WSGI application, *&c*.
 
