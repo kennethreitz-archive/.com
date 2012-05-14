@@ -56,11 +56,12 @@ Take some time to reflect. Remember why you're doing this in the first place. I 
 
 Why are you? If you don't have answer, maybe you shouldn't be doing it. If you find yourself maintaining a project purely out of obligation, maybe you should be `doing less <http://geemus.com/blog/2011/11/27/less-is-more>`_.
 
-Before you tweet, comment on a pull request, or comment publically about a project, remember that it's often not a peice of code you're critiquing — it's a human being.
-
 - Don't be `an asshole <http://jacobian.org/writing/assholes/>`_.
 - Make your contributors `feel welcome and appreciated <http://news.ycombinator.com/item?id=3786590>`_.
 - Always say `thank you <http://www.amazon.com/gp/product/B007MXAZBW/ref=as_li_ss_tl?ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=B007MXAZBW>`_.
+
+Before you tweet, comment on a pull request, or comment publically about a project, remember that it's often not a peice of code you're critiquing — it's a human being.
+
 
 I don't have the energy or patience for non-constructive feedback. Be cordial and positive or be on your way.
 
