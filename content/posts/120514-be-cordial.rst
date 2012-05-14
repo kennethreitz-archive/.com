@@ -1,4 +1,4 @@
-Be Cordial or Be On Your Way
+Be Cordial or Be on Your Way
 ==============================
 
 :date: 2012-05-14 10:00
