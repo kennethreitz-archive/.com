@@ -23,13 +23,11 @@ As a project maintainer, it's *extremely* important to be respectful to your con
 Publishing Open Source
 ----------------------
 
-
-There's a difference between stress and stressful situation. One can be caught in a tremendously stressful situation and not be stressed at all with the right mixture of perspective and empathy.
-
 I don't handle stress and negativity well at all. I almost instantly get a terrible headache, have difficulty concentrating, lose my appetite, and my general quality of life degrades almost immediately.
 
-By publishing your code (or anything, really) on the open internet, you're inviting the whole world to analyze and scrutinize it, line by line. That takes guts. People may love it, hate it, disagree with your general approach, or be convinced that you're doing their community a huge disservice. That can be stressful.
+There's a difference between being stressed and being in a stressful situation. One can be caught in a tremendously stressful situation and not be stressed at all with the right mixture of perspective and empathy.
 
+By publishing your code (or anything, really) on the open internet, you're inviting the whole world to analyze and scrutinize it, line by line. That takes guts. People may love it, hate it, disagree with your general approach, or be convinced that you're doing their community a huge disservice. That can be stressful.
 
 Don't worry about non-constructive feedback. It serves no purpose. Realize that some people just take things *way* too seriously. Tell them to be on their way.
 
