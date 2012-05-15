@@ -12,21 +12,11 @@ By opening a Pull Request to a popular project, you're inviting the maintainers 
 
 Most of the time, the maintainers of the projects do their best to be kind. If they have feedback or criticism, it's generally positive.
 
-Unfortunately, this isn't always the case. The most recent example is that of Linus Torvalds upon receiving a pull request `on GitHub <https://github.com/torvalds/linux/pull/17#issuecomment-5659970>`_:
+Unfortunately, this isn't always the case. Maintainers will sometimes shun and insult contributor's work. This is a perfect example of what you should **never** do.
 
+What if the Pull Request in question was the person's first time ever contributing to a project? They could be scared them away from the world of open source forever.
 
-.. epigraph::
-
-   You're a moron.
-
-   -- Linus
-
-
-This is a perfect example of what you should **never** do.
-
-He has no context. What if this was that person's first time ever contributing to a project? He may have scared them away from the world of open source forever.
-
-Instead of simply yelling at his potential contributor and causing a mess of negativity and stress; Linus could have taken this perfect opportunity to educate the user. He could have pointed the user to a guide that outlines what the proper protocol for his project is.
+Instead of simply yelling at a potential contributor and causing a mess of negativity and stress; the maintainer should take the opportunity to educate the user. They should piont the user to a guide that outlines what the proper protocol for his project is.
 
 As a project maintainer, it's *extremely* important to be respectful to your contributors. They often take what you say very personally.
 
