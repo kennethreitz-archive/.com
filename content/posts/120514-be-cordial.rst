@@ -14,9 +14,9 @@ Most of the time, the maintainers of the projects do their best to be kind. If t
 
 Every once in while, maintainers and community members will shun and insult a contributor's work. This is a perfect example of what you should **never** do.
 
-What if the Pull Request in question was the person's first time ever contributing to a project? They could be scared them away from the world of open source forever.
+What if the Pull Request in question was the person's first time ever contributing to a project? They could be scared away from the world of open source forever.
 
-Instead of simply yelling at a potential contributor and causing a mess of negativity and stress; the maintainer should take the opportunity to educate the user. They should piont the user to a guide that outlines what the proper protocol for his project is.
+Instead of simply yelling at a potential contributor and causing a mess of negativity and stress; the maintainer should take the opportunity to educate the user. They should point the user to a guide that outlines what the proper protocol for his project is.
 
 As a project maintainer, it's *extremely* important to be respectful to your contributors. They often take what you say very personally.
 
