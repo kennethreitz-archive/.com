@@ -10,7 +10,9 @@ Contributing to Open Source can be stressful.
 
 By opening a Pull Request to a popular project, you're inviting the maintainers and all of their users to analyze and scrutinize your code. Often, they will.
 
-Most of the time, the maintainers of the projects do their best to be kind. If they have feedback or criticism, it's generally positive. Unfortunately, this isn't always the case. Maintainers will sometimes shun and insult contributor's work. This is a perfect example of what you should **never** do.
+Most of the time, the maintainers of the projects do their best to be kind. If they have feedback or criticism, it's generally positive. Unfortunately, this isn't always the case.
+
+Every once in while, maintainers and community members will shun and insult a contributor's work. This is a perfect example of what you should **never** do.
 
 What if the Pull Request in question was the person's first time ever contributing to a project? They could be scared them away from the world of open source forever.
 
