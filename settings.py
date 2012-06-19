@@ -9,7 +9,7 @@ PDF_GENERATOR = False
 GOOGLE_ANALYTICS = 'UA-8742933-1'
 GAUGES = '4ddc1ab3f5a1f57b4d000009'
 
-BYLINE = '&copy; 2011 Kenneth Reitz &amp; co. All Rights Reserved.'
+BYLINE = '&copy; 2012 Kenneth Reitz &amp; co. All Rights Reserved.'
 LINKS = (
     ('Colophon', '/pages/colophon.html'),
     ('Projects', '/pages/open-projects.html'),
