@@ -5,9 +5,7 @@ Featured: True
 
 I'm happy to announce that [Sublime Text 2](http://www.sublimetext.com/2) was officially released today!
 
-This is awesome news. I've spend 12+ hours a day for the past year and a half in Sublime Text 2.
-
-It is indeed sublime.
+This is awesome news. I've spend 12+ hours a day for the past year and a half in Sublime Text 2. It is indeed sublime.
 
 ## Why should you try it?
 
