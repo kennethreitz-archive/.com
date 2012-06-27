@@ -2177,3 +2177,7 @@ color:#AA0000;
 #dsq-pagination, #dsq-trackback-url {
     display: none;
 }
+
+.linenos {
+    display: none;
+}
