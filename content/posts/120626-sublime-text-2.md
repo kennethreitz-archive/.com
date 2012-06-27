@@ -19,6 +19,67 @@ It is indeed sublime.
 - It supports TextMate Bundles and Themes!
 - It's fully scripted with an embedded Python interpreter, making it nicely extensible
 
+## Beautiful
+
+My editor looks like this:
+
+![kr-subl](http://cl.ly/311W3L251p0R021i2z2o/Screen%20Shot%202012-06-26%20at%206.44.52%20PM.png)
+
+This is comprised of a few things:
+
+### Soda Theme Dark
+
+This is a nice alternative to the default "skin" of Sublime. It comes in both light and dark flavors. You can grab it [on GitHub](https://github.com/buymeasoda/soda-theme/).
+
+### Tomorrow Night
+
+[Tomorrow Night](https://github.com/chriskempson/tomorrow-theme/tree/master/textmate) is my current favorite color scheme for syntax highlighting. I've cycled through around with [quite](https://github.com/kennethreitz/krTheme.tmTheme) a [few](http://ethanschoonover.com/solarized) in the past, but this one is really something special.
+
+### Ubuntu Mono
+
+I'm pretty passionate about monospace typefaces. Over the years, I've been a heavy supporter of Monaco, MS Consalas, Inconsolas, Menlo, and finally Ubuntu Mono.
+
+Ubuntu Mono is the greatest programming font ever made. [Download it here](http://font.ubuntu.com/).
+
+### Configuration
+
+I've optimized my settings for Python development.
+
+- Hidden sidebar
+- Disabled minimap
+- Disabled fold buttons
+- All whitespace drawn
+- Auto-trim trailing whitespace
+- PEP8-esque line rulers (79 for code, 72 for docstrings)
+
+Here's my user config file:
+
+    {
+        "auto_complete": false,
+        "close_windows_when_empty": false,
+        "color_scheme": "Packages/User/Tomorrow-Night.tmTheme",
+        "draw_white_space": "all",
+        "find_selected_text": true,
+        "fold_buttons": false,
+        "font_face": "Ubuntu Mono",
+        "font_options":
+        [
+            "subpixel_antialias"
+        ],
+        "font_size": 13.0,
+        "highlight_line": true,
+        "rulers":
+        [
+            72, 79
+        ],
+        "theme": "Soda Dark.sublime-theme",
+        "translate_tabs_to_spaces": true,
+        "trim_trailing_white_space_on_save": true,
+        "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "_build", "dist", "build", "site"]
+    }
+
+
+
 ## Tips
 
 Here's a quick list of things that I didn't pick up on immediately when migrating from vim.
@@ -94,65 +155,6 @@ The repo is [available on GitHub](https://github.com/kennethreitz/kcode.tmbundle
 Other great plugins available via Package Control include HTML Encode, Gist, and Restructured Text.
 
 
-## Beautiful
-
-My editor looks like this:
-
-![kr-subl](http://cl.ly/311W3L251p0R021i2z2o/Screen%20Shot%202012-06-26%20at%206.44.52%20PM.png)
-
-This is comprised of a few things:
-
-### Soda Theme Dark
-
-This is a nice alternative to the default "skin" of Sublime. It comes in both light and dark flavors. You can grab it [on GitHub](https://github.com/buymeasoda/soda-theme/).
-
-### Tomorrow Night
-
-[Tomorrow Night](https://github.com/chriskempson/tomorrow-theme/tree/master/textmate) is my current favorite color scheme for syntax highlighting. I've cycled through around with [quite](https://github.com/kennethreitz/krTheme.tmTheme) a [few](http://ethanschoonover.com/solarized) in the past, but this one is really something special.
-
-### Ubuntu Mono
-
-I'm pretty passionate about monospace typefaces. Over the years, I've been a heavy supporter of Monaco, MS Consalas, Inconsolas, Menlo, and finally Ubuntu Mono.
-
-Ubuntu Mono is the greatest programming font ever made. [Download it here](http://font.ubuntu.com/).
-
-
-### Configuration
-
-I've optimized my settings for Python development.
-
-- Hidden sidebar
-- Disabled minimap
-- Disabled fold buttons
-- All whitespace drawn
-- Auto-trim trailing whitespace
-- PEP8-esque line rulers (79 for code, 72 for docstrings)
-
-Here's my user config file:
-
-    {
-        "auto_complete": false,
-        "close_windows_when_empty": false,
-        "color_scheme": "Packages/User/Tomorrow-Night.tmTheme",
-        "draw_white_space": "all",
-        "find_selected_text": true,
-        "fold_buttons": false,
-        "font_face": "Ubuntu Mono",
-        "font_options":
-        [
-            "subpixel_antialias"
-        ],
-        "font_size": 13.0,
-        "highlight_line": true,
-        "rulers":
-        [
-            72, 79
-        ],
-        "theme": "Soda Dark.sublime-theme",
-        "translate_tabs_to_spaces": true,
-        "trim_trailing_white_space_on_save": true,
-        "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "_build", "dist", "build", "site"]
-    }
-
-
 Happy hacking!
+
+
