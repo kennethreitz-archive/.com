@@ -145,10 +145,10 @@ It's really nice to have sometimes. I typically have it disabled. Give it a spin
 ### kCode and More
 
 This old plugin is a remnant of my old PHP + Textmate work.
-If you write a lot of Python scripts, the `env` and `enc` snippets will save you a lot of typing:
+If you write a lot of Python scripts, the 'env' and 'enc' snippets will save you a lot of typing:
 
     #!/usr/bin/env python
-        # -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 
 The repo is [available on GitHub](https://github.com/kennethreitz/kcode.tmbundle).
 
