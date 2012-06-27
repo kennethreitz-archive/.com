@@ -106,7 +106,7 @@ This nifty window pops up and gives you a list of available commands in your cur
 
 Pretty standard stuff. Jumps to the file you select.
 
-*Command + E: Go to Symbol*
+*Command + R: Go to Symbol*
 
 Use this to hop to any symbol definition in your current file.
 
