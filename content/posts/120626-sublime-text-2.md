@@ -39,7 +39,7 @@ This is a nice alternative to the default "skin" of Sublime. It comes in both li
 
 I'm pretty passionate about monospace typefaces. Over the years, I've been a heavy supporter of Monaco, MS Consalas, Inconsolas, Menlo, and finally Ubuntu Mono.
 
-Ubuntu Mono is the greatest programming font ever made. [Download it here](http://font.ubuntu.com/).
+Simply the greatest programming font ever made. [Download it here](http://font.ubuntu.com/).
 
 ### Configuration
 
