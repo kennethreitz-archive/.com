@@ -125,9 +125,8 @@ On OS X, the location of the Sublime configuration is:
 While Sublime does support Textmate Bundles, it also has a robust Python-powered plugin and extension system that allows for some very cool plugins that weren't possible with TextMate.
 
 ### Package Control
-The first thing you need to install is [Package Control](wbond.net/sublime_packages/package_control). It's essentially Homebrew for Sublime packages. It'll save you tons of time.
 
-[Installation](http://wbond.net/sublime_packages/package_control/installation)
+The first thing you need to install is [Package Control](http://wbond.net/sublime_packages/package_control). It's essentially Homebrew for Sublime packages. It'll save you tons of time.
 
 ###  Sublime Linter
 
