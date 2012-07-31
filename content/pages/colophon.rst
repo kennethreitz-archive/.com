@@ -10,7 +10,7 @@ The US Library of Congress, Twitter, Digg, Northrop Gruman, National Geographic,
 A Little Context
 ~~~~~~~~~~~~~~~~
 
-- I learned GW-BASIC in 5th Grade. TurboC++ in 6th. TuboPascal in 7th.
+- I learned GW-BASIC in 5th Grade. TurboC++ in 6th. TurboPascal in 7th.
 - I used MS-DOS 4.2 in 5th Grade. MS-DOS 6.22 in 6th. RH Linux in 7th.
 - I have lived in Pennsylvania, Missouri, Minnesota, Maryland, and Virginia.
 - I went to George Mason University for a bit, but walked away fast.
