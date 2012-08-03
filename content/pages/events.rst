@@ -3,7 +3,7 @@ Events
 
 :hide: True
 
-I often present at conferences. Check out my [previous talks](http://kennethreitz.com/pages/talks.html) to learn more.
+I often present at conferences. Check out my `previous talks <http://kennethreitz.com/pages/talks.html>`_ to learn more.
 
 August 2012
 -----------
