@@ -10,7 +10,7 @@ Python's ecosystem is held up to a high standard, but it falls short in a few ke
 
 <script async class="speakerdeck-embed" data-id="4f24d3a79a6510001f008836" data-ratio="1.3333333333333333" src="http://speakerdeck.com/assets/embed.js"></script>
 
-<p>Here's a condensed video presentation:</p>
+<p></p>
 
 <iframe width="560" height="400" src="http://www.youtube.com/embed/Q1pe6lHZeNs" frameborder="0" allowfullscreen></iframe>
 
