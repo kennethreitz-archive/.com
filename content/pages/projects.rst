@@ -3,7 +3,7 @@ Open Projects
 
 :hide: True
 
-Active Projects
+Active Ventures
 ===============
 
 The Hitchhiker's Guide to Python
@@ -135,6 +135,7 @@ In addition to authoring new software, I contribute to other projects and teams 
 
 
 Python Software Foundation
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 I am a proud member of the Python Software Foundation.
