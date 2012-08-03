@@ -19,11 +19,9 @@ and usage of Python on a daily basis.
 Requests: Python HTTP for Humans
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Requests is an elegant and simple HTTP library for Python, built for
-human beings. It allows you to send GET, HEAD, PUT, POST, and DELETE
-HTTP requests. You can add headers, form data, multipart files, and
-parameters with simple Python dictionaries, and access the response data
-in the same way. It’s powered by httplib, urllib3, and good intentions.
+Requests is an ISC Licensed HTTP/1.1 library, written in Python, for human beings.
+Unlike most HTTP libraries, the goal of the project is to provide the best API
+and Developer Experience possible.
 
 { `python-requests.org <http://python-requests.org>`_ }
 
