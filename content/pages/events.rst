@@ -8,25 +8,36 @@ Upcoming Events
 
 I'll be presenting at the following upcoming events:
 
-- August 9: PyMNtos (St. Paul, MN)
+August 2012
+-----------
+
+- 08/09: PyMNtos (St. Paul, MN)
     Presenting, *Heroku 101*
-- August 14: PDXPython (Portland, OR)
+- 08/14: PDXPython (Portland, OR)
     Presenting, *Heroku 101*
-- August 18: PyCon AU (Hobart, Tasmania, Australia)
+- 08/18: PyCon AU (Hobart, Tasmania, Australia)
     Keynoting, *Python for Humans*
-- August 28: beCamp (Charlottesville, VA)
+- 08/28: beCamp (Charlottesville, VA)
     Hosting, Heroku Open Space
-- September 4: DjangoCon US (Washington, DC)
+
+September 2012
+--------------
+
+- 09/04: DjangoCon US (Washington, DC)
     Hosting, Heroku Open Space
-- September 18: Dreamforce (San Francisco, CA)
+- 09/18: Dreamforce (San Francisco, CA)
     Attending
-- September 23: Strangeloop (St. Louis, MO)
+- 09/23: Strangeloop (St. Louis, MO)
     Attending
-- October 3: Asbury Agile (Asbury Park, NJ)
+
+October 2012
+------------
+
+- 10/03: Asbury Agile (Asbury Park, NJ)
     Presenting, Semi-technical Talk
-- October 9: PhillyPUG (Philadelphia, PA)
+- 10/9: PhillyPUG (Philadelphia, PA)
     Presenting, *Heroku 101*
-- October 16: TwilioCon (San Francisco, CA)
+- 10/16: TwilioCon (San Francisco, CA)
     Presenting, Highly-technical Talk
-- October 27: PyArkansas (Conway, AK)
+- 10/27: PyArkansas (Conway, AK)
     Presenting, *Heroku 101*
