@@ -79,7 +79,7 @@ bars, and much much more.
 Envoy: Subprocess for Humans
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An simple wrapper around the powerful ``subprocess`` module.
+A simple wrapper around the powerful ``subprocess`` module.
 
 { `kennethreitz/envoy <https://github.com/kennethreitz/envoy>`_ }
 
