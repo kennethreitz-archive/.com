@@ -1,6 +1,4 @@
-Talks
-=====
-
+Title: Talks
 
 Python for Humans
 -----------------
