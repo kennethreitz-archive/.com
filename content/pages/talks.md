@@ -3,20 +3,22 @@ Title: Talks
 Python for Humans
 -----------------
 
-<div class='embedly'>
-
-<a href="https://speakerdeck.com/u/kennethreitz/p/python-for-humans">Python for Humans</a>
-
-</div>
+<script async class="speakerdeck-embed" data-id="4f24d3a79a6510001f008836" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
 
 
 Flasky Goodness
 ---------------
 
-https://speakerdeck.com/u/kennethreitz/p/flasky-goodness
+
+<script async class="speakerdeck-embed" data-id="4fcf32ff4aab160022003030" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
 
 The Twelve-Factor App
 ---------------------
 
-https://speakerdeck.com/u/kennethreitz/p/the-12-factor-app
+
+
+
+<script async class="speakerdeck-embed" data-id="4f22cc6da0a84d0022028725" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
