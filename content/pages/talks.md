@@ -1,6 +1,6 @@
 Title: Talks
 
-I often present at conferences. Check out my [upcoming events](/pages/events.html) schedule to learn more.
+I often present at conferences. Check out my [upcoming events](http://kennethreitz.com/pages/events.html) schedule to learn more.
 
 
 Python for Humans

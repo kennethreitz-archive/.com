@@ -41,4 +41,4 @@ October 2012
 
 -------------------
 
-See also, my `previous talks </pages/talks.html>`_ archive.
+See also, my `previous talks <http://kennethreitz.com/pages/talks.html>`_ archive.
