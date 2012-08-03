@@ -3,7 +3,7 @@ Events
 
 :hide: True
 
-I'll be presenting at the following upcoming events:
+I often present at conferences. Check out my [previous talks](http://kennethreitz.com/pages/talks.html) to learn more.
 
 August 2012
 -----------
@@ -38,7 +38,3 @@ October 2012
     Presenting, Highly-technical Talk
 - 10/27: PyArkansas (Conway, AR)
     Presenting, *Heroku 101*
-
--------------------
-
-See also, my `previous talks <http://kennethreitz.com/pages/talks.html>`_ archive.
