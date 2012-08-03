@@ -132,31 +132,57 @@ Secure your web services with HTTPS and HSTS policies.
 { `kennethreitz/flask-sslify <https://github.com/kennethreitz/flask-sslify>`_ }
 
 
-Other Projects
---------------
+Other Contributions
+-------------------
+
+In addition to authoring new software, I contribute to other projects and teams as well.
 
 
-- `spark.py <https://github.com/kennethreitz/spark.py>`_ :
-  Sparklines in your CLI.
-- `pyandoc <https://github.com/kennethreitz/pyandoc>`_ :
-  A simple wrapper for Pandoc document conversion.
-- `humble <https://github.com/kennethreitz/humble>`_:
-  Python clone of the vain gem. Lists a GH user's repos and watchers.
-- `ghsync <https://github.com/kennethreitz/ghsync>`_:
-  GitHub account repository syncer.
-- `pyandoc <https://github.com/kennethreitz/pyandoc>`_:
-  Simple Python object wrapper around the Pandoc cli tool.
-- `python-gistapi <https://github.com/kennethreitz/gistapi.py>`_:
-  Python wrapper for the Gist API. Deprecated soon for python-github3.
-- `xerox <https://github.com/kennethreitz/xerox>`_:
-  Simple system copy+paste API for OSX, Windows, and Linux.
-- `showme <https://github.com/kennethreitz/showme>`_:
-  Set of debugging decorators for Python.
-- `stathat <https://github.com/kennethreitz/stathat.py>`_:
-  A simple API wrapper for the StatHat api.
-- `goldenarch <https://github.com/kennethreitz/goldenarch>`_:
-  Serves (static) crap. Fast.
-- `diveintomark <https://github.com/diveintomark>`_:
-  Legacy, yet maintained, mirror of Mark Pilgrim's public repositories.
-- `readability-api <https://github.com/arc90/python-readability-api>`_:
-  An API wrapper for Readability.
+Python Software Foundation
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+I am a proud member of the Python Software Foundation.
+
+{ `python.org <http://www.python.org/psf/>`_}
+
+
+Flask/Werkzeug
+~~~~~~~~~~~~~~
+
+I am a comitter to the excellent Flask and Werkzeug projects.
+
+{ `flask.pocoo.org <http://flask.pocoo.org>`_ }
+
+
+Archive Team
+~~~~~~~~~~~~
+
+Archive Team is a loose collective of rouge archivists, programmers, writers,
+and loudmouths dedicated to saving our digital age.
+
+I agressively assist in the archival of our digital history.
+
+
+{ `archiveteam.org <http://archiveteam.org>`_ }
+
+
+Mark Pilgrim
+~~~~~~~~~~~~
+
+When Mark Pilgrim decided to 410 from the internet, I managed to find old copies
+of his works and host them on his old GitHub profile URL.
+
+His wonderful open source projects are preserved, and occasionally updated.
+
+{ `github/diveintomark <https://github.com/diveintomark>`_ }
+
+
+OAuthlib
+~~~~~~~~
+
+OAuthlib is the future of OAuth for Python. I assist the project through
+support via Requests, community outreach, increasing awareness, and occassional
+organizational assistance.
+
+{ `idan/oauthlib <https://github.com/idan/oauthlib>`_ }
+
