@@ -15,11 +15,6 @@ and usage of Python on a daily basis.
 { `python-guide.org <http://python-guide.org>`_ }
 
 
-
--------------------
-
-
-
 Requests: Python HTTP for Humans
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -133,7 +128,7 @@ Secure your web services with HTTPS and HSTS policies.
 
 
 Other Contributions
--------------------
+===================
 
 In addition to authoring new software, I contribute to other projects and teams as well.
 
