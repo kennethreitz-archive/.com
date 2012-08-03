@@ -10,7 +10,7 @@ Python's ecosystem is held up to a high standard, but it falls short in a few ke
 
 <script async class="speakerdeck-embed" data-id="4f24d3a79a6510001f008836" data-ratio="1.3333333333333333" src="http://speakerdeck.com/assets/embed.js"></script>
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/Q1pe6lHZeNs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="400" src="http://www.youtube.com/embed/Q1pe6lHZeNs" frameborder="0" allowfullscreen></iframe>
 
 
 Flasky Goodness
@@ -25,6 +25,6 @@ This talk dives into the specifics of why Django isn't always the best tool for 
 The Twelve-Factor App
 ---------------------
 
-This talk is a brief overview of `12factor.net <http://12factor.net>`_.
+This talk is a brief overview of [12factor.net](http://12factor.net).
 
 <script async class="speakerdeck-embed" data-id="4f22cc6da0a84d0022028725" data-ratio="1.3333333333333333" src="http://speakerdeck.com/assets/embed.js"></script>
