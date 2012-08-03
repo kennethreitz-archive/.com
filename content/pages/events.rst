@@ -3,9 +3,6 @@ Events
 
 :hide: True
 
-Upcoming Events
-~~~~~~~~~~~~~~~
-
 I'll be presenting at the following upcoming events:
 
 August 2012
