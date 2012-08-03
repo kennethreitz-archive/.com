@@ -32,6 +32,13 @@ in the same way. It’s powered by httplib, urllib3, and good intentions.
 { `python-requests.org <http://python-requests.org>`_ }
 
 
+OSX-GCC-Installer
+~~~~~~~~~~~~~~~~~
+
+Install the real GCC on your Mac without using Xcode.
+
+{ `kennethreitz/osx-gcc-installer <https://github.com/kennethreitz/osx-gcc-installer>`_ }
+
 
 Tablib: Format-Agnostic Tabular Datasets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,19 +124,22 @@ Google Federated Logins for Flask.
 { `kennethreitz/flask-googlefed <https://github.com/kennethreitz/flask-googlefed>`_ }
 
 
+Flask-SSLify
+~~~~~~~~~~~~
+
+Secure your web services with HTTPS and HSTS policies.
+
+{ `kennethreitz/flask-sslify <https://github.com/kennethreitz/flask-sslify>`_ }
 
 
 Other Projects
 --------------
 
-- `osx-gcc-installer <https://github.com/kennethreitz/osx-gcc-installer>`_:
-  Install GCC without Xcode on your Mac.
+
 - `spark.py <https://github.com/kennethreitz/spark.py>`_ :
   Sparklines in your CLI.
 - `pyandoc <https://github.com/kennethreitz/pyandoc>`_ :
   A simple wrapper for Pandoc document conversion.
-- `redi <https://github.com/kennethreitz/redi>`_:
-  Redis-py interaction layer. Treats all data as JSON.
 - `humble <https://github.com/kennethreitz/humble>`_:
   Python clone of the vain gem. Lists a GH user's repos and watchers.
 - `ghsync <https://github.com/kennethreitz/ghsync>`_:
@@ -140,8 +150,6 @@ Other Projects
   Python wrapper for the Gist API. Deprecated soon for python-github3.
 - `xerox <https://github.com/kennethreitz/xerox>`_:
   Simple system copy+paste API for OSX, Windows, and Linux.
-- `instareader <https://github.com/kennethreitz/instareader.py>`_:
-  Sends Google Reader Starred Articles to your Instapaper account.
 - `showme <https://github.com/kennethreitz/showme>`_:
   Set of debugging decorators for Python.
 - `stathat <https://github.com/kennethreitz/stathat.py>`_:
@@ -150,28 +158,5 @@ Other Projects
   Serves (static) crap. Fast.
 - `diveintomark <https://github.com/diveintomark>`_:
   Legacy, yet maintained, mirror of Mark Pilgrim's public repositories.
-- `vaincheese <https://github.com/kennethreitz/vaincheese>`_:
-  A simple webservice for reporting PyPi download stats.
-- `fortune-service <https://github.com/kennethreitz/fortune-service>`_:
-  A simple webservice for the classic fortune tool.
-- `tablib-service <https://github.com/kennethreitz/tablib-service>`_:
-  A simple webservice for tablib.
 - `readability-api <https://github.com/arc90/python-readability-api>`_:
   An API wrapper for Readability.
-
-
-
-Works in Progress
------------------
-- `python-github3 <https://github.com/kennethreitz/python-github3>`_: Python wrapper for the GitHub API v3.
-- `feedharvest <https://github.com/kennethreitz/feedharvest>`_: An API-only Google Reader clone.
-- `sshout <https://github.com/kennethreitz/sshout>`_: Throw-away, temporary SSH server + localtunnel for pairing.
-- `resources <https://github.com/kennethreitz/resources>`_: A non-HTTP rest protocol. Perhaps to built on 0mq.
-- `elements <https://github.com/kennethreitz/elements>`_: A pure-python XML haven.
-- `packages <https://github.com/kennethreitz/packages>`_: Experimental distributed Python packaging.
-- `relative <https://github.com/kennethreitz/relative>`_: Converts Python module imports into absolute-relative style (for vendoring).
-- python-boom: Python implimentation of holman/boom.
-- unzipit: I'll never remember the ``tar`` flags. Now, I don't have to.
-- backitup: Server backup utility.
-- python-convore: Python wrapper for the Convore API.
-- flaskbook: Python module for dealing with Facebook Canvas sites.
