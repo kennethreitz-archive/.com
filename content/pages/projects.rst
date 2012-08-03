@@ -155,7 +155,7 @@ Archive Team
 Archive Team is a loose collective of rouge archivists, programmers, writers,
 and loudmouths dedicated to saving our digital age.
 
-I agressively assist in the archival of our digital history.
+I aggressively assist in the archival of our digital history.
 
 
 { `archiveteam.org <http://archiveteam.org>`_ }
