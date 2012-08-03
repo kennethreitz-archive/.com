@@ -36,5 +36,5 @@ October 2012
     Presenting, *Heroku 101*
 - 10/16: TwilioCon (San Francisco, CA)
     Presenting, Highly-technical Talk
-- 10/27: PyArkansas (Conway, AK)
+- 10/27: PyArkansas (Conway, AR)
     Presenting, *Heroku 101*
