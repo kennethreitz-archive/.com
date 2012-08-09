@@ -21,7 +21,7 @@ September 2012
 --------------
 
 - 09/04: DjangoCon US (Washington, DC)
-    Hosting, Heroku Open Space
+    Presenting *Flasky Goodness*
 - 09/18: Dreamforce (San Francisco, CA)
     Attending
 - 09/23: Strangeloop (St. Louis, MO)
