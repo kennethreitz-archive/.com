@@ -34,7 +34,9 @@ October 2012
     Presenting, Semi-technical Talk
 - 10/9: PhillyPUG (Philadelphia, PA)
     Presenting, *Heroku 101*
-- 10/13 : PyCon Ireland (Dublin, Ireland)
+- 10/12: Guilford Web Expo (Guildford, England)
+    Presenting, Semi-technical Talk
+- 10/13: PyCon Ireland (Dublin, Ireland)
     Presenting, *Python for Humans*
 - 10/16: TwilioCon (San Francisco, CA)
     Presenting, Highly-technical Talk
