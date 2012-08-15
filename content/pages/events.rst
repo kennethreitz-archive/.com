@@ -22,6 +22,8 @@ September 2012
 
 - 09/04: DjangoCon US (Washington, DC)
     Presenting *Flasky Goodness*
+- 09/15: OpenHatch Worskhop (Baltimore, MD)
+    Presenting
 - 09/18: Dreamforce (San Francisco, CA)
     Attending
 - 09/23: Strangeloop (St. Louis, MO)
