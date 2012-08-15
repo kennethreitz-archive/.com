@@ -40,5 +40,7 @@ October 2012
     Presenting, *Python for Humans*
 - 10/16: TwilioCon (San Francisco, CA)
     Presenting, Highly-technical Talk
+- 10/20: PyCarolina (RTP, NC)
+    Presenting, *Python for Humans* & *Flasky Goodness*
 - 10/27: PyArkansas (Conway, AR)
     Presenting, *Heroku 101*
