@@ -46,3 +46,9 @@ October 2012
     Presenting, *Python for Humans* & *Flasky Goodness*
 - 10/27: PyArkansas (Conway, AR)
     Presenting, *Heroku 101*
+
+November 2012
+-------------
+
+- 11/16 RuPy 2012 (Czech Republic)
+    Presenting, Technical Talk
