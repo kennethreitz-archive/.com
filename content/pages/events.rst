@@ -45,7 +45,7 @@ October 2012
 - 10/20: PyCarolina (RTP, NC)
     Presenting, *Python for Humans* & *Flasky Goodness*
 - 10/27: PyArkansas (Conway, AR)
-    Presenting, *Heroku 101*
+    Presenting, Technical Talk
 
 November 2012
 -------------
