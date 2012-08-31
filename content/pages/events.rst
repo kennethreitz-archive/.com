@@ -25,11 +25,11 @@ October 2012
 - 10/9: PhillyPUG (Philadelphia, PA)
     Presenting, *Heroku 101*
 - 10/12: Guilford Web Expo (Guildford, England)
-    Presenting, Semi-technical Talk
+    Presenting, *API Driven Development*
 - 10/13: PyCon Ireland (Dublin, Ireland)
     Presenting, *Python for Humans*
 - 10/16: TwilioCon (San Francisco, CA)
-    Presenting, Highly-technical Talk
+    Presenting, *API Driven Development*
 - 10/20: PyCarolina (RTP, NC)
     Presenting, *Python for Humans* & *Flasky Goodness*
 - 10/27: PyArkansas (Conway, AR)
