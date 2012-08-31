@@ -5,18 +5,6 @@ Events
 
 I often present at conferences. Check out my `previous talks <http://kennethreitz.com/pages/talks.html>`_ to learn more.
 
-August 2012
------------
-
-- 08/09: PyMNtos (St. Paul, MN)
-    Presenting, *Heroku 101*
-- 08/14: PDXPython (Portland, OR)
-    Presenting, *Heroku 101*
-- 08/18: PyCon AU (Hobart, Tasmania, Australia)
-    Keynoting, *Python for Humans*
-- 08/28: beCamp (Charlottesville, VA)
-    Hosting, Heroku Open Space
-
 September 2012
 --------------
 
