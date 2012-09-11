@@ -13,10 +13,9 @@ I specialize in candid, street, and available-light photography. My kit:
 
 Previously I had a fantastic Canon kit (Canon 5DmkII, 35L, 50L, 85L, and 135L) and the incredible Fujifilm x100. I found myself quite torn—I really wanted the mechanical interaction and size of the x100, with the performance and flexibility of the 5DmkII.
 
-So, I sold everything and got the M9. I couldn't be happier.
+So, I sold everything and got the Leica M9. I couldn't be happier.
 
 .. image:: http://farm9.staticflickr.com/8321/7961450946_d9a056a52b_b.jpg
-
 
 Street Photography
 ------------------
