@@ -37,5 +37,7 @@ If you'd like to buy or license a print, send me an email.
 See More
 --------
 
-- `Flickr <www.flickr.com/photos/kennethreitz/>`_
+I publish dozens of photos a week. Check them out online:
+
+- `Flickr <http://www.flickr.com/photos/kennethreitz/>`_
 - `500px <http://500px.com/kennethreitz>`_
