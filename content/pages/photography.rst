@@ -3,7 +3,7 @@ Photography
 
 :hide: True
 
-I am passionate about many things, including `code </pages/open-projects.html>`_,  electronic music, and photography.
+I am passionate about many things, including code,  electronic music, and photography.
 
 I specialize in candid, street, and available/low light photography. My kit:
 
