@@ -3,7 +3,7 @@ Photography
 
 :hide: True
 
-I am passionate about many things, including code, electronic music, and photography.
+I am passionate about many things, including `code </pages/open-projects.html>`_,  electronic music, and photography.
 
 I specialize in candid, street, and available/low light photography. My kit:
 
@@ -21,7 +21,7 @@ So, I sold everything and got the M9. I couldn't be happier.
 Street Photography
 ------------------
 
-If you'd like to buy or license a print, `get in touch <mailto:photos@kennethreitz.com>`_.
+If you'd like to buy or license a print, send me an email.
 
 .. image:: http://farm6.staticflickr.com/5062/5672429067_a5b81498f1_b.jpg
 .. image:: http://farm9.staticflickr.com/8302/7839548144_c7f95f7e5d_b.jpg
