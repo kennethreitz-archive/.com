@@ -31,7 +31,6 @@ If you'd like to buy or license a print, send me an email.
 .. image:: http://farm3.staticflickr.com/2180/5791751963_e4c887d41e_b.jpg
 .. image:: http://farm9.staticflickr.com/8285/7713484064_9053ccd3f2_b.jpg
 .. image:: http://farm8.staticflickr.com/7021/6611198513_077cebc130_b.jpg
-.. image:: http://farm9.staticflickr.com/8005/7506060574_227e8698b1_b.jpg
 
 See More
 --------
