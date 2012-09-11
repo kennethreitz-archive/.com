@@ -5,7 +5,7 @@ Photography
 
 I am passionate about many things, including code,  electronic music, and photography.
 
-I specialize in candid, street, and available/low light photography. My kit:
+I specialize in candid, street, and available-light photography. My kit:
 
 - Leica M9-P
 - Voitlander Nokton 35mm f/1.2
