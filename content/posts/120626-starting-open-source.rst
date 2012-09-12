@@ -15,4 +15,4 @@ If you find a bug or have a feature request, open a new issue. If you feel confi
 
 It's rare, but sometimes maintainers can be hard to deal with. If you've tried your best to fit the project's workflow and conventions, but the maintainer is snappy, dismissive, or just closes your issue without a comment: move on. That project isn't worth your time.
 
-If you feel like your code would be useful to others, Read up on open source licensing and stick your protect up on GitHub. Write some documentation. Tell people about it.
+If you feel like your code would be useful to others, Read up on open source licensing and stick your project up on GitHub. Write some documentation. Tell people about it.
