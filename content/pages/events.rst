@@ -37,6 +37,8 @@ October 2012
 
 November 2012
 -------------
+- 11/09: PyCon CA (Toronto, CA)
+    Presenting, *Something*
 
 - 11/16 RuPy 2012 (Czech Republic)
     Presenting, Technical Talk
