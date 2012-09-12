@@ -21,7 +21,7 @@ October 2012
 ------------
 
 - 10/03: Asbury Agile (Asbury Park, NJ)
-    Presenting, Semi-technical Talk
+    Presenting, *API Driven Development*
 - 10/9: PhillyPUG (Philadelphia, PA)
     Presenting, *Heroku 101*
 - 10/12: Guilford Web Expo (Guildford, England)
