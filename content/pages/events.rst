@@ -41,3 +41,5 @@ November 2012
     Presenting, *Something*
 - 11/16 RuPy 2012 (Czech Republic)
     Presenting, Technical Talk
+- 11/27 AWS Re:Invent (Las Vegas)
+    Attending
