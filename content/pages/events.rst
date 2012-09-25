@@ -32,3 +32,16 @@ November 2012
     Presenting, Technical Talk
 - 11/27 AWS Re:Invent (Las Vegas)
     Attending
+
+
+January 2013
+------------
+
+- 01/08: CodeMash (Sandusky, Ohio)
+    Attending, Submitted Talks
+
+Febuary 2013
+------------
+
+- 02/??: Waza (San Francisco, CA)
+    Attending
