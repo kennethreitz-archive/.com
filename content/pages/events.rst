@@ -43,5 +43,5 @@ January 2013
 Febuary 2013
 ------------
 
-- 02/??: Waza (San Francisco, CA)
+- Waza (San Francisco, CA)
     Attending
