@@ -41,11 +41,10 @@ Favorite Things
 ~~~~~~~~~~~~~~~
 
 - My Dearest Fiancée
-- B & W P5 Headphones
+- My Beloved Leica M9
 - Rotring 500 Pencil
-- OS X & My MacBook Pro
-- Moleskine Notebooks (Large Journals, Squared)
+- Moleskine Notebook (Large Journal, Squared)
 - ZSH, Git, Python, TextMate
-- iPad + Reeder
+- iPad + Instapaper
 
 
