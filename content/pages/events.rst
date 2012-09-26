@@ -16,7 +16,7 @@ September 2012
     Attending
 - 09/23: Strangeloop (St. Louis, MO)
     Attending
-- 09/28: Google DevDay (Reston, VA)
+- 09/28: Google DevFestDC (Reston, VA)
     Attending
 
 October 2012
