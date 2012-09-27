@@ -34,6 +34,8 @@ October 2012
     Presenting, *API Driven Development*
 - 10/20: PyCarolina (RTP, NC)
     Presenting, *Python for Humans* & *Flasky Goodness*
+- 10/24: Austin, TX
+    Secret Meetings
 - 10/27: PyArkansas (Conway, AR)
     Presenting, Technical Talk
 
