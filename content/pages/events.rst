@@ -52,9 +52,3 @@ January 2013
 
 - 01/08: CodeMash (Sandusky, Ohio)
     Attending, Submitted Talks
-
-Febuary 2013
-------------
-
-- Waza (San Francisco, CA)
-    Attending
