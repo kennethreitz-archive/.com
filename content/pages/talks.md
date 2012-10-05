@@ -23,6 +23,14 @@ This talk dives into the specifics of why Django isn't always the best tool for 
 <script async class="speakerdeck-embed" data-id="4fcf32ff4aab160022003030" data-ratio="1.3333333333333333" src="http://speakerdeck.com/assets/embed.js"></script>
 
 
+API Driven Development
+----------------------
+
+This talk focuses on developer/user interaction, the philosophy behind the code we write, service oriented architecture, and layering APIs.
+
+<script async class="speakerdeck-embed" data-id="506c56d1ff33fd000205dfd2" data-ratio="1.3333333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+
 
 The Twelve-Factor App
 ---------------------
