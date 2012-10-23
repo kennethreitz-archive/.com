@@ -27,6 +27,7 @@ October 2012
 
 November 2012
 -------------
+
 - 11/09: PyCon CA (Toronto, CA)
     Presenting, *Something*
 - 11/16 RuPy 2012 (Czech Republic)
@@ -34,6 +35,11 @@ November 2012
 - 11/27 AWS Re:Invent (Las Vegas)
     Attending
 
+December 2012
+-------------
+
+- 12/01 Angelhack (Paris, France)
+    Attending
 
 January 2013
 ------------
