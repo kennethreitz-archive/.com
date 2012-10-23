@@ -38,7 +38,7 @@ November 2012
 December 2012
 -------------
 
-- 12/01 Angelhack (Paris, France)
+- 12/01 AngelHack (Paris, France)
     Attending
 
 January 2013
