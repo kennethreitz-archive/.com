@@ -31,7 +31,7 @@ November 2012
 - 11/09: PyCon CA (Toronto, CA)
     Presenting, *Something*
 - 11/16 RuPy 2012 (Czech Republic)
-    Presenting, Technical Talk
+    Presenting,  *Rippin' off Ruby*
 - 11/27 AWS Re:Invent (Las Vegas)
     Attending
 
