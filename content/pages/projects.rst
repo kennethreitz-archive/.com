@@ -64,7 +64,6 @@ debugging and testing HTTP Clients.
 { `httpbin.org <http://httpbin.org>`_ }
 
 
-
 Clint: Command Line Application Tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -91,6 +90,14 @@ Magic per-project shell environments. Very pretentious. If a directory contains
 a ``.env`` file, it will automatically be excecuted when you ``cd`` into it.
 
 { `kennethreitz/autoenv <https://github.com/kennethreitz/autoenv>`_ }
+
+
+Django-PostgresPool
+~~~~~~~~~~~~~~~~~~~
+
+This is a simple Postgres Connection Pooling backend for Django, powered by the lovely and beautiful SQLAlchemy.
+
+{ `kennethreitz/django-postgrespool <https://github.com/kennethreitz/django-postgrespool`_ }
 
 
 Heroku.py
