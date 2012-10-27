@@ -40,9 +40,17 @@ December 2012
 
 - 12/01 AngelHack (Paris, France)
     Attending
+- 12/08 San Francisco
+    Visiting
 
 January 2013
 ------------
 
 - 01/08: CodeMash (Sandusky, Ohio)
     Attending, Submitted Talks
+
+February 2013
+-------------
+
+- 02/28: Waza (San Francisco, CA)
+    Organizing, Attending
