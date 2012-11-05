@@ -10,7 +10,7 @@ November 2012
 
 - 11/09: PyCon CA (Toronto, CA)
     Presenting, *Python for Humans*
-- 11/14 Spotify HQ & Python Stockholm (Stockholm, Sweeden)
+- 11/14 Spotify HQ & Python Stockholm (Stockholm, Sweden)
     Presenting, Technical Talks
 - 11/16 RuPy 2012 (Czech Republic)
     Presenting, *API Driven Development*
