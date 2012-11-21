@@ -34,5 +34,7 @@ January 2013
 February 2013
 -------------
 
+- 02/02: FOSDEM (Brussels, Belgium)
+	Presenting
 - 02/28: Waza (San Francisco, CA)
     Organizing, Attending
