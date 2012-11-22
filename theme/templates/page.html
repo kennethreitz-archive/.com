@@ -3,6 +3,7 @@
 
 {% block content %}
 
+
 <hr class="implied">
   <article class="G4 GR GS" id="content">
   <header>
@@ -10,7 +11,15 @@
   </header>
 
   <div class="formatted">
+
+    {% if page.aside %}
+      <aside>
+        {{ page.aside }}
+      </aside>
+    {% endif %}
+
     {{ page.content }}
+
   </div>
 
   <hr>

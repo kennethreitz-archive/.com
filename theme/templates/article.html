@@ -28,6 +28,14 @@
   </header>
 
   <div class="formatted">
+
+    {% if article.aside %}
+      <aside>
+        {{ article.aside }}
+      </aside>
+    {% endif %}
+
+
     {{ article.content }}
   </div>
 
