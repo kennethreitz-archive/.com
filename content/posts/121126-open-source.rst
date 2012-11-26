@@ -46,9 +46,7 @@ I've been keen to recognize another recurring pattern, found in many internal co
 - Little to no documentation
 - Tight coupling of components.
 
-Look closely at these problems, and the root cause will be clear: communication is lacking.
-
-No open source project would ever be successful if it was run this way, so why should your company? The same principles can be directly applied to any project, open source or not.
+Look closely at these problems, and the root cause will be clear: communication is lacking. No open source project would ever be successful if it was run this way, so why should your company? The same principles can be directly applied to any project, open source or not.
 
 
 Documentation is King
@@ -60,7 +58,10 @@ My code improves far more from writing documentation than writing tests. Documen
 
 When I'm writing and maintaining robust documentation for a project, it's reflected in the code and API. I'm not building software for myself as an engineer, I'm designing an API and experience for myself and others as developers.
 
+An open source project wouldn't be sustainable if it didn't have great documentation. Neither could your internal code.
+
 Every design decision should be documented. Imagine not having to have tap your coworkers on the shoulder when you're working on an unfamiliar part of the codebase, or on-boarding a new employee. Imagine being able to make the change, run the tests, and push to production without questioning yourself, because the process was documented — or better yet, automated.
+
 
 Conclusion
 ----------
@@ -68,7 +69,7 @@ Conclusion
 Treat your `teams like open teams <http://tomayko.com/writings/adopt-an-open-source-process-constraints>`_  and your `codebases like open codebases <http://tom.preston-werner.com/2011/11/22/open-source-everything.html>`_. All of these communication problems will naturally erode because they don't have a choice.
 
 
-Attention is the only true currency we have in life. What do you have to lose?
+Attention is the only true currency we have in life. Constrain yourself.
 
 
 
