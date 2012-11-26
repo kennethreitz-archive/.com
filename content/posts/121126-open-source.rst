@@ -1,5 +1,5 @@
-Open Source and Communication
-=============================
+Open Source and Constraints
+===========================
 
 :date: 2012-11-26 13:10
 :category: python
