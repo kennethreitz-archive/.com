@@ -69,7 +69,7 @@ Conclusion
 Treat your `teams like open teams <http://tomayko.com/writings/adopt-an-open-source-process-constraints>`_  and your `codebases like open codebases <http://tom.preston-werner.com/2011/11/22/open-source-everything.html>`_. All of these communication problems will naturally erode because they don't have a choice.
 
 
-Attention is the only true currency we have in life. Constrain yourself.
+Constrain yourself.
 
 
 
