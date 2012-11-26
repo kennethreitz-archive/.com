@@ -58,7 +58,7 @@ My code improves far more from writing documentation than writing tests. Documen
 
 When I'm writing and maintaining robust documentation for a project, it's reflected in the code and API. I'm not building software for myself as an engineer, I'm designing an API and experience for myself and others as developers.
 
-An open source project wouldn't be sustainable if it didn't have great documentation. Neither could your internal code.
+An open source project wouldn't be sustainable if it didn't have great documentation. Neither is your internal code.
 
 Every design decision should be documented. Imagine not having to have tap your coworkers on the shoulder when you're working on an unfamiliar part of the codebase, or on-boarding a new employee. Imagine being able to make the change, run the tests, and push to production without questioning yourself, because the process was documented — or better yet, automated.
 
