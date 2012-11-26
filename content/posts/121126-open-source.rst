@@ -30,24 +30,25 @@ Code is a creative craft, as is photography. The same principles can be directly
 Internal vs. External
 ---------------------
 
-Great open source projects often feature some common goals:
+If you survey a large number of successful, thriving open source projects out there,
+you'll notice a recurring pattern. Great open source projects often share some common goals:
 
 - Solve a clear problem.
 - Have great documentation.
 - Manage expectations realistically.
 
-In short, they communicate well.
+They communicate well.
 
-I've noticed a pattern in many organizations I've worked with. There's dozens, perhaps hundreds, of random projects with:
+
+I've been keen to recognize another recurring pattern, found in many internal codbases I've worked with:
 
 - Technical debt.
 - Little to no documentation
-- Undocumented tribal knowledge.
 - Tight coupling of components.
 
-In short, they don't communicate well.
+Look closely at these problems, and the root cause will be clear: communication is lacking.
 
-I suspect your organization may be the same way. The same principles can be directly applied to any project, open source or not.
+No open source project would ever be successful if it was run this way, so why should your company? The same principles can be directly applied to any project, open source or not.
 
 
 Documentation is King
@@ -61,15 +62,13 @@ When I'm writing and maintaining robust documentation for a project, it's reflec
 
 Every design decision should be documented. Imagine not having to have tap your coworkers on the shoulder when you're working on an unfamiliar part of the codebase, or on-boarding a new employee. Imagine being able to make the change, run the tests, and push to production without questioning yourself, because the process was documented — or better yet, automated.
 
-If you treat your teams  `like open source projects <http://tomayko.com/writings/adopt-an-open-source-process-constraints>`_, these problems would naturally erode, and these new best practices naturally come to light.
+Conclusion
+----------
 
-Attention is the only currency we have in our lives. Think before you code.
-
-
-
+Treat your `teams like open teams <http://tomayko.com/writings/adopt-an-open-source-process-constraints>`_  and your `codebases like open codebases <http://tom.preston-werner.com/2011/11/22/open-source-everything.html>`_. All of these communication problems will naturally erode because they don't have a choice.
 
 
-
+Attention is the only true currency we have in life. What do you have to lose?
 
 
 
