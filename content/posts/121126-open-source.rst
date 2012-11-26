@@ -40,7 +40,7 @@ you'll notice a recurring pattern. Great open source projects often share some c
 They communicate well.
 
 
-I've been keen to recognize another recurring pattern, found in many internal codbases I've worked with:
+I've been keen to recognize another recurring pattern, found in many internal codebases I've worked with:
 
 - Technical debt.
 - Little to no documentation
