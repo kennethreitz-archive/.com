@@ -1,7 +1,7 @@
 Open Source and Communication
 =============================
 
-:date: 2012-12-26 13:10
+:date: 2012-11-26 13:10
 :category: python
 :featured: True
 
@@ -9,7 +9,7 @@ As a member of the development community, I have the unique opportunity to take 
 
 Open source has found itself to be the crux of my professional, personal, and social life. There's something special about it.
 
-However, it's also not the only activity that I give my attention to. I'm also a photographer. My camera is one of my favorite things in the world. It never leaves my side.
+However, it's also not the only activity that I give my attention to. I'm also `a photographer <http://kennethreitz.com/pages/photography.html>`_. My camera never leaves my side.
 
 It's crucial to have an analog balance in our digital world. No digital interface will ever replicate the feeling of a manually focused rangefinder camera, or the sustainable precision of a fully mechanical watch. It's all about context and perspective.
 
