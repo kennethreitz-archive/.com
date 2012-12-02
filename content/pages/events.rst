@@ -28,6 +28,8 @@ December 2012
 January 2013
 ------------
 
+- 01/17 TakeOff (Lille, France)
+    Presenting, *Flasky Goodness*
 
 February 2013
 -------------
