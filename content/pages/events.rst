@@ -22,6 +22,8 @@ December 2012
 
 - 12/01 AngelHack (Paris, France)
     Booth Duty, Attending
+- 12/03 API Days (Paris, France)
+    Presenting, *API Driven Development*
 - 12/08 San Francisco
     Visiting
 
