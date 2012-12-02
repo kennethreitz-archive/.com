@@ -28,8 +28,6 @@ December 2012
 January 2013
 ------------
 
-- 01/08: CodeMash (Sandusky, Ohio)
-    Attending, Submitted Talks
 
 February 2013
 -------------
