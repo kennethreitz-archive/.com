@@ -11,7 +11,7 @@ Open source has found itself to be the crux of my professional, personal, and so
 
 However, it's also not the only activity that I give my attention to. I'm also `a photographer <http://kennethreitz.com/pages/photography.html>`_. My camera never leaves my side.
 
-It's crucial to have an analog balance in our digital world. No digital interface will ever replicate the feeling of a manually focused rangefinder camera, or the sustainable precision of a fully mechanical watch. It's all about context and perspective.
+It's crucial to have an analog balance in our digital world. No digital interface will ever replicate the feeling of a manually focused rangefinder camera, or the attention to detail and craftmanship of a mechanical watch. It's all about context and perspective.
 
 
 Constraints
