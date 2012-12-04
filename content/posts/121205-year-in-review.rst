@@ -1,5 +1,5 @@
-Reflections: 2012 & One Year at Heroku
-======================================
+On Heroku and 2012
+==================
 
 :date: 2012-12-05 09:00
 :category: python
@@ -7,7 +7,7 @@ Reflections: 2012 & One Year at Heroku
 
 Alas, 2012 is quickly coming to a close.
 
-It's been an absolutely incredible year — easily one of my best of the twenty-four I've experienced. I became a member of the Python Software Foundation, travelled all over the world, met several thousand inspiring software developers, and collaborated on dozens of incredible projects.
+This has been an absolutely incredible year — easily the best of the mere twenty-four I've experienced so far. I became a member of the Python Software Foundation, traveled all over the world, met several thousand inspiring software developers, and collaborated on dozens of incredible projects.
 
 It's important to reflect — perspective is everything.
 
@@ -27,7 +27,7 @@ I'm looking forward to many more years with Heroku.
 Accomplishments & Goals
 -----------------------
 
-For years, I dreamed of being a well known member of the open source community. I spent hundreds of nights obsessing over other's code and developing my own development style/philosophies.
+For years, I dreamed of being a well known member of the open source community. I spent hundreds of nights obsessing over other's code and developing my own development style and philosophies.
 
 Much to my surprise, all of that work really paid off. Today, I'm the #1 most followed Python GitHub user and the #17th most followed GitHub user in general. Requests has been downloaded 1,500,000+ times and is indirectly helping change the world. OSX-GCC-Installer reached over 43 TB of downloads and directly inspired Apple's Command-Line Tools.
 
@@ -40,11 +40,11 @@ I've spent the majority of my time this year traveling. It's a bit daunting to t
 
 [Lanyards]
 
-A year ago, I had given only one talk in my life (PyCodeConf) and didn't own a passport.
+One year ago, I had given only **one talk** in my entire life (PyCodeConf) and didn't even own a passport.
 
 This year:
 
-- 116,933 miles travelled by air (+ dec)
+- 116,933 miles traveled by air (+ dec)
 - 138 hotel nights.
 - 29 talks given.
 - 20 conferences attended.
@@ -64,7 +64,7 @@ And even got the chance to reconnect with friends from past lives:
 Lessons Learned
 ---------------
 
-I've leaned a lot during my travels. You get to know oneself well.
+I've leaned a lot during my travels. You have lots of time to reflect and get to know yourself.
 
 Considering being a developer evangelist?
 
@@ -88,3 +88,5 @@ In closing, I'll leave myself with a short list of my personal values. They have
 - Fallibilism & Open Mindedness. There is only one thing I can be certain of in life: that I am prone to error. Nothing saddens me more than someone who is unwilling to listen to others.
 - Attention is my only currency. Allocate it sparingly. Don't spend a single moment in life doing something you don't want to do.
 
+
+Here's to 2013! Hopefully the Mayans based their calendar on the Twinkie.
