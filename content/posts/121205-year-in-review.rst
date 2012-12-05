@@ -69,7 +69,7 @@ And even got the chance to reconnect with friends from past lives:
 Lessons Learned
 ---------------
 
-I spent most of my life moving around the country. Between 8th and 10th grade, I attended **seven** different schools. Being out of my element is my element. I've leaned a lot during my travels. You have lots of time to reflect and get to know yourself.
+I spent most of my life moving around the country. Between 8th and 10th grade, I attended **seven** different schools. Being out of my element is my element. I've learned a lot during my travels. You have lots of time to reflect and get to know yourself.
 
 Considering being a developer evangelist?
 
