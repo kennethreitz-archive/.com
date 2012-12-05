@@ -5,17 +5,6 @@ Events
 
 I often present at conferences. Check out my `previous talks <http://kennethreitz.com/pages/talks.html>`_ to learn more.
 
-November 2012
--------------
-
-- 11/09: PyCon CA (Toronto, CA)
-    Presenting, *Python for Humans*
-- 11/14 Spotify HQ & Python Stockholm (Stockholm, Sweden)
-    Presenting, Technical Talks
-- 11/16 RuPy 2012 (Czech Republic)
-    Presenting, *API Driven Development*
-- 11/27 AWS Re:Invent (Las Vegas)
-    Booth Duty, Attending
 
 December 2012
 -------------
