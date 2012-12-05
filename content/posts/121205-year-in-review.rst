@@ -42,7 +42,7 @@ I've spent the majority of my time this year traveling. It's a bit daunting to t
 
 One year ago, I had given only **one talk** in my entire life (`PyCodeConf <http://py.codeconf.com/>`_) and didn't even own a passport.
 
-This year:
+This year alone:
 
 - 139,669 miles traveled by air
 - 139 hotel nights.
