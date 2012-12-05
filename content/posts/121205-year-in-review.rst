@@ -18,7 +18,7 @@ I officially `joined Heroku <http://kennethreitz.org/joining-heroku.html>`_ exac
 
 Heroku is directly responsible for the majority of my satisfaction of the past year. I feel incredibly privileged to work with this fine group of individuals — the most talented, classy, supportive, attentive, and caring group of people I've ever had the pleasure to meet.
 
-Words can't serialize how much I recommend `working for Heroku <http://jobs.heroku.com/?kr=1>`_. If you are speaking at a conference, Heroku will fully fund your trip. If there's a natural disaster in your area (e.g. Super-Storm Sandy), you will be contacted by a dedicated member of the Vibe team, ensuring your family's safety, accommodation, and well-being.
+Words can't serialize how much I recommend `working for Heroku <https://coderwall.com/team/heroku>`_. If you are speaking at a conference, Heroku will fully fund your trip. If there's a natural disaster in your area (e.g. Super-Storm Sandy), you will be contacted by a dedicated member of the Vibe team, ensuring your family's safety, accommodation, and well-being.
 
 The strangest part of the Heroku environment is our unlimited vacation policy. My job consists primarily of two things: Making Heroku awesome for Python, and Making Python awesome for Heroku. I took a week off after a six-week world tour last month, but kept finding myself doing what I love to do — my work.
 
