@@ -59,7 +59,7 @@ I also rediscovered my deep love for Photography:
 .. image:: http://farm9.staticflickr.com/8345/8191658942_20ae350aa9.jpg
 .. image:: http://farm9.staticflickr.com/8203/8241038176_f35609da67.jpg
 
-(More over on `500px <http://500px.com/kennethreitz>`_)
+(More over at `500px <http://500px.com/kennethreitz>`_)
 
 And even got the chance to reconnect with friends from past lives:
 
