@@ -93,7 +93,7 @@ In closing, I'll leave a short list of my personal values. They haven't changed 
 - Life's not a race, but there's no speed limit either.
 - Positivity. Negative atmospheres are toxic. Remove yourself from them.
 - Fallibilism & Open Mindedness. There is only one thing I can be certain of in life: that I am prone to error. Nothing saddens me more than someone who is unwilling to listen.
-- Attention is my only currency. Allocate it sparingly. Don't spend a single moment in life doing something you don't want to do.
+- Attention is your only currency. Allocate it sparingly. Don't spend a single moment in life doing something you don't want to do.
 
 
 Here's to 2013! Hopefully the Mayans based their calendar on the Twinkie.
