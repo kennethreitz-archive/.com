@@ -9,7 +9,7 @@ Alas, 2012 is quickly coming to a close.
 
 This has been an absolutely incredible year — easily the best of the mere twenty-four I've experienced so far. I became a member of the Python Software Foundation, traveled all over the world, met several thousand inspiring software developers, and collaborated on dozens of incredible projects.
 
-It's important to reflect — perspective is everything.
+It's important to reflect; perspective is everything.
 
 Heroku
 ------
