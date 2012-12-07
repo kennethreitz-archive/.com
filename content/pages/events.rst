@@ -31,3 +31,12 @@ February 2013
     Presenting
 - 02/28: Waza (San Francisco, CA)
     Organizing, Attending
+
+March 2013
+----------
+
+- PyCon US (Santa Clara, CA)
+    Attending, Workshop, Booth Duty
+
+- JsPyConf (Instanbul, Turkey)
+    Speaking
