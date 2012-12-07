@@ -26,6 +26,8 @@ February 2013
 -------------
 
 - 02/02: FOSDEM (Brussels, Belgium)
-	Presenting
+    Presenting
+- 02/14: DevconTLV (Tel Aviv, Israel)
+    Presenting
 - 02/28: Waza (San Francisco, CA)
     Organizing, Attending
