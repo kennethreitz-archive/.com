@@ -162,7 +162,6 @@ In exchange for doing Guillaume's API Days keynote, he agreed to take me out for
 .. image:: http://farm9.staticflickr.com/8343/8254020813_46be7587c5_b.jpg
 .. image:: http://farm9.staticflickr.com/8201/8254011775_339e2caa07_c.jpg
 .. image:: http://farm9.staticflickr.com/8492/8254013299_50eefdb647_c.jpg
-.. image:: http://farm9.staticflickr.com/8478/8255089022_3bd146c086_c.jpg
 .. image:: http://farm9.staticflickr.com/8348/8254017353_c0dae5ebf0_c.jpg
 .. image:: http://farm9.staticflickr.com/8077/8254019579_1b28d57914_c.jpg
 .. image:: http://farm9.staticflickr.com/8219/8255092572_488865bd9e_c.jpg
