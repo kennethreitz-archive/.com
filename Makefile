@@ -1,3 +1,5 @@
+rebuild: html
+	open output/index.html
 
 html:
 	rm -fr output/*.html output/theme
