@@ -11,7 +11,7 @@ I just returned from a lovely trip to Paris, France. I was there for a Heroku-sp
 Getting There
 -------------
 
-Unfortunately, I had to fly to Paris strait from Las Vegas, so I had a grueling ~15 hours of flying ahead of me. Luckily, the flights on the way over were lovely. I got bumped up to premium economy and had power outlets on both flights.
+Unfortunately, I had to fly to Paris straight from Las Vegas, so I had a grueling ~15 hours of flying ahead of me. Luckily, the flights on the way over were lovely. I got bumped up to premium economy and had power outlets on both flights.
 
 I took advantage and brushed up on my Ocarina of Time skills.
 
