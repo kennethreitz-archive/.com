@@ -180,7 +180,7 @@ I've flown home through Charles de Gaulle (CDG->IAD) several times.
 .. image:: http://farm9.staticflickr.com/8077/8255096238_4b742281de_c.jpg
 .. image:: http://farm9.staticflickr.com/8222/8254023791_8060c57594_c.jpg
 
-It'd oddly one of my least favorite flights. 10 hours in the air seems to strike the perfect balance between *almost-over* and *never-ending*. The 16 hour flight I took to Australia last year went past faster than this.
+It's somehow one of my least favorite flights. 10 hours in the air seems to strike the perfect balance between *almost-over* and *never-ending*. The 16 hour flight I took to Australia last year went past faster than this.
 
 Regardless, it was a fairly uneventful flight. I got a good photo of two strangers cuddling while watching a film on a MacBook:
 
