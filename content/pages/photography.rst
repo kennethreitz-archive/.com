@@ -8,6 +8,7 @@ I am passionate about many things, including code,  electronic music, and photog
 I specialize in candid, street, and available-light photography. My kit:
 
 - Leica M9-P
+- Leica Summicron 35mm f/2 IV
 - Voitlander Nokton 35mm f/1.2
 
 
