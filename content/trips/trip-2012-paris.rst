@@ -123,7 +123,7 @@ The thirds and fourth place teams of the hackathon won 5x 13" Retina MacBook Pro
 Designer Jeans
 --------------
 
-In my travels, I've learned to pack as lightly as humanly possible. Unfortunately, a single point of failure was discovered this trip: $25 jeans. While in Vegas, my pants developed a very small tear between the legs. Much to my surprise, by the end of the hackathon, this small imperfection had transformed itself into a 10 inch hole. No number of hotel sewing kits could fixed this.
+In my travels, I've learned to pack as lightly as humanly possible. Unfortunately, a single point of failure was discovered this trip: $25 jeans. While in Vegas, my pants developed a very small tear between the legs. Much to my surprise, by the end of the hackathon, this small imperfection had transformed itself into a 10 inch hole. No number of hotel sewing kits could possibly repair this situation.
 
 I had a keynote the next day. My hand was forced: I had to buy new jeans. In the fashion capital of the world. On a Sunday.
 
