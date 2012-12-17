@@ -41,7 +41,7 @@ Now, you can cleanly create your own `Request` instances.
     >>> req = requests.Request(method='GET', url=…, data=…)
     <Request [GET]>
 
-And let Requests do all the hhard work.
+And let Requests do all the hard work.
 
     >>> prep = req.prepare()
     <PreparedRequest [GET]>
