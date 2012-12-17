@@ -91,7 +91,7 @@ Implementing SPDY will be ~60 lines of code, once there's a decent client librar
 
 ## Moving Forward
 
-Request's development will now focus on a few different efforts;
+Request's development will now focus on a few different efforts:
 
 - Bugfixes and improvements, obviously.
 - Support for streaming uploads (e.g. `requests.get(…), data=generator()`)
