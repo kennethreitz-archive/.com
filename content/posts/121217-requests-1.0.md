@@ -25,9 +25,9 @@ A large number of features have been removed from Requests.
 - Removal of the magic `Response.json` property. Replaced with a method.
 - Change of `prefetch` argument to `stream`, to emphasize its purpose.
 - Sessions now provide all persistience, connections, and configuration. No magic.
-- Session creation no longer has any options. You can modify a session once it's instantiated.
+- Session creation no longer has any options. You can modify a session yourself.
 - Removal of esoteric ISC license. Replaced with Apache 2.0.
-- There are no more gobal configuration defaults.
+- There are no more global configuration defaults.
 
 > Simplicity is always better than functionality.
   — Pieter Hintjens
