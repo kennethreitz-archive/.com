@@ -4,6 +4,7 @@ The Future of Python HTTP
 :date: 2012-04-02 12:00
 :category: python
 :featured: True
+:aside: <bold>Update: </bold> This work has <a href="http://kennethreitz.org/requests-python-http-module.html">finally been completed</a>!
 
 
 I like to think `Requests <http://python-requests.org>`_ is mostly analogous to
