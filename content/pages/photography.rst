@@ -26,10 +26,11 @@ If you'd like to buy or license a print, send me an email.
 .. image:: http://farm6.staticflickr.com/5062/5672429067_a5b81498f1_b.jpg
 .. image:: http://farm9.staticflickr.com/8180/8010900491_0b89bed71f_b.jpg
 .. image:: http://farm9.staticflickr.com/8302/7839548144_c7f95f7e5d_b.jpg
-.. image:: http://farm9.staticflickr.com/8473/8075986722_6fb7de3903_b.jpg
-.. image:: http://farm7.staticflickr.com/6043/6360989077_2080dc6bfd_b.jpg
 .. image:: http://farm9.staticflickr.com/8345/8191658942_20ae350aa9_b.jpg
 .. image:: http://farm9.staticflickr.com/8050/8140806503_954e24e19b_b.jpg
+.. image:: http://farm9.staticflickr.com/8473/8075986722_6fb7de3903_b.jpg
+.. image:: http://farm7.staticflickr.com/6043/6360989077_2080dc6bfd_b.jpg
+
 
 .. image:: http://farm3.staticflickr.com/2180/5791751963_e4c887d41e_b.jpg
 .. image:: http://farm9.staticflickr.com/8285/7713484064_9053ccd3f2_b.jpg
