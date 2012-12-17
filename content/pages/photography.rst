@@ -28,6 +28,10 @@ If you'd like to buy or license a print, send me an email.
 .. image:: http://farm9.staticflickr.com/8302/7839548144_c7f95f7e5d_b.jpg
 .. image:: http://farm9.staticflickr.com/8345/8191658942_20ae350aa9_b.jpg
 .. image:: http://farm9.staticflickr.com/8050/8140806503_954e24e19b_b.jpg
+.. image:: http://farm9.staticflickr.com/8339/8229550254_6eca46b30e_b.jpg
+.. image:: http://farm9.staticflickr.com/8203/8241038176_f35609da67_b.jpg
+.. image:: http://farm9.staticflickr.com/8355/8265866502_c57641cc49_b.jpg
+
 .. image:: http://farm9.staticflickr.com/8473/8075986722_6fb7de3903_b.jpg
 .. image:: http://farm7.staticflickr.com/6043/6360989077_2080dc6bfd_b.jpg
 
