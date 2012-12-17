@@ -23,7 +23,7 @@ A large number of features have been removed from Requests.
 - Built-in OAuth and Kerberos support moved to new [requests](https://github.com/requests/) org.
 - All hooks except `response` removed, which was the only one in serious use.
 - Removal of the magic `Response.json` property. Replaced with a method.
-- Change of `prefetch` argument to `stream`, to emphasize it's purpose.
+- Change of `prefetch` argument to `stream`, to emphasize its purpose.
 - Sessions now provide all persistience, connections, and configuration. No magic.
 - Session creation no longer has any options. You can modify a session once it's instantiated.
 - Removal of esoteric ISC license. Replaced with Apache 2.0.
