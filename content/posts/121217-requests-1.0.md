@@ -98,6 +98,6 @@ Request's development will now focus on a few different efforts;
 - Support for new protocols (SPDY)
 - Communication. Documentation, ecosystem, and community.
 
-Thanks to everyone in the community for your continual love and support! This project would be a fruitless endevor without you.
+It's been a great [two years](http://kennethreitz.org/requests-python-http-module.html). Thanks to everyone in the community for your continual love and support! This project would be a fruitless endevor without you.
 
 Cheers — here's to 1.6 million more downloads.
