@@ -63,7 +63,7 @@ Now, you can send your `PreparedRequest` through a session's connection. Of cour
 
     >>> s = requests.Session()
     >>> s.send(prep)
-    <Response [200]
+    <Response [200]>
 
 
 No need for a session? Send it straight through your own connection. Trade them like Pokémon cards!
