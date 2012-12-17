@@ -16,6 +16,9 @@ color:#AA0000;
     outline:0;
     vertical-align:baseline
     }
+    code {
+        display: inline;
+    }
 
 
     tt {
@@ -150,6 +153,9 @@ color:#AA0000;
     list-style:none;
     margin:0 0 1.5em;
     text-rendering:optimizeLegibility
+    }
+    code {
+        display: inline;
     }
 
     html[lang=ja] #content address,
