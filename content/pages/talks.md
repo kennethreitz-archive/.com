@@ -30,8 +30,7 @@ This talk focuses on developer/user interaction, the philosophy behind the code 
 
 <script async class="speakerdeck-embed" data-id="506c56d1ff33fd000205dfd2" data-ratio="1.3333333333333333" src="http://speakerdeck.com/assets/embed.js"></script>
 
-
-
+<iframe width="560" height="400" src="http://www.youtube.com/embed/ccqGOODoQTg" frameborder="0" allowfullscreen></iframe>
 The Twelve-Factor App
 ---------------------
 
