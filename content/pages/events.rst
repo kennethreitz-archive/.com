@@ -26,8 +26,14 @@ February 2013
 March 2013
 ----------
 
-- PyCon US (Santa Clara, CA)
-    Attending, Workshop, Booth Duty
+- 03/13 PyCon US (Santa Clara, CA)
+    Attending, Leading Workshop, Booth Duty, Sprinting
 
-- JsPyConf (Instanbul, Turkey)
+- 03/30 JsPyConf (Instanbul, Turkey)
+    Speaking
+
+April 2013
+----------
+
+- 04/24 PyPgh (Pittsburg, PA)
     Speaking
